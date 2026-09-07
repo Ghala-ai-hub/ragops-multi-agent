@@ -1,0 +1,12 @@
+{
+    "platform": "najiz",
+    "service_folder": "enforcement_request",
+    "domain": "Government Digital Services",
+    "country": "Saudi Arabia",
+    "language": "Arabic",
+    "source_type": "Official PDF Guide",
+    "source_file": "source\\official_guide.pdf",
+    "document_id": "najiz_enforcement_request_001",
+    "page_count": 42,
+    "extraction_date": "2026-09-01"
+}

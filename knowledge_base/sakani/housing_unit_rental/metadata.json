@@ -1,0 +1,12 @@
+{
+    "platform": "sakani",
+    "service_folder": "housing_unit_rental",
+    "domain": "Government Digital Services",
+    "country": "Saudi Arabia",
+    "language": "Arabic",
+    "source_type": "Official PDF Guide",
+    "source_file": "source\\official_guide.pdf",
+    "document_id": "sakani_housing_unit_rental_001",
+    "page_count": 8,
+    "extraction_date": "2026-09-01"
+}

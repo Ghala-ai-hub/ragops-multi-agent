@@ -1,0 +1,12 @@
+{
+    "platform": "sakani",
+    "service_folder": "housing_support_eligibility",
+    "domain": "Government Digital Services",
+    "country": "Saudi Arabia",
+    "language": "Arabic",
+    "source_type": "Official PDF Guide",
+    "source_file": "source\\official_guide.pdf",
+    "document_id": "sakani_housing_support_eligibility_001",
+    "page_count": 10,
+    "extraction_date": "2026-09-01"
+}

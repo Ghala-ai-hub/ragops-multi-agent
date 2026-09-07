@@ -1,0 +1,12 @@
+{
+    "platform": "najiz",
+    "service_folder": "electronic_power_of_attorney",
+    "domain": "Government Digital Services",
+    "country": "Saudi Arabia",
+    "language": "Arabic",
+    "source_type": "Official PDF Guide",
+    "source_file": "source\\official_guide.pdf",
+    "document_id": "najiz_electronic_power_of_attorney_001",
+    "page_count": 12,
+    "extraction_date": "2026-09-01"
+}

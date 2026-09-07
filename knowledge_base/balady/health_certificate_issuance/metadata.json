@@ -1,0 +1,12 @@
+{
+    "platform": "balady",
+    "service_folder": "health_certificate_issuance",
+    "domain": "Government Digital Services",
+    "country": "Saudi Arabia",
+    "language": "Arabic",
+    "source_type": "Official PDF Guide",
+    "source_file": "source\\official_guide.pdf",
+    "document_id": "balady_health_certificate_issuance_001",
+    "page_count": 41,
+    "extraction_date": "2026-09-01"
+}

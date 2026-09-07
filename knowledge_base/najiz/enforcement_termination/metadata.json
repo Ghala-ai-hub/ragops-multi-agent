@@ -1,0 +1,12 @@
+{
+    "platform": "najiz",
+    "service_folder": "enforcement_termination",
+    "domain": "Government Digital Services",
+    "country": "Saudi Arabia",
+    "language": "Arabic",
+    "source_type": "Official PDF Guide",
+    "source_file": "source\\official_guide.pdf",
+    "document_id": "najiz_enforcement_termination_001",
+    "page_count": 7,
+    "extraction_date": "2026-09-01"
+}

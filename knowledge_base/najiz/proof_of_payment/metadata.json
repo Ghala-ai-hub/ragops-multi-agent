@@ -1,0 +1,12 @@
+{
+    "platform": "najiz",
+    "service_folder": "proof_of_payment",
+    "domain": "Government Digital Services",
+    "country": "Saudi Arabia",
+    "language": "Arabic",
+    "source_type": "Official PDF Guide",
+    "source_file": "source\\official_guide.pdf",
+    "document_id": "najiz_proof_of_payment_001",
+    "page_count": 15,
+    "extraction_date": "2026-09-01"
+}
