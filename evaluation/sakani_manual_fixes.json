@@ -1,0 +1,282 @@
+[
+  {
+    "platform": "sakani",
+    "service": "housing_unit_rental",
+    "issue_type": "step_order_mapping",
+    "source_file": "knowledge_base/sakani/housing_unit_rental/source/official_guide.pdf",
+    "reason": "PDF text extraction mapped steps 03 and 04 to the wrong text blocks. The correct mapping was verified manually against the official PDF.",
+    "fixes": [
+      {
+        "step": 3,
+        "correct_text": "اختيار الحجوزات المكتملة والضغط على عرض الحجز"
+      },
+      {
+        "step": 4,
+        "correct_text": "بعد أن يكون الحجز مكتمل يتم طلب استئجار وحدة مدعومة"
+      }
+    ]
+  },
+
+  {
+  "platform": "sakani",
+  "service": "residential_lands",
+  "issue_type": "structural_step_reconstruction",
+  "source_file": "knowledge_base/sakani/residential_lands/source/official_guide.pdf",
+  "reason": "PDF text extraction merged multiple numbered steps and introduced Arabic word extraction errors. The correct 11-step sequence and wording were manually verified against the official PDF.",
+  "replacement_steps": [
+    {
+      "step": 1,
+      "correct_text": "بعد الحصول على الاستحقاق وتسجيل الدخول إلى سكني تظهر الشاشة الرئيسية التالية."
+    },
+    {
+      "step": 2,
+      "correct_text": "الضغط على أيقونة \"عقارات الشراء\" واختيار \"أراضي\"."
+    },
+    {
+      "step": 3,
+      "correct_text": "لتصفح المخططات يتم الضغط على \"تصفية النتائج\"."
+    },
+    {
+      "step": 4,
+      "correct_text": "تحديد نوع الأرض \"أراضي الوزارة\"."
+    },
+    {
+      "step": 5,
+      "correct_text": "تظهر المخططات المتاحة للحجز ويتم اختيار المخطط المرغوب."
+    },
+    {
+      "step": 6,
+      "correct_text": "يتم اختيار القطعة المناسبة."
+    },
+    {
+      "step": 7,
+      "correct_text": "يتم الضغط على \"حجز قطعة أرض\"."
+    },
+    {
+      "step": 8,
+      "correct_text": "الإقرار بقراءة الشروط والأحكام."
+    },
+    {
+      "step": 9,
+      "correct_text": "الضغط على \"قبول وتوقيع\"."
+    },
+    {
+      "step": 10,
+      "correct_text": "يتم إدخال رمز التحقق المرسل على رقم الجوال المسجل في أبشر ثم الضغط على تحقق."
+    },
+    {
+      "step": 11,
+      "correct_text": "تم توقيع العقد إلكترونياً بنجاح ويمكن اختيار \"عرض الحجز\" للاطلاع على تفاصيل الحجز أو \"تصفح التصاميم الهندسية\" عند الرغبة بالاستفادة من التصاميم الهندسية."
+    }
+  ],
+  "text_replacements": [
+    {
+      "wrong_text": "ي أراض",
+      "correct_text": "أراضي"
+    },
+    {
+      "wrong_text": "ممتة",
+      "correct_text": "مميزة"
+    },
+    {
+      "wrong_text": "غير ممتة",
+      "correct_text": "غير مميزة"
+    }
+  ],
+
+  "validated_tail": {
+  "sections": [
+    "إجراءات منتج أرضك دعمك",
+    "شروط الاستفادة من منتج أرضك دعمك"
+  ],
+  "conditions": [
+    "توقيع العقد إلكترونياً للأرض خلال 48 ساعة من الحجز وذلك من خلال رمز تحقق يصل برسالة نصية للمستفيد على رقم الجوال المسجل في سكني.",
+    "إصدار رخصة البناء ورفع الرخصة بالملف الشخصي في سكني خلال 6 أشهر من تاريخ الحجز.",
+    "البدء بالبناء خلال 6 أشهر إذا كانت الأرض مميزة، وخلال سنة إذا كانت الأرض غير مميزة.",
+    "إتمام البناء خلال 3 سنوات بحد أقصى."
+  ],
+  "contact": [
+    "199090 — من 08:00 ص إلى 08:00 م، من الأحد إلى الخميس.",
+    "0114199090 — التواصل عبر الواتس آب، يوميًا على مدار 24 ساعة.",
+    "@SaudiHousingCC — حساب X، يوميًا على مدار 24 ساعة."
+  ]
+}
+},
+{
+  "platform": "sakani",
+  "service": "real_estate_advisor",
+  "issue_type": "multi_section_step_reconstruction",
+  "source_file": "knowledge_base/sakani/real_estate_advisor/source/official_guide.pdf",
+  "reason": "PDF text extraction merged multiple numbered steps across two different procedural sections. The correct section structure, 9-step sequence, wording, and contact information were manually verified against the official PDF.",
+  "document_title": "دليل المستخدم للتسجيل في المستشار العقاري بمنصة سكني",
+  "replacement_sections": [
+    {
+      "title": "خطوات التسجيل في المستشار العقاري بمنصة سكني",
+      "steps": [
+        {
+          "step": 1,
+          "correct_text": "تسجيل الدخول في سكني ثم الدخول على \"الخدمات\" واختيار \"عرض جميع الخدمات\"."
+        },
+        {
+          "step": 2,
+          "correct_text": "الضغط على \"خدمة المستشار العقاري\"."
+        },
+        {
+          "step": 3,
+          "correct_text": "الضغط على \"بدء الخدمة\"."
+        },
+        {
+          "step": 4,
+          "correct_text": "يتم تعبئة البيانات المالية وجهة العمل ثم اختيار نوع المنتج."
+        },
+        {
+          "step": 5,
+          "correct_text": "يتم توضيح خيارات الدعم المتاحة بالإضافة للدعومات الأخرى، ثم الإقرار بالاطلاع على الشروط والموافقة عليها والضغط على \"إرسال\"."
+        },
+        {
+          "step": 6,
+          "correct_text": "تم استكمال التسجيل في المستشار العقاري وإصدار التوصية المالية بنجاح."
+        }
+      ]
+    },
+    {
+      "title": "خطوات تحديث معلوماتي المالية في المستشار العقاري بمنصة سكني",
+      "steps": [
+        {
+          "step": 7,
+          "correct_text": "بعد الضغط على بدء الخدمة عبر المستشار العقاري يتم الضغط على \"تحديث معلوماتي المالية\"."
+        },
+        {
+          "step": 8,
+          "correct_text": "يتم تحديث البيانات المالية واختيار \"نوع المنتج\"."
+        },
+        {
+          "step": 9,
+          "correct_text": "الإقرار بالاطلاع على الشروط والموافقة عليها والضغط على \"إرسال\"."
+        }
+      ]
+    }
+  ],
+  "validated_tail": {
+    "contact": [
+      "199090 — من 08:00 ص إلى 08:00 م، من الأحد إلى الخميس.",
+      "0114199090 — التواصل عبر الواتس آب، يوميًا على مدار 24 ساعة.",
+      "@SaudiHousingCC — حساب X، يوميًا على مدار 24 ساعة."
+    ]
+  }
+},
+
+{
+  "platform": "sakani",
+  "service": "housing_support_eligibility",
+  "issue_type": "structural_step_reconstruction",
+  "source_file": "knowledge_base/sakani/housing_support_eligibility/source/official_guide.pdf",
+  "reason": "PDF text extraction mapped several numbered steps to the wrong text blocks. The correct procedural sequence, introductory instruction, and contact information were manually verified against the official PDF.",
+  "document_title": "دليل المستخدم للتحقق من أهلية الاستحقاق",
+  "intro_lines": [
+    "حلولنا السكنية",
+    "يهدف سكني إلى تقديم الحلول السكنية التي تساهم في تحسين نمط الحياة لأهلينا المستفيدين لبناء مجتمع ينعم أفراده بتعدد سبل امتلاك المسكن، ويمكن معرفة شروط الاستحقاق للدعم السكني من خلال زيارة صفحة اللائحة التنفيذية لتنظيم الدعم السكني عبر الرابط التالي:",
+    "https://sakani.sa/housing-subsidy-policy",
+    "خطوات التحقق من أهلية الاستحقاق",
+    "لاستكمال التقديم على الدعم السكني ومعرفة حالة الاستحقاق يتم الدخول على خدمة \"التحقق من حالة الاستحقاق\"."
+  ],
+  "replacement_steps": [
+    {
+      "step": 1,
+      "correct_text": "يتم اختيار ملفي الشخصي بعد تسجيل الدخول في منصة سكني."
+    },
+    {
+      "step": 2,
+      "correct_text": "الضغط على تحقق من حالة الاستحقاق."
+    },
+    {
+      "step": 3,
+      "correct_text": "يتم التأكيد على قراءة وفهم الشروط والأحكام والموافقة عليها."
+    },
+    {
+      "step": 4,
+      "correct_text": "يتم الإجابة على الإقرار ومن ثم الضغط على المتابعة."
+    },
+    {
+      "step": 5,
+      "correct_text": "تعبئة البيانات الشخصية وبعد ذلك يتم الضغط على تأكيد."
+    },
+    {
+      "step": 6,
+      "correct_text": "تم التحقق من أهلية الاستحقاق (تهانينا أنت الآن مستحق للدعم السكني)."
+    },
+    {
+      "step": 7,
+      "correct_text": "بعد التسجيل في المستشار العقاري يتم عكس البيانات المالية."
+    },
+    {
+      "step": 8,
+      "correct_text": "عند ظهور (عذرًا، أنت غير مؤهل للحصول على الدعم)، يمكن الضغط على أيقونة تقديم اعتراض في حال استيفاء شروط لائحة الدعم السكني."
+    }
+  ],
+  "validated_tail": {
+    "contact": [
+      "199090 — من 08:00 ص إلى 08:00 م، من الأحد إلى الخميس.",
+      "0114199090 — التواصل عبر الواتس آب، يوميًا على مدار 24 ساعة.",
+      "@SaudiHousingCC — حساب X، يوميًا على مدار 24 ساعة."
+    ]
+  }
+},
+
+{
+  "platform": "sakani",
+  "service": "real_estate_transaction_tax_support",
+  "issue_type": "multi_section_step_reconstruction",
+  "source_file": "knowledge_base/sakani/real_estate_transaction_tax_support/source/official_guide.pdf",
+  "reason": "PDF text extraction merged and mis-mapped several numbered steps across two procedural sections. The correct section structure, 7-step sequence, wording, and contact information were manually verified against the official PDF.",
+  "document_title": "دليل إصدار شهادة إعفاء ضريبة المسكن الأول",
+  "replacement_sections": [
+    {
+      "title": "التحقق من الأهلية وإصدار الشهادة",
+      "steps": [
+        {
+          "step": 1,
+          "correct_text": "بعد تسجيل الدخول إلى سكني تظهر الشاشة الرئيسية التالية."
+        },
+        {
+          "step": 2,
+          "correct_text": "الضغط على أيقونة \"الخدمات\" واختيار \"خدمات ومنتجات الدعم السكني\" ومن ثم اختيار خدمة \"تحمل ضريبة التصرفات العقارية للمسكن الأول\"."
+        },
+        {
+          "step": 3,
+          "correct_text": "الدخول على الخدمة وتعبئة البيانات المطلوبة ومن ثم النقر على \"المتابعة\" للانتقال إلى الخطوة الثانية."
+        },
+        {
+          "step": 4,
+          "correct_text": "يتم مراجعة الإعلان من قبل المستخدم والموافقة عليه ومن ثم النقر على \"إرسال\"."
+        },
+        {
+          "step": 5,
+          "correct_text": "يقوم النظام بإظهار رسالة النجاح للمستخدم."
+        },
+        {
+          "step": 6,
+          "correct_text": "بعد ثبوت أهلية المستخدم، يقوم النظام بإصدار الشهادة وعكسها في حساب المستخدم. يمكن للمستخدم استعراض وتحميل الشهادة."
+        }
+      ]
+    },
+    {
+      "title": "الاستعلام عن الشهادة",
+      "steps": [
+        {
+          "step": 7,
+          "correct_text": "يمكن للمستخدم الاستعلام عن الشهادة من خلال إدخال رقم الهوية ورقم الشهادة."
+        }
+      ]
+    }
+  ],
+  "validated_tail": {
+    "contact": [
+      "199090 — من 08:00 ص إلى 08:00 م، من الأحد إلى الخميس.",
+      "0114199090 — التواصل عبر الواتس آب، من 08:00 ص إلى 04:00 م، من الأحد إلى الخميس.",
+      "@SaudiHousingCC — حساب X، يوميًا على مدار 24 ساعة."
+    ]
+  }
+}
+
+]
