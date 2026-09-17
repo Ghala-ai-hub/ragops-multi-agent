@@ -1,0 +1,26 @@
+{"query": "ما هي شروط تجديد رخصة القيادة؟", "expected_service_id": "driving_license_renewal", "style": "direct", "note": "eligibility conditions"}
+{"query": "فحص طبي رخصة قيادة", "expected_service_id": "driving_license_renewal", "style": "short_keyword", "note": "medical exam requirement"}
+{"query": "ابغى اجدد رخصتي كم تاخذ توصل لي", "expected_service_id": "driving_license_renewal", "style": "saudi_colloquial", "note": "delivery time"}
+{"query": "عدد السنوات المسموح بها لتجديد رخصة القيادة", "expected_service_id": "driving_license_renewal", "style": "paraphrase", "note": "renewal duration options"}
+{"query": "كيف احسب تاريخ انتهاء الاستمارة بعد التجديد؟", "expected_service_id": "vehicle_registration_renewal", "style": "direct", "note": "expiry date calc"}
+{"query": "شروط تجديد استمارة السيارة", "expected_service_id": "vehicle_registration_renewal", "style": "short_keyword", "note": "eligibility conditions"}
+{"query": "استمارة سيارتي خلصت ابي اجددها", "expected_service_id": "vehicle_registration_renewal", "style": "saudi_colloquial", "note": "expired registration renewal"}
+{"query": "متطلبات تجديد رخصة السير", "expected_service_id": "vehicle_registration_renewal", "style": "paraphrase", "note": "eligibility conditions (paraphrase of query #6)"}
+{"query": "هل لازم بصمة عشان اطلع تأشيرة خروج وعودة؟", "expected_service_id": "exit_reentry_final_exit_visa", "style": "saudi_colloquial", "note": "fingerprint requirement"}
+{"query": "تأشيرة خروج نهائي للتابعين", "expected_service_id": "exit_reentry_final_exit_visa", "style": "short_keyword", "note": "how to request for dependents"}
+{"query": "اقامتي منتهية اقدر اطلع تأشيرة خروج وعودة؟", "expected_service_id": "exit_reentry_final_exit_visa", "style": "direct_colloquial", "note": "expired residency permit"}
+{"query": "ضاع جوازي كيف أطلع بدل فاقد؟", "expected_service_id": "lost_passport_replacement", "style": "saudi_colloquial", "note": "how to request a replacement"}
+{"query": "هل يشترط الإبلاغ عن فقدان الجواز؟", "expected_service_id": "lost_passport_replacement", "style": "direct", "note": "loss report requirement"}
+{"query": "اصدار جواز لفرد من العائلة بدل الجواز المفقود", "expected_service_id": "lost_passport_replacement", "style": "paraphrase", "note": "issuing for a family member"}
+{"query": "هويتي منتهية ابي اصدر جواز بدل فاقد", "expected_service_id": "lost_passport_replacement", "style": "direct_colloquial", "note": "expired national ID blocker"}
+{"query": "كم تكلفة توصيل الجواز البديل", "expected_service_id": "lost_passport_replacement", "style": "short_keyword", "note": "delivery fee"}
+{"query": "كيف أبلغ عن فقدان لوحة السيارة؟", "expected_service_id": "lost_stolen_plate_report", "style": "direct", "note": "how to report a lost/stolen plate"}
+{"query": "سرقة لوحة السيارة", "expected_service_id": "lost_stolen_plate_report", "style": "short_keyword", "note": "plate theft"}
+{"query": "ضاعت لوحة سيارتي كيف ابلغ عنها", "expected_service_id": "lost_stolen_plate_report", "style": "saudi_colloquial", "note": "lost plate, how to report"}
+{"query": "هل يمكن تقديم أكثر من بلاغ عن نفس المركبة؟", "expected_service_id": "lost_stolen_plate_report", "style": "paraphrase", "note": "duplicate-report rule (real FAQ in the new source)"}
+{"query": "ما هي رسوم إذن التنقل بالسلاح؟", "expected_service_id": "firearm_transport_permit", "style": "direct", "note": "transport permit fee"}
+{"query": "تصريح نقل سلاح", "expected_service_id": "firearm_transport_permit", "style": "short_keyword", "note": "weapon transport permit"}
+{"query": "ابي انقل سلاحي من مدينة لمدينة وش اسوي", "expected_service_id": "firearm_transport_permit", "style": "saudi_colloquial", "note": "moving a weapon between cities"}
+{"query": "هل يمكن حمل أكثر من سلاح بإذن واحد؟", "expected_service_id": "firearm_transport_permit", "style": "paraphrase", "note": "one-weapon-per-permit rule (real FAQ in the new source)"}
+{"query": "رخصة", "expected_service_id": null, "style": "ambiguous", "note": "single word 'license' — matches driving license AND vehicle registration equally; there is no single correct answer"}
+{"query": "تجديد", "expected_service_id": null, "style": "ambiguous", "note": "single word 'renewal' — matches all 3 renewal-type services"}
