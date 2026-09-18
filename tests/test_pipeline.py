@@ -119,11 +119,16 @@ def test_exit_visa_service_has_real_steps_for_both_procedures():
 # embeddings / backend selection
 # --------------------------------------------------------------------------
 
-def test_default_backend_is_sentence_transformers():
-    """The DEFAULT requested backend must be sentence-transformers, per the
-    decision to make semantic retrieval primary — regardless of whether the
-    package happens to be installed in the environment running this test."""
-    assert DEFAULT_EMBEDDER_BACKEND == "sentence-transformers"
+def test_default_backend_is_openai():
+    """UPDATED for the FAISS/OpenAI integration: the DEFAULT requested
+    backend is now "openai", per the decision to match the project
+    proposal's stated technology stack (Python • LangChain • FAISS •
+    OpenAI API) — regardless of whether the package/key happens to be
+    available in the environment running this test. Was
+    test_default_backend_is_sentence_transformers (asserted
+    "sentence-transformers"); that backend is now the secondary fallback,
+    not the default — see embeddings.py module docstring."""
+    assert DEFAULT_EMBEDDER_BACKEND == "openai"
 
 
 def test_unavailable_sentence_transformers_falls_back_to_tfidf_not_a_crash():
@@ -140,6 +145,30 @@ def test_unavailable_sentence_transformers_falls_back_to_tfidf_not_a_crash():
     assert embedder.name == "tfidf"
     assert embedder.fallback_from == "sentence-transformers"
     assert embedder.fallback_reason  # non-empty, explains exactly why
+
+
+def test_unavailable_openai_falls_back_correctly_not_a_crash():
+    """Same contract as the sentence-transformers fallback test above, one
+    tier up: requesting "openai" without a usable key/package must NOT
+    raise, and must NOT silently claim to be FAISS-backed. Depending on
+    what's actually available in the environment running this test, it may
+    land on sentence-transformers (single fallback) or cascade all the way
+    to tfidf (double fallback, chained fallback_from/_reason) — both are
+    valid, both must be honestly recorded."""
+    embedder = get_embedder("openai")
+    if embedder.name == "openai":
+        # Real key + package + network available — nothing to fall back
+        # from; that's a valid, better outcome.
+        assert embedder.fallback_from is None
+        return
+    assert embedder.fallback_from is not None
+    assert embedder.fallback_reason  # non-empty, explains exactly why
+    assert embedder.name in ("sentence-transformers", "tfidf")
+    if embedder.name == "tfidf":
+        # Cascaded through both tiers — this sandbox's actual case.
+        assert embedder.fallback_from == "openai -> sentence-transformers"
+        assert "openai:" in embedder.fallback_reason
+        assert "sentence-transformers:" in embedder.fallback_reason
 
 
 def test_explicit_tfidf_request_never_reports_a_fallback():

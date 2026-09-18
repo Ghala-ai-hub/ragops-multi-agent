@@ -240,9 +240,11 @@ def run_full_evaluation() -> Dict[str, dict]:
     baseline_backend = baseline_store.backend_info()
     baseline_results = run_topk_experiment(baseline_store, log_prefix="baseline_tfidf")
 
-    # 2) Primary: whatever get_embedder() resolves to by default
-    #    (sentence-transformers as of this revision, unless it can't load,
-    #    in which case get_embedder() itself already fell back to TF-IDF).
+    # 2) Primary: whatever get_embedder() resolves to by default (openai as
+    #    of this revision, matching the project proposal's stated stack,
+    #    unless it can't load — in which case get_embedder() itself already
+    #    fell back one or two tiers, down to sentence-transformers or
+    #    tfidf).
     primary_store = VectorStore.from_jsonl(embedder=get_embedder())
     primary_backend = primary_store.backend_info()
 
@@ -255,31 +257,51 @@ def run_full_evaluation() -> Dict[str, dict]:
         },
     }
 
-    if primary_backend["actual_backend"] == "sentence-transformers":
-        primary_results = run_topk_experiment(primary_store, log_prefix="primary_sentence-transformers")
+    actual = primary_backend["actual_backend"]
+    if actual == "openai":
+        primary_results = run_topk_experiment(primary_store, log_prefix="primary_openai")
         output["primary"] = {
-            "label": "Sentence Transformers (primary/default)",
+            "label": "OpenAI + FAISS (primary/default)",
             "status": "ran",
             "backend_info": primary_backend,
             "results": primary_results,
             "recommended_k": recommend_k(primary_results),
         }
+    elif actual == "sentence-transformers":
+        # openai unavailable, fell back one tier to a still-real semantic
+        # backend — worth running and reporting, just not the FAISS path.
+        primary_results = run_topk_experiment(primary_store, log_prefix="primary_sentence-transformers")
+        output["primary"] = {
+            "label": "Sentence Transformers (fallback from openai)",
+            "status": "ran_as_fallback",
+            "backend_info": primary_backend,
+            "note": (
+                f"openai was requested (default) but could not be loaded: "
+                f"{primary_backend['fallback_reason']!r}. Fell back one tier "
+                "to sentence-transformers, which DID load, so these are real "
+                "semantic-retrieval results — just not FAISS-backed."
+            ),
+            "results": primary_results,
+            "recommended_k": recommend_k(primary_results),
+        }
     else:
         output["primary"] = {
-            "label": "Sentence Transformers (primary/default) — NOT RUN",
+            "label": "OpenAI + FAISS (primary/default) — NOT RUN",
             "status": "not_run_fallback_to_tfidf",
             "backend_info": primary_backend,
             "note": (
-                "sentence-transformers is the configured default "
-                "(ABSHER_EMBEDDER=sentence-transformers) but could not be "
-                f"loaded in this environment: {primary_backend['fallback_reason']!r}. "
-                "retrieval.get_embedder() already fell back to TF-IDF automatically, "
-                "so a 'primary' run here would be numerically identical to "
-                "baseline_tfidf above under a misleading label -- it is deliberately "
-                "NOT duplicated/relabeled as semantic-retrieval results. Re-run "
-                "`python src/evaluation.py` on a machine with `pip install "
-                "sentence-transformers` and network access to populate this "
-                "section with real numbers."
+                "openai is the configured default (ABSHER_EMBEDDER=openai) "
+                "but could not be loaded in this environment: "
+                f"{primary_backend['fallback_reason']!r}. "
+                "retrieval.get_embedder() already cascaded all the way down "
+                "to TF-IDF automatically, so a 'primary' run here would be "
+                "numerically identical to baseline_tfidf above under a "
+                "misleading label -- it is deliberately NOT duplicated/"
+                "relabeled as semantic-retrieval or FAISS results. Re-run "
+                "`python src/evaluation.py` on a machine with "
+                "OPENAI_API_KEY set, `pip install langchain-openai "
+                "langchain-community faiss-cpu`, and network access to "
+                "populate this section with real numbers."
             ),
             "results": None,
             "recommended_k": None,
@@ -293,7 +315,7 @@ def run_full_evaluation() -> Dict[str, dict]:
 
     print(f"\n=== PRIMARY: requested={primary_backend['requested_backend']!r} "
           f"actual={primary_backend['actual_backend']!r} ===")
-    if output["primary"]["status"] == "ran":
+    if output["primary"]["results"] is not None:
         print_topk_report(primary_results)
     else:
         print(output["primary"]["note"])
