@@ -1,0 +1,935 @@
+{
+  "n_reports": 25,
+  "n_failure_detected": 3,
+  "reports": [
+    {
+      "style": "direct",
+      "note": "eligibility conditions",
+      "monitoring_report": {
+        "original_query": "ما هي شروط تجديد رخصة القيادة؟",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.652,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_faq.txt",
+            "chunk_index": 2
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_guide.txt",
+            "chunk_index": 1
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_faq.txt",
+            "chunk_index": 1
+          }
+        ]
+      }
+    },
+    {
+      "style": "short_keyword",
+      "note": "medical exam requirement",
+      "monitoring_report": {
+        "original_query": "فحص طبي رخصة قيادة",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.608,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_faq.txt",
+            "chunk_index": 1
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_guide.txt",
+            "chunk_index": 6
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_guide.txt",
+            "chunk_index": 0
+          }
+        ]
+      }
+    },
+    {
+      "style": "saudi_colloquial",
+      "note": "delivery time",
+      "monitoring_report": {
+        "original_query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+        "baseline_k": 3,
+        "failure_detected": true,
+        "baseline_relevant_found": false,
+        "baseline_first_relevant_rank": null,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.562,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 7
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 6
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 5
+          }
+        ]
+      }
+    },
+    {
+      "style": "paraphrase",
+      "note": "renewal duration options",
+      "monitoring_report": {
+        "original_query": "عدد السنوات المسموح بها لتجديد رخصة القيادة",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.663,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_guide.txt",
+            "chunk_index": 1
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_guide.txt",
+            "chunk_index": 2
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_faq.txt",
+            "chunk_index": 1
+          }
+        ]
+      }
+    },
+    {
+      "style": "direct",
+      "note": "expiry date calc",
+      "monitoring_report": {
+        "original_query": "كيف احسب تاريخ انتهاء الاستمارة بعد التجديد؟",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.55,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "vehicle_registration_renewal",
+            "source": "vehicle_registration_renewal_faq.txt",
+            "chunk_index": 0
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "vehicle_registration_renewal",
+            "source": "vehicle_registration_renewal_faq.txt",
+            "chunk_index": 1
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "vehicle_registration_renewal",
+            "source": "vehicle_registration_renewal_faq.txt",
+            "chunk_index": 2
+          }
+        ]
+      }
+    },
+    {
+      "style": "short_keyword",
+      "note": "eligibility conditions",
+      "monitoring_report": {
+        "original_query": "شروط تجديد استمارة السيارة",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 2,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.567,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 2
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "vehicle_registration_renewal",
+            "source": "vehicle_registration_renewal_guide.txt",
+            "chunk_index": 0
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 0
+          }
+        ]
+      }
+    },
+    {
+      "style": "saudi_colloquial",
+      "note": "expired registration renewal",
+      "monitoring_report": {
+        "original_query": "استمارة سيارتي خلصت ابي اجددها",
+        "baseline_k": 3,
+        "failure_detected": true,
+        "baseline_relevant_found": false,
+        "baseline_first_relevant_rank": null,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.617,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 7
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 6
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 5
+          }
+        ]
+      }
+    },
+    {
+      "style": "paraphrase",
+      "note": "eligibility conditions (paraphrase of query #6)",
+      "monitoring_report": {
+        "original_query": "متطلبات تجديد رخصة السير",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.636,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "vehicle_registration_renewal",
+            "source": "vehicle_registration_renewal_guide.txt",
+            "chunk_index": 2
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "vehicle_registration_renewal",
+            "source": "vehicle_registration_renewal_guide.txt",
+            "chunk_index": 4
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "vehicle_registration_renewal",
+            "source": "vehicle_registration_renewal_guide.txt",
+            "chunk_index": 3
+          }
+        ]
+      }
+    },
+    {
+      "style": "saudi_colloquial",
+      "note": "fingerprint requirement",
+      "monitoring_report": {
+        "original_query": "هل لازم بصمة عشان اطلع تأشيرة خروج وعودة؟",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.615,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 9
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 7
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 0
+          }
+        ]
+      }
+    },
+    {
+      "style": "short_keyword",
+      "note": "how to request for dependents",
+      "monitoring_report": {
+        "original_query": "تأشيرة خروج نهائي للتابعين",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.525,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 7
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 9
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 4
+          }
+        ]
+      }
+    },
+    {
+      "style": "direct_colloquial",
+      "note": "expired residency permit",
+      "monitoring_report": {
+        "original_query": "اقامتي منتهية اقدر اطلع تأشيرة خروج وعودة؟",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.658,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 9
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 7
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 0
+          }
+        ]
+      }
+    },
+    {
+      "style": "saudi_colloquial",
+      "note": "how to request a replacement",
+      "monitoring_report": {
+        "original_query": "ضاع جوازي كيف أطلع بدل فاقد؟",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.639,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_faq.txt",
+            "chunk_index": 1
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_faq.txt",
+            "chunk_index": 0
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "vehicle_registration_renewal",
+            "source": "vehicle_registration_renewal_faq.txt",
+            "chunk_index": 2
+          }
+        ]
+      }
+    },
+    {
+      "style": "direct",
+      "note": "loss report requirement",
+      "monitoring_report": {
+        "original_query": "هل يشترط الإبلاغ عن فقدان الجواز؟",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.608,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_faq.txt",
+            "chunk_index": 0
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_guide.txt",
+            "chunk_index": 5
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 8
+          }
+        ]
+      }
+    },
+    {
+      "style": "paraphrase",
+      "note": "issuing for a family member",
+      "monitoring_report": {
+        "original_query": "اصدار جواز لفرد من العائلة بدل الجواز المفقود",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.61,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_faq.txt",
+            "chunk_index": 2
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_faq.txt",
+            "chunk_index": 0
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_faq.txt",
+            "chunk_index": 1
+          }
+        ]
+      }
+    },
+    {
+      "style": "direct_colloquial",
+      "note": "expired national ID blocker",
+      "monitoring_report": {
+        "original_query": "هويتي منتهية ابي اصدر جواز بدل فاقد",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.592,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_faq.txt",
+            "chunk_index": 2
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_faq.txt",
+            "chunk_index": 1
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_guide.txt",
+            "chunk_index": 1
+          }
+        ]
+      }
+    },
+    {
+      "style": "short_keyword",
+      "note": "delivery fee",
+      "monitoring_report": {
+        "original_query": "كم تكلفة توصيل الجواز البديل",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.61,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_guide.txt",
+            "chunk_index": 5
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "exit_reentry_final_exit_visa",
+            "source": "exit_reentry_final_exit_visa_guide.txt",
+            "chunk_index": 5
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_faq.txt",
+            "chunk_index": 2
+          }
+        ]
+      }
+    },
+    {
+      "style": "direct",
+      "note": "how to report a lost/stolen plate",
+      "monitoring_report": {
+        "original_query": "كيف أبلغ عن فقدان لوحة السيارة؟",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.56,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 1
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "lost_passport_replacement",
+            "source": "lost_passport_replacement_faq.txt",
+            "chunk_index": 0
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 5
+          }
+        ]
+      }
+    },
+    {
+      "style": "short_keyword",
+      "note": "plate theft",
+      "monitoring_report": {
+        "original_query": "سرقة لوحة السيارة",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.604,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 1
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 5
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 2
+          }
+        ]
+      }
+    },
+    {
+      "style": "saudi_colloquial",
+      "note": "lost plate, how to report",
+      "monitoring_report": {
+        "original_query": "ضاعت لوحة سيارتي كيف ابلغ عنها",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 3,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.576,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_faq.txt",
+            "chunk_index": 0
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "vehicle_registration_renewal",
+            "source": "vehicle_registration_renewal_faq.txt",
+            "chunk_index": 2
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 1
+          }
+        ]
+      }
+    },
+    {
+      "style": "paraphrase",
+      "note": "duplicate-report rule (real FAQ in the new source)",
+      "monitoring_report": {
+        "original_query": "هل يمكن تقديم أكثر من بلاغ عن نفس المركبة؟",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.595,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 6
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 4
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 0
+          }
+        ]
+      }
+    },
+    {
+      "style": "direct",
+      "note": "transport permit fee",
+      "monitoring_report": {
+        "original_query": "ما هي رسوم إذن التنقل بالسلاح؟",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.589,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 7
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 5
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_faq.txt",
+            "chunk_index": 2
+          }
+        ]
+      }
+    },
+    {
+      "style": "short_keyword",
+      "note": "weapon transport permit",
+      "monitoring_report": {
+        "original_query": "تصريح نقل سلاح",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.562,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 6
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 4
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 0
+          }
+        ]
+      }
+    },
+    {
+      "style": "saudi_colloquial",
+      "note": "moving a weapon between cities",
+      "monitoring_report": {
+        "original_query": "ابي انقل سلاحي من مدينة لمدينة وش اسوي",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.539,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 6
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_faq.txt",
+            "chunk_index": 2
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "driving_license_renewal",
+            "source": "driving_license_renewal_guide.txt",
+            "chunk_index": 0
+          }
+        ]
+      }
+    },
+    {
+      "style": "paraphrase",
+      "note": "one-weapon-per-permit rule (real FAQ in the new source)",
+      "monitoring_report": {
+        "original_query": "هل يمكن حمل أكثر من سلاح بإذن واحد؟",
+        "baseline_k": 3,
+        "failure_detected": false,
+        "baseline_relevant_found": true,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.62,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 6
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 0
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "lost_stolen_plate_report",
+            "source": "lost_stolen_plate_report_guide.txt",
+            "chunk_index": 6
+          }
+        ]
+      }
+    },
+    {
+      "style": "diagnostic_probe_demo",
+      "note": "manually authored rewrite, see _DIAGNOSTIC_PROBE_DEMO_REWRITE",
+      "monitoring_report": {
+        "original_query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+        "baseline_k": 3,
+        "failure_detected": true,
+        "baseline_relevant_found": false,
+        "baseline_first_relevant_rank": null,
+        "expanded_first_relevant_rank": null,
+        "chunking_signal": false,
+        "retrieval_latency_ms": 0.547,
+        "retrieved_results": [
+          {
+            "rank": 1,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 7
+          },
+          {
+            "rank": 2,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 6
+          },
+          {
+            "rank": 3,
+            "platform": "Absher",
+            "service": "firearm_transport_permit",
+            "source": "firearm_transport_permit_guide.txt",
+            "chunk_index": 5
+          }
+        ],
+        "diagnostic_probe": {
+          "rewrite_probe_improved": true,
+          "rewritten_first_relevant_rank": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,777 @@
+{
+  "baseline_tfidf": {
+    "label": "TF-IDF baseline",
+    "backend_info": {
+      "requested_backend": "sentence-transformers",
+      "actual_backend": "tfidf",
+      "fallback_from": null,
+      "fallback_reason": null
+    },
+    "results": {
+      "3": {
+        "k": 3,
+        "n_queries": 24,
+        "recall_at_k": 0.917,
+        "mean_precision_at_k": 0.736,
+        "query_mismatch_rate": 0.083,
+        "retrieval_issue_rate": 0.083,
+        "per_query": [
+          {
+            "query": "ما هي شروط تجديد رخصة القيادة؟",
+            "style": "direct",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.442
+          },
+          {
+            "query": "فحص طبي رخصة قيادة",
+            "style": "short_keyword",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.3265
+          },
+          {
+            "query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+            "style": "saudi_colloquial",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": false,
+            "expected_in_topk": false,
+            "precision_at_k": 0.0,
+            "top1_score": 0.0
+          },
+          {
+            "query": "عدد السنوات المسموح بها لتجديد رخصة القيادة",
+            "style": "paraphrase",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.229
+          },
+          {
+            "query": "كيف احسب تاريخ انتهاء الاستمارة بعد التجديد؟",
+            "style": "direct",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "vehicle_registration_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.3844
+          },
+          {
+            "query": "شروط تجديد استمارة السيارة",
+            "style": "short_keyword",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": false,
+            "expected_in_topk": true,
+            "precision_at_k": 0.333,
+            "top1_score": 0.1222
+          },
+          {
+            "query": "استمارة سيارتي خلصت ابي اجددها",
+            "style": "saudi_colloquial",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": false,
+            "expected_in_topk": false,
+            "precision_at_k": 0.0,
+            "top1_score": 0.0
+          },
+          {
+            "query": "متطلبات تجديد رخصة السير",
+            "style": "paraphrase",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "vehicle_registration_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.2901
+          },
+          {
+            "query": "هل لازم بصمة عشان اطلع تأشيرة خروج وعودة؟",
+            "style": "saudi_colloquial",
+            "expected_service_id": "exit_reentry_final_exit_visa",
+            "top1_service_id": "exit_reentry_final_exit_visa",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.3551
+          },
+          {
+            "query": "تأشيرة خروج نهائي للتابعين",
+            "style": "short_keyword",
+            "expected_service_id": "exit_reentry_final_exit_visa",
+            "top1_service_id": "exit_reentry_final_exit_visa",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.4218
+          },
+          {
+            "query": "اقامتي منتهية اقدر اطلع تأشيرة خروج وعودة؟",
+            "style": "direct_colloquial",
+            "expected_service_id": "exit_reentry_final_exit_visa",
+            "top1_service_id": "exit_reentry_final_exit_visa",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.4014
+          },
+          {
+            "query": "ضاع جوازي كيف أطلع بدل فاقد؟",
+            "style": "saudi_colloquial",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.333,
+            "top1_score": 0.14
+          },
+          {
+            "query": "هل يشترط الإبلاغ عن فقدان الجواز؟",
+            "style": "direct",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.667,
+            "top1_score": 0.6454
+          },
+          {
+            "query": "اصدار جواز لفرد من العائلة بدل الجواز المفقود",
+            "style": "paraphrase",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.385
+          },
+          {
+            "query": "هويتي منتهية ابي اصدر جواز بدل فاقد",
+            "style": "direct_colloquial",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.4286
+          },
+          {
+            "query": "كم تكلفة توصيل الجواز البديل",
+            "style": "short_keyword",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.667,
+            "top1_score": 0.2098
+          },
+          {
+            "query": "كيف أبلغ عن فقدان لوحة السيارة؟",
+            "style": "direct",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.667,
+            "top1_score": 0.2424
+          },
+          {
+            "query": "سرقة لوحة السيارة",
+            "style": "short_keyword",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.243
+          },
+          {
+            "query": "ضاعت لوحة سيارتي كيف ابلغ عنها",
+            "style": "saudi_colloquial",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": false,
+            "expected_in_topk": true,
+            "precision_at_k": 0.333,
+            "top1_score": 0.13
+          },
+          {
+            "query": "هل يمكن تقديم أكثر من بلاغ عن نفس المركبة؟",
+            "style": "paraphrase",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.746
+          },
+          {
+            "query": "ما هي رسوم إذن التنقل بالسلاح؟",
+            "style": "direct",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.667,
+            "top1_score": 0.2732
+          },
+          {
+            "query": "تصريح نقل سلاح",
+            "style": "short_keyword",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.2576
+          },
+          {
+            "query": "ابي انقل سلاحي من مدينة لمدينة وش اسوي",
+            "style": "saudi_colloquial",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.333,
+            "top1_score": 0.1384
+          },
+          {
+            "query": "هل يمكن حمل أكثر من سلاح بإذن واحد؟",
+            "style": "paraphrase",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.667,
+            "top1_score": 0.3864
+          }
+        ]
+      },
+      "5": {
+        "k": 5,
+        "n_queries": 24,
+        "recall_at_k": 0.917,
+        "mean_precision_at_k": 0.717,
+        "query_mismatch_rate": 0.083,
+        "retrieval_issue_rate": 0.292,
+        "per_query": [
+          {
+            "query": "ما هي شروط تجديد رخصة القيادة؟",
+            "style": "direct",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.442
+          },
+          {
+            "query": "فحص طبي رخصة قيادة",
+            "style": "short_keyword",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.8,
+            "top1_score": 0.3265
+          },
+          {
+            "query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+            "style": "saudi_colloquial",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": false,
+            "expected_in_topk": false,
+            "precision_at_k": 0.0,
+            "top1_score": 0.0
+          },
+          {
+            "query": "عدد السنوات المسموح بها لتجديد رخصة القيادة",
+            "style": "paraphrase",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.229
+          },
+          {
+            "query": "كيف احسب تاريخ انتهاء الاستمارة بعد التجديد؟",
+            "style": "direct",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "vehicle_registration_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.6,
+            "top1_score": 0.3844
+          },
+          {
+            "query": "شروط تجديد استمارة السيارة",
+            "style": "short_keyword",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": false,
+            "expected_in_topk": true,
+            "precision_at_k": 0.4,
+            "top1_score": 0.1222
+          },
+          {
+            "query": "استمارة سيارتي خلصت ابي اجددها",
+            "style": "saudi_colloquial",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": false,
+            "expected_in_topk": false,
+            "precision_at_k": 0.0,
+            "top1_score": 0.0
+          },
+          {
+            "query": "متطلبات تجديد رخصة السير",
+            "style": "paraphrase",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "vehicle_registration_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.8,
+            "top1_score": 0.2901
+          },
+          {
+            "query": "هل لازم بصمة عشان اطلع تأشيرة خروج وعودة؟",
+            "style": "saudi_colloquial",
+            "expected_service_id": "exit_reentry_final_exit_visa",
+            "top1_service_id": "exit_reentry_final_exit_visa",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.3551
+          },
+          {
+            "query": "تأشيرة خروج نهائي للتابعين",
+            "style": "short_keyword",
+            "expected_service_id": "exit_reentry_final_exit_visa",
+            "top1_service_id": "exit_reentry_final_exit_visa",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.4218
+          },
+          {
+            "query": "اقامتي منتهية اقدر اطلع تأشيرة خروج وعودة؟",
+            "style": "direct_colloquial",
+            "expected_service_id": "exit_reentry_final_exit_visa",
+            "top1_service_id": "exit_reentry_final_exit_visa",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.4014
+          },
+          {
+            "query": "ضاع جوازي كيف أطلع بدل فاقد؟",
+            "style": "saudi_colloquial",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.6,
+            "top1_score": 0.14
+          },
+          {
+            "query": "هل يشترط الإبلاغ عن فقدان الجواز؟",
+            "style": "direct",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.4,
+            "top1_score": 0.6454
+          },
+          {
+            "query": "اصدار جواز لفرد من العائلة بدل الجواز المفقود",
+            "style": "paraphrase",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.385
+          },
+          {
+            "query": "هويتي منتهية ابي اصدر جواز بدل فاقد",
+            "style": "direct_colloquial",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.4286
+          },
+          {
+            "query": "كم تكلفة توصيل الجواز البديل",
+            "style": "short_keyword",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.8,
+            "top1_score": 0.2098
+          },
+          {
+            "query": "كيف أبلغ عن فقدان لوحة السيارة؟",
+            "style": "direct",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.8,
+            "top1_score": 0.2424
+          },
+          {
+            "query": "سرقة لوحة السيارة",
+            "style": "short_keyword",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.243
+          },
+          {
+            "query": "ضاعت لوحة سيارتي كيف ابلغ عنها",
+            "style": "saudi_colloquial",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": false,
+            "expected_in_topk": true,
+            "precision_at_k": 0.4,
+            "top1_score": 0.13
+          },
+          {
+            "query": "هل يمكن تقديم أكثر من بلاغ عن نفس المركبة؟",
+            "style": "paraphrase",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.8,
+            "top1_score": 0.746
+          },
+          {
+            "query": "ما هي رسوم إذن التنقل بالسلاح؟",
+            "style": "direct",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.8,
+            "top1_score": 0.2732
+          },
+          {
+            "query": "تصريح نقل سلاح",
+            "style": "short_keyword",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.2576
+          },
+          {
+            "query": "ابي انقل سلاحي من مدينة لمدينة وش اسوي",
+            "style": "saudi_colloquial",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.4,
+            "top1_score": 0.1384
+          },
+          {
+            "query": "هل يمكن حمل أكثر من سلاح بإذن واحد؟",
+            "style": "paraphrase",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.6,
+            "top1_score": 0.3864
+          }
+        ]
+      },
+      "7": {
+        "k": 7,
+        "n_queries": 24,
+        "recall_at_k": 0.917,
+        "mean_precision_at_k": 0.69,
+        "query_mismatch_rate": 0.083,
+        "retrieval_issue_rate": 0.375,
+        "per_query": [
+          {
+            "query": "ما هي شروط تجديد رخصة القيادة؟",
+            "style": "direct",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.857,
+            "top1_score": 0.442
+          },
+          {
+            "query": "فحص طبي رخصة قيادة",
+            "style": "short_keyword",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.857,
+            "top1_score": 0.3265
+          },
+          {
+            "query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+            "style": "saudi_colloquial",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": false,
+            "expected_in_topk": false,
+            "precision_at_k": 0.0,
+            "top1_score": 0.0
+          },
+          {
+            "query": "عدد السنوات المسموح بها لتجديد رخصة القيادة",
+            "style": "paraphrase",
+            "expected_service_id": "driving_license_renewal",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.229
+          },
+          {
+            "query": "كيف احسب تاريخ انتهاء الاستمارة بعد التجديد؟",
+            "style": "direct",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "vehicle_registration_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.571,
+            "top1_score": 0.3844
+          },
+          {
+            "query": "شروط تجديد استمارة السيارة",
+            "style": "short_keyword",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": false,
+            "expected_in_topk": true,
+            "precision_at_k": 0.571,
+            "top1_score": 0.1222
+          },
+          {
+            "query": "استمارة سيارتي خلصت ابي اجددها",
+            "style": "saudi_colloquial",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": false,
+            "expected_in_topk": false,
+            "precision_at_k": 0.0,
+            "top1_score": 0.0
+          },
+          {
+            "query": "متطلبات تجديد رخصة السير",
+            "style": "paraphrase",
+            "expected_service_id": "vehicle_registration_renewal",
+            "top1_service_id": "vehicle_registration_renewal",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.714,
+            "top1_score": 0.2901
+          },
+          {
+            "query": "هل لازم بصمة عشان اطلع تأشيرة خروج وعودة؟",
+            "style": "saudi_colloquial",
+            "expected_service_id": "exit_reentry_final_exit_visa",
+            "top1_service_id": "exit_reentry_final_exit_visa",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.3551
+          },
+          {
+            "query": "تأشيرة خروج نهائي للتابعين",
+            "style": "short_keyword",
+            "expected_service_id": "exit_reentry_final_exit_visa",
+            "top1_service_id": "exit_reentry_final_exit_visa",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.4218
+          },
+          {
+            "query": "اقامتي منتهية اقدر اطلع تأشيرة خروج وعودة؟",
+            "style": "direct_colloquial",
+            "expected_service_id": "exit_reentry_final_exit_visa",
+            "top1_service_id": "exit_reentry_final_exit_visa",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.857,
+            "top1_score": 0.4014
+          },
+          {
+            "query": "ضاع جوازي كيف أطلع بدل فاقد؟",
+            "style": "saudi_colloquial",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.571,
+            "top1_score": 0.14
+          },
+          {
+            "query": "هل يشترط الإبلاغ عن فقدان الجواز؟",
+            "style": "direct",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.286,
+            "top1_score": 0.6454
+          },
+          {
+            "query": "اصدار جواز لفرد من العائلة بدل الجواز المفقود",
+            "style": "paraphrase",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.385
+          },
+          {
+            "query": "هويتي منتهية ابي اصدر جواز بدل فاقد",
+            "style": "direct_colloquial",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.4286
+          },
+          {
+            "query": "كم تكلفة توصيل الجواز البديل",
+            "style": "short_keyword",
+            "expected_service_id": "lost_passport_replacement",
+            "top1_service_id": "lost_passport_replacement",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.571,
+            "top1_score": 0.2098
+          },
+          {
+            "query": "كيف أبلغ عن فقدان لوحة السيارة؟",
+            "style": "direct",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.857,
+            "top1_score": 0.2424
+          },
+          {
+            "query": "سرقة لوحة السيارة",
+            "style": "short_keyword",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.243
+          },
+          {
+            "query": "ضاعت لوحة سيارتي كيف ابلغ عنها",
+            "style": "saudi_colloquial",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "driving_license_renewal",
+            "correct_top1": false,
+            "expected_in_topk": true,
+            "precision_at_k": 0.571,
+            "top1_score": 0.13
+          },
+          {
+            "query": "هل يمكن تقديم أكثر من بلاغ عن نفس المركبة؟",
+            "style": "paraphrase",
+            "expected_service_id": "lost_stolen_plate_report",
+            "top1_service_id": "lost_stolen_plate_report",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.571,
+            "top1_score": 0.746
+          },
+          {
+            "query": "ما هي رسوم إذن التنقل بالسلاح؟",
+            "style": "direct",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.857,
+            "top1_score": 0.2732
+          },
+          {
+            "query": "تصريح نقل سلاح",
+            "style": "short_keyword",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 1.0,
+            "top1_score": 0.2576
+          },
+          {
+            "query": "ابي انقل سلاحي من مدينة لمدينة وش اسوي",
+            "style": "saudi_colloquial",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.429,
+            "top1_score": 0.1384
+          },
+          {
+            "query": "هل يمكن حمل أكثر من سلاح بإذن واحد؟",
+            "style": "paraphrase",
+            "expected_service_id": "firearm_transport_permit",
+            "top1_service_id": "firearm_transport_permit",
+            "correct_top1": true,
+            "expected_in_topk": true,
+            "precision_at_k": 0.429,
+            "top1_score": 0.3864
+          }
+        ]
+      }
+    },
+    "recommended_k": "3"
+  },
+  "primary": {
+    "label": "Sentence Transformers (primary/default) — NOT RUN",
+    "status": "not_run_fallback_to_tfidf",
+    "backend_info": {
+      "requested_backend": "sentence-transformers",
+      "actual_backend": "tfidf",
+      "fallback_from": "sentence-transformers",
+      "fallback_reason": "ImportError: sentence-transformers is not installed. Run `pip install sentence-transformers --break-system-packages` (requires internet access) or set ABSHER_EMBEDDER=tfidf."
+    },
+    "note": "sentence-transformers is the configured default (ABSHER_EMBEDDER=sentence-transformers) but could not be loaded in this environment: 'ImportError: sentence-transformers is not installed. Run `pip install sentence-transformers --break-system-packages` (requires internet access) or set ABSHER_EMBEDDER=tfidf.'. retrieval.get_embedder() already fell back to TF-IDF automatically, so a 'primary' run here would be numerically identical to baseline_tfidf above under a misleading label -- it is deliberately NOT duplicated/relabeled as semantic-retrieval results. Re-run `python src/evaluation.py` on a machine with `pip install sentence-transformers` and network access to populate this section with real numbers.",
+    "results": null,
+    "recommended_k": null
+  }
+}

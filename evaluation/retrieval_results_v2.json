@@ -1,0 +1,1710 @@
+{
+  "configuration": {
+    "dataset": "evaluation/dataset_v2.json",
+    "vector_store": "vector_store/evaluation_index",
+    "embedding_model": "text-embedding-3-small",
+    "k": 4,
+    "relevance_level": "platform_and_service"
+  },
+  "summary": {
+    "total_queries": 36,
+    "k": 4,
+    "overall": {
+      "recall_at_k": 0.9722222222222222,
+      "precision_at_k": 0.4027777777777778,
+      "mrr": 0.8356481481481481
+    },
+    "by_query_type": {
+      "standard": {
+        "count": 18,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.4305555555555556,
+        "mrr": 0.8935185185185185
+      },
+      "query_mismatch": {
+        "count": 18,
+        "recall_at_k": 0.9444444444444444,
+        "precision_at_k": 0.375,
+        "mrr": 0.7777777777777778
+      }
+    },
+    "by_platform": {
+      "balady": {
+        "count": 12,
+        "recall_at_k": 0.9166666666666666,
+        "precision_at_k": 0.5,
+        "mrr": 0.8125
+      },
+      "najiz": {
+        "count": 12,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.3958333333333333,
+        "mrr": 0.8888888888888888
+      },
+      "sakani": {
+        "count": 12,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.3125,
+        "mrr": 0.8055555555555555
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "balady_building_permit_001",
+      "platform": "balady",
+      "service": "building_permit_issuance",
+      "query": "ما خطوات التقديم على إصدار رخصة بناء عبر منصة بلدي؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 0.25,
+      "first_relevant_rank": 4,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 1,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 1,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "health_certificate_issuance",
+          "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+          "chunk_index": 3,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "building_permit_issuance",
+          "source": "knowledge_base/balady/building_permit_issuance/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "balady_building_permit_002",
+      "platform": "balady",
+      "service": "building_permit_issuance",
+      "query": "أبي أطلع تصريح بناء من بلدي، كيف أبدأ وأرسل الطلب للمكتب الهندسي؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.5,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "building_permit_issuance",
+          "source": "knowledge_base/balady/building_permit_issuance/content_final.md",
+          "chunk_index": 2,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "building_permit_issuance",
+          "source": "knowledge_base/balady/building_permit_issuance/content_final.md",
+          "chunk_index": 4,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "residential_lands",
+          "source": "knowledge_base/sakani/residential_lands/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 2,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "balady_commercial_license_cancellation_001",
+      "platform": "balady",
+      "service": "commercial_license_cancellation",
+      "query": "ما خطوات إلغاء رخصة نشاط تجاري عبر منصة بلدي؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 2,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 2,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "commercial_license_renewal",
+          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+          "chunk_index": 4,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "commercial_license_renewal",
+          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+          "chunk_index": 7,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "balady_commercial_license_cancellation_002",
+      "platform": "balady",
+      "service": "commercial_license_cancellation",
+      "query": "أبي أقفل رخصة المحل في بلدي، وش الخطوات؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.5,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 8,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 2,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 8,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "balady_commercial_license_modification_001",
+      "platform": "balady",
+      "service": "commercial_license_modification",
+      "query": "ما خطوات تعديل رخصة نشاط تجاري عبر منصة بلدي؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.5,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 2,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "commercial_license_renewal",
+          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+          "chunk_index": 4,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 2,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 14,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "balady_commercial_license_modification_002",
+      "platform": "balady",
+      "service": "commercial_license_modification",
+      "query": "أبي أغير بيانات أو نشاط رخصة المحل في بلدي، وش أسوي؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.75,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 2,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 6,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 13,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 2,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "balady_commercial_license_renewal_001",
+      "platform": "balady",
+      "service": "commercial_license_renewal",
+      "query": "ما خطوات تجديد رخصة تجارية عبر منصة بلدي؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.5,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "commercial_license_renewal",
+          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "commercial_license_renewal",
+          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+          "chunk_index": 4,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 14,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 2,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "balady_commercial_license_renewal_002",
+      "platform": "balady",
+      "service": "commercial_license_renewal",
+      "query": "رخصة المحل انتهت وأبي أجددها من بلدي، وش الخطوات؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 0.0,
+      "precision_at_k": 0.0,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 8,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 14,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 7,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "balady_health_certificate_issuance_001",
+      "platform": "balady",
+      "service": "health_certificate_issuance",
+      "query": "ما خطوات إصدار شهادة صحية عبر منصة بلدي؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "health_certificate_issuance",
+          "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+          "chunk_index": 4,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "health_certificate_issuance",
+          "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "health_certificate_issuance",
+          "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+          "chunk_index": 7,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "health_certificate_issuance",
+          "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "balady_health_certificate_issuance_002",
+      "platform": "balady",
+      "service": "health_certificate_issuance",
+      "query": "أبي أطلع كرت صحي للعامل من بلدي، كيف أقدّم عليه؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 0.5,
+      "first_relevant_rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 8,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "health_certificate_issuance",
+          "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+          "chunk_index": 3,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 8,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "commercial_license_renewal",
+          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+          "chunk_index": 19,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "balady_health_certificate_renewal_001",
+      "platform": "balady",
+      "service": "health_certificate_renewal",
+      "query": "ما خطوات تجديد شهادة صحية عبر منصة بلدي؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "health_certificate_renewal",
+          "source": "knowledge_base/balady/health_certificate_renewal/content_final.md",
+          "chunk_index": 5,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "health_certificate_renewal",
+          "source": "knowledge_base/balady/health_certificate_renewal/content_final.md",
+          "chunk_index": 4,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "health_certificate_renewal",
+          "source": "knowledge_base/balady/health_certificate_renewal/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "health_certificate_renewal",
+          "source": "knowledge_base/balady/health_certificate_renewal/content_final.md",
+          "chunk_index": 2,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "balady_health_certificate_renewal_002",
+      "platform": "balady",
+      "service": "health_certificate_renewal",
+      "query": "الكرت الصحي للعامل قرب ينتهي، كيف أجدده من بلدي؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.5,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "balady",
+          "service": "health_certificate_renewal",
+          "source": "knowledge_base/balady/health_certificate_renewal/content_final.md",
+          "chunk_index": 6,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "health_certificate_renewal",
+          "source": "knowledge_base/balady/health_certificate_renewal/content_final.md",
+          "chunk_index": 5,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 8,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "health_certificate_issuance",
+          "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+          "chunk_index": 5,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "najiz_electronic_power_of_attorney_001",
+      "platform": "najiz",
+      "service": "electronic_power_of_attorney",
+      "query": "ما خطوات إصدار وكالة فردية عبر بوابة ناجز؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "electronic_power_of_attorney",
+          "source": "knowledge_base/najiz/electronic_power_of_attorney/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "statement_of_claim",
+          "source": "knowledge_base/najiz/statement_of_claim/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "urgent_lawsuits",
+          "source": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "enforcement_termination",
+          "source": "knowledge_base/najiz/enforcement_termination/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "najiz_electronic_power_of_attorney_002",
+      "platform": "najiz",
+      "service": "electronic_power_of_attorney",
+      "query": "أبي أسوي وكالة لشخص عن طريق ناجز، كيف أطلعها؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "electronic_power_of_attorney",
+          "source": "knowledge_base/najiz/electronic_power_of_attorney/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 8,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 14,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "commercial_license_renewal",
+          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+          "chunk_index": 13,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "najiz_enforcement_request_001",
+      "platform": "najiz",
+      "service": "enforcement_request",
+      "query": "ما خطوات تقديم طلب تنفيذ عبر بوابة ناجز؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 0.3333333333333333,
+      "first_relevant_rank": 3,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "enforcement_termination",
+          "source": "knowledge_base/najiz/enforcement_termination/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "urgent_lawsuits",
+          "source": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "enforcement_request",
+          "source": "knowledge_base/najiz/enforcement_request/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "statement_of_claim",
+          "source": "knowledge_base/najiz/statement_of_claim/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "najiz_enforcement_request_002",
+      "platform": "najiz",
+      "service": "enforcement_request",
+      "query": "عندي سند وأبي أطالب بتنفيذه من ناجز، كيف أرفع الطلب؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.5,
+      "reciprocal_rank": 0.3333333333333333,
+      "first_relevant_rank": 3,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "enforcement_termination",
+          "source": "knowledge_base/najiz/enforcement_termination/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 2,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "enforcement_request",
+          "source": "knowledge_base/najiz/enforcement_request/content_final.md",
+          "chunk_index": 5,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "enforcement_request",
+          "source": "knowledge_base/najiz/enforcement_request/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "najiz_enforcement_termination_001",
+      "platform": "najiz",
+      "service": "enforcement_termination",
+      "query": "ما خطوات طلب إنهاء السند التنفيذي عبر بوابة ناجز؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "enforcement_termination",
+          "source": "knowledge_base/najiz/enforcement_termination/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "enforcement_request",
+          "source": "knowledge_base/najiz/enforcement_request/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 2,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 5,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "najiz_enforcement_termination_002",
+      "platform": "najiz",
+      "service": "enforcement_termination",
+      "query": "خلص موضوع التنفيذ وأبي أقفل الطلب في ناجز، وش أسوي؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "enforcement_termination",
+          "source": "knowledge_base/najiz/enforcement_termination/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 5,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 2,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 3,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "najiz_proof_of_payment_001",
+      "platform": "najiz",
+      "service": "proof_of_payment",
+      "query": "ما خطوات تقديم طلب إثبات السداد عبر بوابة ناجز؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 2,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 3,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "najiz_proof_of_payment_002",
+      "platform": "najiz",
+      "service": "proof_of_payment",
+      "query": "أنا سددت المبلغ في قضية تنفيذ وأبي أثبت لناجز إني دفعت، كيف أسوي؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 2,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 3,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "najiz_statement_of_claim_001",
+      "platform": "najiz",
+      "service": "statement_of_claim",
+      "query": "ما خطوات تقديم صحيفة دعوى عبر بوابة ناجز؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "statement_of_claim",
+          "source": "knowledge_base/najiz/statement_of_claim/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "urgent_lawsuits",
+          "source": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "electronic_power_of_attorney",
+          "source": "knowledge_base/najiz/electronic_power_of_attorney/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "enforcement_termination",
+          "source": "knowledge_base/najiz/enforcement_termination/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "najiz_statement_of_claim_002",
+      "platform": "najiz",
+      "service": "statement_of_claim",
+      "query": "أبي أرفع دعوى على شخص عن طريق ناجز، من وين أبدأ؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "statement_of_claim",
+          "source": "knowledge_base/najiz/statement_of_claim/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "urgent_lawsuits",
+          "source": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 3,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 5,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "najiz_urgent_lawsuits_001",
+      "platform": "najiz",
+      "service": "urgent_lawsuits",
+      "query": "ما خطوات تقديم دعوى مستعجلة عبر بوابة ناجز؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "urgent_lawsuits",
+          "source": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "statement_of_claim",
+          "source": "knowledge_base/najiz/statement_of_claim/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 5,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "enforcement_termination",
+          "source": "knowledge_base/najiz/enforcement_termination/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "najiz_urgent_lawsuits_002",
+      "platform": "najiz",
+      "service": "urgent_lawsuits",
+      "query": "عندي موضوع مستعجل وأبي أرفع دعوى بسرعة من ناجز، كيف أقدم؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "najiz",
+          "service": "urgent_lawsuits",
+          "source": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "najiz",
+          "service": "statement_of_claim",
+          "source": "knowledge_base/najiz/statement_of_claim/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 5,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "najiz",
+          "service": "proof_of_payment",
+          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
+          "chunk_index": 4,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_housing_support_eligibility_001",
+      "platform": "sakani",
+      "service": "housing_support_eligibility",
+      "query": "ما خطوات التحقق من أهلية الاستحقاق للدعم السكني عبر منصة سكني؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.5,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "real_estate_transaction_tax_support",
+          "source": "knowledge_base/sakani/real_estate_transaction_tax_support/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "housing_unit_rental",
+          "source": "knowledge_base/sakani/housing_unit_rental/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_housing_support_eligibility_002",
+      "platform": "sakani",
+      "service": "housing_support_eligibility",
+      "query": "كيف أعرف إذا أنا مستحق للدعم السكني في سكني؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.5,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "housing_unit_rental",
+          "source": "knowledge_base/sakani/housing_unit_rental/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "real_estate_advisor",
+          "source": "knowledge_base/sakani/real_estate_advisor/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_housing_unit_rental_001",
+      "platform": "sakani",
+      "service": "housing_unit_rental",
+      "query": "ما خطوات طلب تأجير وحدة سكنية عبر منصة سكني؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "housing_unit_rental",
+          "source": "knowledge_base/sakani/housing_unit_rental/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "online_financing",
+          "source": "knowledge_base/sakani/online_financing/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "real_estate_advisor",
+          "source": "knowledge_base/sakani/real_estate_advisor/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_housing_unit_rental_002",
+      "platform": "sakani",
+      "service": "housing_unit_rental",
+      "query": "عندي حجز مكتمل في سكني وأبي أستأجر وحدة مدعومة، وش أسوي؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "housing_unit_rental",
+          "source": "knowledge_base/sakani/housing_unit_rental/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 7,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 8,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "real_estate_advisor",
+          "source": "knowledge_base/sakani/real_estate_advisor/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_online_financing_001",
+      "platform": "sakani",
+      "service": "online_financing",
+      "query": "ما خطوات طلب التمويل العقاري الإلكتروني عبر منصة سكني؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "online_financing",
+          "source": "knowledge_base/sakani/online_financing/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "real_estate_advisor",
+          "source": "knowledge_base/sakani/real_estate_advisor/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "commercial_license_modification",
+          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+          "chunk_index": 8,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_online_financing_002",
+      "platform": "sakani",
+      "service": "online_financing",
+      "query": "لقيت وحدة في سكني وأبي أشوف عروض التمويل عليها، كيف أقدم؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "online_financing",
+          "source": "knowledge_base/sakani/online_financing/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "housing_unit_rental",
+          "source": "knowledge_base/sakani/housing_unit_rental/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 1,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_real_estate_advisor_001",
+      "platform": "sakani",
+      "service": "real_estate_advisor",
+      "query": "ما خطوات التسجيل في المستشار العقاري عبر منصة سكني؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "real_estate_advisor",
+          "source": "knowledge_base/sakani/real_estate_advisor/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 1,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "residential_lands",
+          "source": "knowledge_base/sakani/residential_lands/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_real_estate_advisor_002",
+      "platform": "sakani",
+      "service": "real_estate_advisor",
+      "query": "أبي أعرف وش التمويل أو الدعم المناسب لي في سكني، كيف أستخدم المستشار العقاري؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 0.3333333333333333,
+      "first_relevant_rank": 3,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 1,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "real_estate_advisor",
+          "source": "knowledge_base/sakani/real_estate_advisor/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "online_financing",
+          "source": "knowledge_base/sakani/online_financing/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_real_estate_transaction_tax_support_001",
+      "platform": "sakani",
+      "service": "real_estate_transaction_tax_support",
+      "query": "ما خطوات إصدار شهادة تحمل ضريبة التصرفات العقارية للمسكن الأول عبر سكني؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 0.5,
+      "first_relevant_rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "real_estate_transaction_tax_support",
+          "source": "knowledge_base/sakani/real_estate_transaction_tax_support/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 1,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "residential_lands",
+          "source": "knowledge_base/sakani/residential_lands/content_final.md",
+          "chunk_index": 1,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_real_estate_transaction_tax_support_002",
+      "platform": "sakani",
+      "service": "real_estate_transaction_tax_support",
+      "query": "كيف أطلع شهادة إعفاء ضريبة المسكن الأول من سكني؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 0.5,
+      "first_relevant_rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "real_estate_transaction_tax_support",
+          "source": "knowledge_base/sakani/real_estate_transaction_tax_support/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 1,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 7,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "sakani_residential_lands_001",
+      "platform": "sakani",
+      "service": "residential_lands",
+      "query": "ما خطوات الحجز على منتج أرضك دعمك عبر منصة سكني؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.5,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "residential_lands",
+          "source": "knowledge_base/sakani/residential_lands/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "real_estate_advisor",
+          "source": "knowledge_base/sakani/real_estate_advisor/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "residential_lands",
+          "source": "knowledge_base/sakani/residential_lands/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "sakani_residential_lands_002",
+      "platform": "sakani",
+      "service": "residential_lands",
+      "query": "أنا مستحق للدعم وأبي أحجز أرض من سكني، كيف أسوي؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.25,
+      "reciprocal_rank": 0.3333333333333333,
+      "first_relevant_rank": 3,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 1,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "sakani",
+          "service": "residential_lands",
+          "source": "knowledge_base/sakani/residential_lands/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "sakani",
+          "service": "real_estate_advisor",
+          "source": "knowledge_base/sakani/real_estate_advisor/content_final.md",
+          "chunk_index": 0,
+          "relevant": false
+        }
+      ]
+    }
+  ]
+}

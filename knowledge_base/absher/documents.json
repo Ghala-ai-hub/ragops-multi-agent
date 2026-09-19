@@ -1,0 +1,399 @@
+{
+  "services": [
+    {
+      "service_id": "driving_license_renewal",
+      "service_name_ar": "تجديد رخصة القيادة",
+      "service_name_en": "Driving License Renewal",
+      "category_ar": "المرور",
+      "category_en": "Traffic",
+      "data_completeness": "full",
+      "source_files": [
+        "driving_license_renewal_guide.txt",
+        "driving_license_renewal_faq.txt"
+      ],
+      "definition_ar": "تُتيح هذه الخدمة للأفراد تجديد رخصة القيادة إلكترونيًا بكل يسر وسرعة، دون الحاجة إلى زيارة مكاتب المرور، مما يوفّر الوقت والجهد. ويشترط للاستفادة من الخدمة استكمال المتطلبات النظامية، مثل سداد الرسوم وإجراء الفحص الطبي.",
+      "platform": "Absher",
+      "conditions_ar": [
+        "تشمل هذه الخدمة تجديد رخصة القيادة من نوع خصوصي، والدراجات الآلية فقط.",
+        "سداد رسوم تجديد الرخصة من خلال المدفوعات الحكومية عبر البنوك.",
+        "سداد المخالفات المرورية؛ إن وجدت.",
+        "أن تكون المدة المتبقية من صلاحية رخصة القيادة أقل من 365 يومًا.",
+        "وجود فحص طبي من أحد المراكز الطبية المعتمدة."
+      ],
+      "steps": [
+        {
+          "phase_id": "access",
+          "title_ar": "الوصول إلى الخدمة",
+          "title_en": "Accessing the service",
+          "text_ar": "الدخول إلى موقع منصة أبشر، ثم اختيار \"خدماتي\"، ثم اختيار \"المرور\" من قائمة الخدمات، ثم اختيار خدمة \"تجديد رخصة القيادة\"."
+        },
+        {
+          "phase_id": "eligibility_confirm",
+          "title_ar": "الشروط ومدة التجديد والتأكيد",
+          "title_en": "Reading conditions, selecting renewal duration, and confirming",
+          "text_ar": "قراءة وصف الخدمة وشروطها وأحكامها، ثم اختيار \"التالي\"، ثم مراجعة البيانات الشخصية وتحديد عدد سنوات التجديد (سنتين أو 5 سنوات أو 10 سنوات)، ثم ثم اختيار \"تأكيد التجديد\"."
+        },
+        {
+          "phase_id": "delivery_address",
+          "title_ar": "تعبئة عنوان التوصيل",
+          "title_en": "Filling in the delivery address",
+          "text_ar": "تعبئة بيانات العنوان الوطني لطلب توصيل الرخصة."
+        },
+        {
+          "phase_id": "payment_delivery",
+          "title_ar": "مراجعة البيانات ودفع أجور التوصيل",
+          "title_en": "Reviewing data and paying delivery fees",
+          "text_ar": "مراجعة البيانات المدخلة، ثم دفع أجور التوصيل باستخدام بطاقة (فيزا أو مدى أو ماستركارد)، ثم تُجدَّد رخصة القيادة عند إتمام ذلك بنجاح."
+        }
+      ],
+      "fees_notes_ar": "40 ريالاً عن كل سنة لرخصة القيادة الخاصة. 200 ريال لرخصة سير الدراجات النارية (مدة 10 سنوات). لا يحدد المصدر الرسمي المرفق قيمة أجور التوصيل بشكل منفصل عن رسوم التجديد نفسها.",
+      "delivery_notes_ar": "يتم توصيل الرخصة المطبوعة إلى العنوان الوطني المسجّل بعد تعبئة بيانات العنوان ودفع أجور التوصيل؛ لا يحدد المصدر الرسمي المرفق اسم شركة الشحن ولا القيمة الدقيقة لأجور التوصيل (بيانات متغيرة/غير مذكورة في المصدر).",
+      "important_notes_ar": [
+        "الخدمة مخصّصة لرخصة القيادة الخصوصية ورخصة قيادة الدراجة النارية الآلية فقط.",
+        "يشترط التجديد وجود فحص طبي من أحد المراكز المعتمدة."
+      ],
+      "faq": [
+        {
+          "question_ar": "كيف يتم احتساب رسوم التجديد مع التأخير؟",
+          "answer_ar": "يتم احتسابها تلقائيًا بشكل آلي في سداد.",
+          "question_en": "How are late renewal fees calculated?",
+          "answer_en": "They are automatically calculated in the SADAD system."
+        },
+        {
+          "question_ar": "هل يلزم وجود فحص طبي جديد عند التجديد؟",
+          "answer_ar": "نعم.",
+          "question_en": "Is a new medical examination required for renewal?",
+          "answer_en": "Yes."
+        },
+        {
+          "question_ar": "ما هي المدة المتوقعة لتسليم الوثيقة؟",
+          "answer_ar": "من 5 إلى 7 أيام.",
+          "question_en": "What is the expected delivery time for the document?",
+          "answer_en": "Between 5 to 7 days."
+        }
+      ]
+    },
+    {
+      "service_id": "vehicle_registration_renewal",
+      "service_name_ar": "تجديد رخصة سير المركبة (تجديد الاستمارة)",
+      "service_name_en": "Vehicle Registration Renewal",
+      "category_ar": "المرور",
+      "category_en": "Traffic",
+      "data_completeness": "full",
+      "source_files": [
+        "vehicle_registration_renewal_guide.txt",
+        "vehicle_registration_renewal_faq.txt"
+      ],
+      "definition_ar": "تتيح هذه الخدمة للمستفيد تجديد رخصة سير المركبة (تجديد الاستمارة) إلكترونيًا بكل سهولة ويسر، في أي وقت ومن أي مكان، بخطوات سهلة وبسيطة عبر منصة أبشر دون الحاجة إلى زيارة مقار الإدارة العامة للمرور.",
+      "platform": "Absher",
+      "conditions_ar": [
+        "وثيقة تأمين سارية على المركبة.",
+        "شهادة الفحص الفني سارية المفعول.",
+        "سداد رسوم التجديد ومخالفة التأخير إن وجدت.",
+        "سداد المخالفات المرورية إن وجدت.",
+        "ألا تقل صلاحية رخصة سير المركبة عن 180 يومًا."
+      ],
+      "steps": [
+        {
+          "phase_id": "access",
+          "title_ar": "الوصول إلى الخدمة واختيار المركبة",
+          "title_en": "Accessing the service and selecting the vehicle",
+          "text_ar": "الدخول إلى منصة أبشر، ثم اختيار \"المركبات\"، ثم اختيار \"إدارة المركبات\" من قائمة الخدمات، ثم اختيار المركبة المراد تجديد رخصتها."
+        },
+        {
+          "phase_id": "eligibility_confirm",
+          "title_ar": "التجديد والتأكيد",
+          "title_en": "Renewing and confirming",
+          "text_ar": "اختيار \"تجديد رخصة سير\"، ثم يتحقّق النظام آليًا من أهلية المستفيد للتجديد وفقًا لشروط ومتطلبات الخدمة، ثم اختيار \"تأكيد التجديد\" لإتمام تجديد رخصة السير بنجاح."
+        }
+      ],
+      "fees_notes_ar": "100 ريال لكل سنة لا يذكر المصدر الرسمي المرفق أي رسوم توصيل مستندات منفصلة لهذه الخدمة.",
+      "delivery_notes_ar": "لا ينطبق — خدمة إلكترونية بالكامل، رخصة السير رقمية ولا يوجد توصيل مستند مطبوع مذكور في المصدر الرسمي المرفق.",
+      "important_notes_ar": [
+        "تجديد رخصة السير الرقمي إلكتروني بالكامل ولا يحتاج زيارة مقار المرور.",
+        "قناة تقديم الخدمة (منصة أبشر تحديدًا مقابل تطبيق الجوال) غير محددة بوضوح في المصدر الرسمي المرفق لهذه الخدمة."
+      ],
+      "faq": [
+        {
+          "question_ar": "كيف يتم احتساب تاريخ انتهاء رخصة السير بعد التجديد؟",
+          "answer_ar": "3 سنوات من بعد تاريخ الانتهاء للرخصة السابقة في حال تم التجديد بعد انتهاء تاريخ الرخصة السابقة أو عند تاريخ التجديد في حال تم التجديد قبل تاريخ الانتهاء.",
+          "question_en": "How is the expiry date of the vehicle registration (Istimara) calculated after renewal?",
+          "answer_en": "3 years from the previous registration's expiry date if renewed after expiry, or from the renewal date if renewed before expiry."
+        },
+        {
+          "question_ar": "رخصة المركبة منتهية، وبعد التجديد تم احتساب تاريخ الانتهاء من تاريخ الاستمارة السابقة، لماذا؟",
+          "answer_ar": "في حال تم التجديد بعد انتهاء تاريخ الرخصة فإن التجديد يتم احتسابه من تاريخ انتهاء الاستمارة السابقة.",
+          "question_en": "My vehicle registration was expired, and after renewal the expiry date was calculated based on the previous registration's date. Why?",
+          "answer_en": "If the renewal is done after the registration expires, the new expiry date is calculated from the previous registration's expiry date."
+        },
+        {
+          "question_ar": "كيف يتم احتساب رسوم التجديد مع التأخير؟",
+          "answer_ar": "يتم احتسابها تلقائيًا بشكل آلي في سداد.",
+          "question_en": "How are late renewal fees calculated?",
+          "answer_en": "They are automatically calculated in the SADAD system."
+        }
+      ]
+    },
+    {
+      "service_id": "exit_reentry_final_exit_visa",
+      "service_name_ar": "إصدار تأشيرة الخروج والعودة أو الخروج النهائي",
+      "service_name_en": "Issuance of Exit/Reentry or Final Exit Visa",
+      "category_ar": "الجوازات",
+      "category_en": "Passports (Residency & Visas)",
+      "data_completeness": "full",
+      "source_files": [
+        "exit_reentry_final_exit_visa_guide.txt"
+      ],
+      "definition_ar": "تتيح هذه الخدمة للمستفيد إصدار تأشيرة خروج وعودة أو تأشيرة خروج نهائي لأفراد الأسرة أو العمالة المنزلية إلكترونيًا.",
+      "platform": "Absher",
+      "conditions_ar": [
+        "أن يكون المستفيد داخل المملكة عند إصدار التأشيرة.",
+        "يمكن تحديد تاريخ العودة قبل 7 أيام من تاريخ انتهاء الإقامة (تُطبق الشروط الأخرى للخدمة).",
+        "عند اختيار المدة \"بالأشهر\" لتأشيرة خروج وعودة (سفرة واحدة)، يجب أن تكون صلاحية الإقامة 90 يومًا على الأقل إضافة إلى المدة المطلوبة.",
+        "في حال تحديد \"تاريخ العودة قبل\"، يعتبر التاريخ المدخل هو آخر موعد لدخول المملكة.",
+        "يُعتمد التاريخ الميلادي في حال اختلافه عن الهجري.",
+        "توفر بصمة للمستفيد (للذكور والإناث من عمر 15 عام فأعلى).",
+        "عند السفر إلى إحدى دول الخليج، يجب أن تكون الإقامة سارية لمدة لا تقل عن 3 أشهر من تاريخ السفر."
+      ],
+      "steps": [
+        {
+          "phase_id": "access_domestic",
+          "title_ar": "الوصول إلى الخدمة (للعمالة المنزلية)",
+          "title_en": "Accessing the service (for domestic workers)",
+          "text_ar": "الدخول إلى منصة أبشر، ثم اختيار \"خدمات العمالة\"، ثم اختيار \"التأشيرات\"، ثم اختيار العامل المطلوب إصدار التأشيرة له."
+        },
+        {
+          "phase_id": "confirm_domestic",
+          "title_ar": "اختيار نوع التأشيرة والتأكيد (للعمالة المنزلية)",
+          "title_en": "Selecting visa type and confirming (for domestic workers)",
+          "text_ar": "اختيار نوع التأشيرة: \"خروج وعودة\" أو \"خروج نهائي\"، ثم التأكد من توفر الشروط وسداد الرسوم المطلوبة، ثم الموافقة على الشروط والأحكام، ثم اختيار \"إصدار التأشيرة\"."
+        },
+        {
+          "phase_id": "access_family",
+          "title_ar": "الوصول إلى الخدمة (للمرافقين)",
+          "title_en": "Accessing the service (for accompanying family members)",
+          "text_ar": "الدخول إلى منصة أبشر، ثم اختيار \"خدمات أفراد الأسرة\"، ثم اختيار \"التأشيرات\"، ثم اختيار الفرد المطلوب إصدار التأشيرة له."
+        },
+        {
+          "phase_id": "confirm_family",
+          "title_ar": "اختيار نوع التأشيرة والتأكيد (للمرافقين)",
+          "title_en": "Selecting visa type and confirming (for accompanying family members)",
+          "text_ar": "اختيار نوع التأشيرة: \"خروج وعودة\" أو \"خروج نهائي\"، ثم التأكد من توفر الشروط وسداد الرسوم المطلوبة، ثم الموافقة على الشروط والأحكام، ثم اختيار \"إصدار التأشيرة\"."
+        }
+      ],
+      "fees_notes_ar": "تكلفة الخدمة متغيرة؛ لا يحدد المصدر الرسمي المرفق قيمة رسم ثابت بالريال.",
+      "delivery_notes_ar": "لا ينطبق (خدمة تأشيرة إلكترونية، لا توصيل مستندات).",
+      "important_notes_ar": [
+        "توجد إجراءان بديلان بحسب المستفيد من التأشيرة: العمالة المنزلية (عبر «خدمات العمالة») أو أفراد الأسرة المرافقين (عبر «خدمات أفراد الأسرة») — نفس نوعي التأشيرة (خروج وعودة / خروج نهائي) متاحان في كلا المسارين.",
+        "هذه الخدمة كانت مصنّفة سابقًا faq_only (بيانات جزئية من الأسئلة الشائعة فقط)؛ مصدر البيانات الجديد يتضمن صفحة الخدمة التفصيلية الكاملة، فتم ترقية data_completeness إلى full."
+      ],
+      "faq": [
+        {
+          "question_ar": "كيف يمكن طلب تأشيرة الخروج النهائي للتابعين؟",
+          "answer_ar": "عن طريق الدخول إلى أبشر أفراد والبدء بخدمة \"إصدار تأشيرة خروج وعودة أو تأشيرة خروج نهائي\".",
+          "question_en": "How can a final exit visa be requested for dependents?",
+          "answer_en": "By logging into Absher Individuals and starting the \"Issue Exit/Return Visa or Final Exit Visa\" service."
+        },
+        {
+          "question_ar": "هل يشترط وجود بصمة للفرد المراد إصدار التأشيرة له؟",
+          "answer_ar": "نعم، يشترط.",
+          "question_en": "Is a fingerprint required for the individual for whom the visa is being issued?",
+          "answer_en": "Yes, it is required."
+        },
+        {
+          "question_ar": "إذا كانت الإقامة منتهية، هل يمكنني إصدار تأشيرة خروج وعودة أو تأشيرة خروج نهائي؟",
+          "answer_ar": "لا، يعتبر سريان الإقامة متطلبًا لاستخراج التأشيرة.",
+          "question_en": "If the residency is expired, can I issue an exit/re-entry visa or a final exit visa?",
+          "answer_en": "No, valid (in-effect) residency is a requirement for issuing the visa."
+        }
+      ]
+    },
+    {
+      "service_id": "lost_passport_replacement",
+      "service_name_ar": "إصدار جواز بدل مفقود",
+      "service_name_en": "Lost Passport Replacement Service",
+      "category_ar": "الجوازات",
+      "category_en": "Passports",
+      "data_completeness": "full",
+      "source_files": [
+        "lost_passport_replacement_guide.txt",
+        "lost_passport_replacement_faq.txt"
+      ],
+      "definition_ar": "تتيح هذه الخدمة الإلكترونية للمواطنين والمواطنات تقديم طلب إصدار جواز بدل مفقود إلكترونيًا، إضافة إلى توصيله إلى عنوان المستفيد المسجل دون الحاجة لمراجعة مكاتب الجوازات.",
+      "platform": "Absher",
+      "conditions_ar": [
+        "إذا كان عمر المستفيد أقل من 21 سنة، يتم إصدار الجواز لمدة 5 سنوات فقط.",
+        "إذا كان عمر المستفيد 21 سنة أو أكثر، يمكنه اختيار صلاحية الجواز (5 أو 10 سنوات).",
+        "أن تكون هوية المواطن/المواطنة سارية المفعول.",
+        "توفر بصمة وصورة للمستفيد في أنظمة وزارة الداخلية.",
+        "سيتم اعتماد الصورة المسجلة في الأنظمة في الجواز الصادر.",
+        "أن يكون المستفيد متواجدًا داخل المملكة العربية السعودية عند تقديم الطلب.",
+        "ألا يكون لدى المستفيد جواز سفر ساري آخر أو مرافقًا في جواز سفر شخص آخر.",
+        "أن يتم الإبلاغ عن فقدان أو سرقة الجواز."
+      ],
+      "steps": [
+        {
+          "phase_id": "access",
+          "title_ar": "الوصول إلى الخدمة واختيارها",
+          "title_en": "Accessing and selecting the service",
+          "text_ar": "تسجيل الدخول إلى أبشر، ثم اختيار \"خدماتي\"، ثم اختيار \"خدمات جواز السفر السعودي\"، ثم اختيار \"طلب جديد\"، ثم اختيار \"إصدار جواز بدل مفقود\"."
+        },
+        {
+          "phase_id": "delivery_address",
+          "title_ar": "بيانات عنوان التوصيل",
+          "title_en": "Delivery address data",
+          "text_ar": "مراجعة معلومات عنوان التوصيل، ثم تعبئة بيانات عنوان التوصيل."
+        },
+        {
+          "phase_id": "carrier_payment",
+          "title_ar": "اختيار الناقل والدفع",
+          "title_en": "Choosing a carrier and paying",
+          "text_ar": "اختيار الناقل، ثم مراجعة المعلومات ودفع أجور التوصيل."
+        }
+      ],
+      "fees_notes_ar": "تكلفة الخدمة متغيرة؛ لا يحدد المصدر الرسمي المرفق قيمة رسم ثابت بالريال ولا اسم شركة الشحن تحديدًا (يُطلب من المستفيد اختيار الناقل أثناء الإجراء).",
+      "delivery_notes_ar": "بعد اختيار الناقل ودفع أجور التوصيل، يُرسل الجواز الجديد إلى عنوان التوصيل الذي تمت تعبئته؛ لا يحدد المصدر الرسمي المرفق اسم الناقل بالتحديد ولا مدة التسليم بالأيام.",
+      "important_notes_ar": [
+        "الخدمة مخصّصة للمواطنين والمواطنات (جواز السفر السعودي).",
+        "يشترط الإبلاغ المسبق عن فقدان أو سرقة الجواز قبل تقديم الطلب.",
+        "إذا كانت الهوية الوطنية منتهية الصلاحية، يجب تجديدها أولًا قبل إصدار الجواز البديل."
+      ],
+      "faq": [
+        {
+          "question_ar": "هل يشترط الإبلاغ عن فقدان الجواز لإصدار جواز جديد؟",
+          "answer_ar": "نعم، يشترط الإبلاغ عن فقدان الجواز أولاً قبل طلب إصدار جواز جديد.",
+          "question_en": "Is it required to report a lost passport in order to issue a new one?",
+          "answer_en": "Yes, reporting the loss or theft of the passport is required before issuing a new one."
+        },
+        {
+          "question_ar": "هل يمكن إصدار جواز بدل مفقود لأحد أفراد الأسرة؟",
+          "answer_ar": "نعم، يمكن للمستفيد إصدار جواز بدل مفقود لأحد أفراد أسرته.",
+          "question_en": "Can a replacement passport be issued for a lost one on behalf of family members?",
+          "answer_en": "Yes, the beneficiary can issue a replacement passport for a lost one on behalf of a family member."
+        },
+        {
+          "question_ar": "هويتي منتهية، هل بإمكاني إصدار جواز بدل مفقود؟",
+          "answer_ar": "لا، لا يمكن إصدار الجواز والهوية منتهية، ويجب تجديد الهوية أولاً قبل إصدار الجواز.",
+          "question_en": "My ID is expired — can I issue a replacement passport for a lost one?",
+          "answer_en": "No, you cannot issue a passport if your ID is expired. You must renew your ID first before issuing a passport."
+        }
+      ]
+    },
+    {
+      "service_id": "lost_stolen_plate_report",
+      "service_name_ar": "الإبلاغ عن سرقة أو فقدان لوحة مركبة",
+      "service_name_en": "Report Stolen/Lost Vehicle Plate",
+      "category_ar": "المرور",
+      "category_en": "Traffic",
+      "data_completeness": "full",
+      "source_files": [
+        "lost_stolen_plate_report_guide.txt"
+      ],
+      "definition_ar": "تتيح هذه الخدمة للأفراد الإبلاغ عن سرقة أو فقدان لوحة مركبة إلكترونيًا، وذلك بعد الاطلاع على شروط الخدمة، وتعبئة الطلب، والإقرار على التعهد.",
+      "platform": "Absher",
+      "conditions_ar": [
+        "عند تقديم البلاغ، سيتم التعميم على المركبة.",
+        "لا يمكن تقديم أكثر من طلب لنفس المركبة.",
+        "يجب أن تكون حالة المركبة \"صالحة\" في النظام.",
+        "تقتصر الخدمة على مالك المركبة فقط."
+      ],
+      "steps": [
+        {
+          "phase_id": "access",
+          "title_ar": "الوصول إلى الخدمة",
+          "title_en": "Accessing the service",
+          "text_ar": "تسجيل الدخول إلى موقع منصة أبشر، ثم اختيار \"المركبات\"، ثم اختيار \"خدمات\"، ثم اختيار \"إدارة المركبات\"، ثم اختيار \"الإبلاغ عن سرقة أو فقدان لوحة مركبة\"."
+        },
+        {
+          "phase_id": "submit_report",
+          "title_ar": "تقديم البلاغ",
+          "title_en": "Submitting the report",
+          "text_ar": "مراجعة شروط الخدمة، ثم تعبئة نموذج البلاغ وتقديمه."
+        }
+      ],
+      "fees_notes_ar": "لا يذكر المصدر الرسمي المرفق أي رسوم لهذه الخدمة.",
+      "delivery_notes_ar": "لا ينطبق (بلاغ إلكتروني، لا توصيل مستندات).",
+      "important_notes_ar": [
+        "عند تقديم البلاغ يتم التعميم على المركبة في النظام.",
+        "لا يمكن تقديم أكثر من بلاغ واحد لنفس المركبة؛ يجب متابعة البلاغ الحالي قبل تقديم طلب جديد.",
+        "الخدمة تقتصر على مالك المركبة فقط، ويجب أن تكون حالة المركبة \"صالحة\" في النظام.",
+        "هذه الخدمة لم يكن لها أي مصدر رسمي متاح في النسخة السابقة من قاعدة المعرفة (كانت مستبعدة بالكامل)؛ أصبح الآن لديها مصدر رسمي كامل."
+      ],
+      "faq": [
+        {
+          "question_ar": "ما هي المتطلبات الأساسية لتقديم بلاغ عن سرقة أو فقدان لوحة مركبة؟",
+          "answer_ar": "يجب أن تكون حالة المركبة \"صالحة\" في النظام، وأن يكون مقدم الطلب هو مالك المركبة، مع عدم وجود بلاغ سابق لنفس المركبة.",
+          "question_en": "What are the basic requirements for submitting a report about theft or loss of a vehicle plate?",
+          "answer_en": "The vehicle status must be \"valid\" in the system, and the applicant must be the vehicle owner, with no existing prior report for the same vehicle."
+        },
+        {
+          "question_ar": "هل يمكن تقديم أكثر من بلاغ عن نفس المركبة؟",
+          "answer_ar": "لا، لا يمكن تقديم أكثر من بلاغ عن نفس المركبة. يجب متابعة البلاغ الحالي قبل تقديم أي طلب جديد.",
+          "question_en": "Can more than one report be submitted for the same vehicle?",
+          "answer_en": "No, more than one report cannot be submitted for the same vehicle. The current report must be followed up on before submitting any new request."
+        }
+      ]
+    },
+    {
+      "service_id": "firearm_transport_permit",
+      "service_name_ar": "إذن التنقل بالسلاح الناري",
+      "service_name_en": "Firearm Transport Permit",
+      "category_ar": "الأمن العام",
+      "category_en": "Public Security",
+      "data_completeness": "full",
+      "source_files": [
+        "firearm_transport_permit_guide.txt"
+      ],
+      "definition_ar": "تتيح هذه الخدمة للمواطن إصدار إذن إلكتروني لحمل السلاح المسجل تحت رخصة الاقتناء لغرض التنقل من منطقة إلى منطقة.",
+      "platform": "Absher",
+      "conditions_ar": [
+        "أن يكون لدى المستفيد هوية رقمية في منصة أبشر.",
+        "عدم وجود ملاحظات أمنية.",
+        "أن يكون السلاح المراد إصدار إذن التنقل له ضمن رخصة الاقتناء فقط.",
+        "لا يمكن حمل أكثر من سلاح واحد واقتناء أكثر من عشرة أسلحة.",
+        "يمكن شراء الأسلحة من الملاك أو المراكز المعتمدة."
+      ],
+      "steps": [
+        {
+          "phase_id": "access",
+          "title_ar": "الوصول إلى الخدمة",
+          "title_en": "Accessing the service",
+          "text_ar": "تسجيل الدخول إلى منصة أبشر، ثم اختيار \"خدماتي\"، ثم اختيار \"الأمن العام\"، ثم اختيار \"إدارة الأسلحة\"."
+        },
+        {
+          "phase_id": "select_submit",
+          "title_ar": "اختيار الخدمة وتقديم الطلب",
+          "title_en": "Selecting the service and submitting the request",
+          "text_ar": "استعراض الخدمات المتاحة، ثم اختيار الخدمة المطلوبة، ثم تعبئة البيانات المطلوبة حسب نوع الخدمة (مسار التنقل، المنطقة، تاريخ بداية التصريح، عدد الذخائر)، ثم تأكيد الطلب."
+        }
+      ],
+      "fees_notes_ar": "57.5 ريال (تُدفع عند تقديم الطلب).",
+      "delivery_notes_ar": "لا ينطبق (إذن إلكتروني، لا توصيل مستندات).",
+      "important_notes_ar": [
+        "لا يُسمح بحمل أكثر من سلاح واحد في كل إذن تنقل.",
+        "يُمنع حمل السلاح داخل الحرمين الشريفين والمناطق الحكومية والأمنية.",
+        "هذه الخدمة لم يكن لها أي مصدر رسمي متاح في النسخة السابقة من قاعدة المعرفة (كانت مستبعدة بالكامل)؛ أصبح الآن لديها مصدر رسمي كامل."
+      ],
+      "faq": [
+        {
+          "question_ar": "هل توجد رسوم لهذه الخدمة؟",
+          "answer_ar": "نعم، يجب دفع رسوم عند التقديم على الخدمة.",
+          "question_en": "Are there fees for this service?",
+          "answer_en": "Yes, fees must be paid upon submitting the service request."
+        },
+        {
+          "question_ar": "هل يمكن إصدار إذن لأكثر من سلاح؟",
+          "answer_ar": "لا، لا يُسمح بحمل أكثر من سلاح واحد في كل إذن تنقل.",
+          "question_en": "Can a permit be issued for more than one weapon?",
+          "answer_en": "No, it is not allowed to carry more than one weapon per transport permit."
+        },
+        {
+          "question_ar": "ما المناطق التي يُمنع التنقل فيها بالسلاح؟",
+          "answer_ar": "يُمنع حمل السلاح داخل الحرمين الشريفين والمناطق الحكومية والأمنية.",
+          "question_en": "What are the areas where weapon transport is prohibited?",
+          "answer_en": "Carrying weapons is prohibited inside the two Holy Mosques and government and security areas."
+        }
+      ]
+    }
+  ]
+}
