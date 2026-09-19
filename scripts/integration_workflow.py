@@ -66,7 +66,10 @@ def build_optimization_proposal(diagnosis_report: Dict[str, Any]) -> Dict[str, A
 
     parameters: Dict[str, Any] = {
         "original_query": diagnosis_report.get("original_query", ""),
+        "baseline_k": int(diagnosis_report.get("baseline_k", 3)),
     }
+    if action == "rewrite_query" and diagnosis_report.get("rewritten_query"):
+        parameters["rewritten_query"] = diagnosis_report["rewritten_query"]
     if action == "change_top_k":
         parameters["new_k"] = int(diagnosis_report.get("recommended_k", 6))
     elif action == "rechunk_and_reindex":
@@ -159,8 +162,14 @@ class RAGOpsWorkflow:
 
         # 2) Diagnosis
         probe = deepcopy(diagnostic_probe or report.get("diagnostic_probe") or {})
+        supplied_rewrite = (monitoring_kwargs or {}).get("rewritten_query")
+        if supplied_rewrite:
+            probe.setdefault("rewritten_query", supplied_rewrite)
         state["diagnostic_probe"] = probe
         diagnosis = self.diagnosis_agent.diagnose(report, probe)
+        diagnosis.setdefault("baseline_k", int(report.get("baseline_k", 3)))
+        if diagnosis.get("recommended_action") == "rewrite_query" and probe.get("rewritten_query"):
+            diagnosis.setdefault("rewritten_query", probe["rewritten_query"])
         state["diagnosis_report"] = diagnosis
         self._record(
             state,
