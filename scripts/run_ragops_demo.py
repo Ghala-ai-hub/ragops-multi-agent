@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -46,7 +47,7 @@ RETRIEVAL_RESULTS_PATH = (
 REWRITE_RESULTS_PATH = (
     PROJECT_ROOT / "evaluation" / "rewrite_probe_results.json"
 )
-VECTORSTORE_PATH = PROJECT_ROOT / "vector_store" / "evaluation_index"
+VECTORSTORE_PATH = Path("vector_store") / "evaluation_index"
 
 EMBEDDING_MODEL = "text-embedding-3-small"
 BASELINE_K = 4
@@ -215,11 +216,19 @@ def main() -> None:
     embeddings = OpenAIEmbeddings(
         model=EMBEDDING_MODEL
     )
-    vector_store = FAISS.load_local(
-        str(VECTORSTORE_PATH),
-        embeddings,
-        allow_dangerous_deserialization=True,
-    )
+    # FAISS native file I/O on Windows can fail on absolute paths that
+    # contain non-ASCII characters. The project path may include Arabic
+    # folder names, so load through an ASCII relative path from PROJECT_ROOT.
+    original_cwd = Path.cwd()
+    try:
+        os.chdir(PROJECT_ROOT)
+        vector_store = FAISS.load_local(
+            str(VECTORSTORE_PATH),
+            embeddings,
+            allow_dangerous_deserialization=True,
+        )
+    finally:
+        os.chdir(original_cwd)
 
     monitor = MonitoringAgent(vector_store)
 
