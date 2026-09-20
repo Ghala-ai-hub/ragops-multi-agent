@@ -195,7 +195,41 @@ def run_tests():
         "validation",
     ]
 
-    print("LangGraph native HITL interrupt/resume tests passed.")
+
+    # A second high-impact run must also support explicit rejection.
+    reject_thread_id = "langgraph-hitl-reject-test"
+    rejected_interrupt = workflow.invoke(
+        {
+            "query": "chunking test",
+            "before_run": before_run,
+            "expected_platform": "sakani",
+            "expected_service": "online_financing",
+            "trace": [],
+        },
+        thread_id=reject_thread_id,
+    )
+    assert "__interrupt__" in rejected_interrupt
+
+    rejected = workflow.resume(
+        "reject",
+        thread_id=reject_thread_id,
+    )
+    assert (
+        rejected["approval_result"]["approval_status"]
+        == "rejected"
+    )
+    assert (
+        rejected["approval_result"]["execution_allowed"]
+        is False
+    )
+    assert rejected["final_status"] == "REJECTED"
+    assert "execution_result" not in rejected
+    assert "validation_result" not in rejected
+
+    print(
+        "LangGraph native HITL interrupt/resume tests passed "
+        "(approve + reject)."
+    )
 
 
 if __name__ == "__main__":
