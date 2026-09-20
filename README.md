@@ -220,7 +220,7 @@ Candidate FAISS indexes are intentionally excluded from Git.
 - Candidate re-indexing is non-destructive.
 - The current baseline remains 1000/200 until a separate promotion decision is approved.
 - `test_baseline_rag.py` is a legacy two-platform Balady/Najiz script and is intentionally excluded from the current regression suite.
-- A `langchain-community` deprecation warning may appear during FAISS usage. It is currently non-blocking and should be migrated to the recommended standalone integration package in a later dependency cleanup.
+- A `langchain-community` sunset warning may appear during FAISS usage. It is currently non-blocking. As of the current dependency review, LangChain still documents local FAISS through `langchain-community`, so the project keeps the dependency pinned rather than forcing an unsupported migration; revisit this when an official dedicated FAISS integration is available.
 
 ## Current verified status
 
