@@ -498,13 +498,24 @@ class LangGraphRAGOps:
     @staticmethod
     def config(
         thread_id: Optional[str] = None,
+        *,
+        tags: Optional[List[str]] = None,
+        metadata: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         return {
             "configurable": {
                 "thread_id": (
                     thread_id or str(uuid4())
                 )
-            }
+            },
+            "tags": list(
+                tags or ["ragops", "multi-agent"]
+            ),
+            "metadata": {
+                "workflow": "ragops_multi_agent",
+                "baseline_k": 4,
+                **dict(metadata or {}),
+            },
         }
 
     def invoke(
@@ -513,7 +524,17 @@ class LangGraphRAGOps:
         *,
         thread_id: Optional[str] = None,
     ):
-        config = self.config(thread_id)
+        config = self.config(
+            thread_id,
+            metadata={
+                "expected_platform": state.get(
+                    "expected_platform"
+                ),
+                "expected_service": state.get(
+                    "expected_service"
+                ),
+            },
+        )
         return self.graph.invoke(state, config)
 
     def resume(
