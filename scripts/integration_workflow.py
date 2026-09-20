@@ -13,8 +13,12 @@ from __future__ import annotations
 from copy import deepcopy
 from typing import Any, Callable, Dict, List, Optional, Protocol, TypedDict
 
-from scripts.hitl import route_approval
-from scripts.validation_agent import ValidationAgent
+try:
+    from scripts.hitl import route_approval
+    from scripts.validation_agent import ValidationAgent
+except ModuleNotFoundError:
+    from hitl import route_approval
+    from validation_agent import ValidationAgent
 
 
 class MonitoringComponent(Protocol):
