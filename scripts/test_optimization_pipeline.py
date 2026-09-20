@@ -1,47 +1,50 @@
-import os
-import sys
-from dotenv import load_dotenv
-
-# إضافة المسار الرئيسي للمشروع لضمان استيراد الوحدات بشكل صحيح
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from scripts.optimization_agent import OptimizationAgent
 
-# تحميل المتغيرات البيئية من ملف .env
-load_dotenv()
 
 def run_pipeline_test():
-    print("==================================================")
-    print("[RAGOps optimization_agent Pipeline Test] بدء اختبار خط أنابيب التحسين")
-    print("==================================================\n")
-
     agent = OptimizationAgent()
 
-    # 1️⃣ اختبار معالجة تباين الأسئلة (Query Mismatch)
-    print("[1] تجربة تحسين الاستعلام (Query Rewriting):")
-    query_report = {
+    query_mismatch = {
         "issue_type": "Query Mismatch",
-        "query": "وش اسوي لو انتهت رخصتي حق بلدي"
+        "original_query": "وش اسوي لو انتهت رخصتي حق بلدي",
+        "recommended_action": "rewrite_query",
+        "baseline_k": 4,
     }
-    
-    print(f"    السؤال الأصلي: '{query_report['query']}'")
-    query_result = agent.process_optimization(query_report)
-    print(f"   النتيجة بعد التحسين: '{query_result.get('new_query')}'\n")
 
-    # 2️⃣ اختبار جودة التقسيم وإعادة التكشير (Chunking Quality & HITL)
-    print("[2] تجربة إستراتيجية التقسيم والموافقة البشرية (HITL):")
-    chunk_report = {
+    top_k = {
+        "issue_type": "Top-K",
+        "original_query": "مثال Top-K",
+        "recommended_action": "change_top_k",
+        "recommended_k": 6,
+        "baseline_k": 4,
+    }
+
+    chunking = {
         "issue_type": "Chunking Quality",
-        "query": "ما هي رسوم تجديد الرخصة؟"
+        "original_query": "مثال جودة التقسيم",
+        "recommended_action": "rechunk_and_reindex",
+        "baseline_k": 4,
+        "new_chunk_size": 500,
+        "new_chunk_overlap": 100,
     }
-    
-    chunk_result = agent.process_optimization(chunk_report)
-    print(f"    الحالة: {chunk_result.get('status')}")
-    print(f"    الرسالة: {chunk_result.get('message')}\n")
 
-    print("==================================================")
-    print(" اكتمل اختبار خط الأنابيب بنجاح 100%!")
-    print("==================================================")
+    q = agent.propose(query_mismatch)
+    k = agent.propose(top_k)
+    c = agent.propose(chunking)
+
+    assert q["action"] == "rewrite_query"
+    assert q["parameters"]["original_query"] == query_mismatch["original_query"]
+    assert q["parameters"]["baseline_k"] == 4
+
+    assert k["action"] == "change_top_k"
+    assert k["parameters"]["new_k"] == 6
+
+    assert c["action"] == "rechunk_and_reindex"
+    assert c["parameters"]["chunk_size"] == 500
+    assert c["parameters"]["chunk_overlap"] == 100
+
+    print("Optimization proposal tests passed.")
+
 
 if __name__ == "__main__":
     run_pipeline_test()
