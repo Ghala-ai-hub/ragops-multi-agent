@@ -3,3 +3,4 @@
 __pycache__/
 vector_store/evaluation_index/
 vector_store/candidates/
+logs/
