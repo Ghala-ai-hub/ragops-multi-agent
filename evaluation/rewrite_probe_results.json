@@ -1,0 +1,75 @@
+{
+  "configuration": {
+    "baseline_k": 4,
+    "probe_k": 10,
+    "embedding_model": "text-embedding-3-small",
+    "rewrite_model": "gpt-4o-mini"
+  },
+  "results": [
+    {
+      "id": "balady_building_permit_001",
+      "platform": "balady",
+      "service": "building_permit_issuance",
+      "query_type": "standard",
+      "original_query": "ما خطوات التقديم على إصدار رخصة بناء عبر منصة بلدي؟",
+      "rewritten_query": "ما هي خطوات التقديم لإصدار رخصة بناء من خلال منصة بلدي؟",
+      "baseline_first_relevant_rank": null,
+      "original_expanded_rank": 5,
+      "rewritten_first_relevant_rank": 3,
+      "rewrite_probe_improved": true,
+      "interpretation": "QUERY-REWRITE IMPROVED TOP-4"
+    },
+    {
+      "id": "balady_commercial_license_cancellation_002",
+      "platform": "balady",
+      "service": "commercial_license_cancellation",
+      "query_type": "query_mismatch",
+      "original_query": "أبي أقفل رخصة المحل في بلدي، وش الخطوات؟",
+      "rewritten_query": "ما هي خطوات إغلاق رخصة المحل في منصة بلدي؟",
+      "baseline_first_relevant_rank": null,
+      "original_expanded_rank": null,
+      "rewritten_first_relevant_rank": 1,
+      "rewrite_probe_improved": true,
+      "interpretation": "QUERY-REWRITE IMPROVED TOP-4"
+    },
+    {
+      "id": "balady_commercial_license_renewal_002",
+      "platform": "balady",
+      "service": "commercial_license_renewal",
+      "query_type": "query_mismatch",
+      "original_query": "رخصة المحل انتهت وأبي أجددها من بلدي، وش الخطوات؟",
+      "rewritten_query": "كيفية تجديد رخصة المحل عبر منصة بلدي؟",
+      "baseline_first_relevant_rank": null,
+      "original_expanded_rank": null,
+      "rewritten_first_relevant_rank": 4,
+      "rewrite_probe_improved": true,
+      "interpretation": "QUERY-REWRITE IMPROVED TOP-4"
+    },
+    {
+      "id": "balady_health_certificate_issuance_002",
+      "platform": "balady",
+      "service": "health_certificate_issuance",
+      "query_type": "query_mismatch",
+      "original_query": "أبي أطلع كرت صحي للعامل من بلدي، كيف أقدّم عليه؟",
+      "rewritten_query": "كيف يمكنني تقديم طلب للحصول على كرت صحي للعامل من منصة بلدي؟",
+      "baseline_first_relevant_rank": null,
+      "original_expanded_rank": 9,
+      "rewritten_first_relevant_rank": 1,
+      "rewrite_probe_improved": true,
+      "interpretation": "QUERY-REWRITE IMPROVED TOP-4"
+    },
+    {
+      "id": "absher_driving_license_renewal_002",
+      "platform": "absher",
+      "service": "driving_license_renewal",
+      "query_type": "query_mismatch",
+      "original_query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+      "rewritten_query": "ما هي المدة اللازمة لتجديد رخصتي؟",
+      "baseline_first_relevant_rank": null,
+      "original_expanded_rank": 9,
+      "rewritten_first_relevant_rank": 5,
+      "rewrite_probe_improved": false,
+      "interpretation": "TOP-K EVIDENCE REMAINS"
+    }
+  ]
+}
