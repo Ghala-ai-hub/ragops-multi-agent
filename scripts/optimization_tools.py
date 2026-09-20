@@ -165,17 +165,30 @@ def rechunk_and_reindex(
     vectorstore = FAISS.from_documents(all_splits, embeddings)
 
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    output_path = (
-        CANDIDATE_INDEX_DIR
+    relative_output_path = (
+        Path("vector_store")
+        / "candidates"
         / f"rechunk_{chunk_size}_{chunk_overlap}_{stamp}"
     )
+    output_path = PROJECT_ROOT / relative_output_path
     output_path.mkdir(parents=True, exist_ok=True)
-    vectorstore.save_local(str(output_path))
+
+    # FAISS on Windows can fail when its native writer receives an absolute
+    # path containing non-ASCII characters (for example an Arabic Desktop
+    # folder name). Save through an ASCII relative path while temporarily
+    # using the project root as the working directory. pathlib still creates
+    # the real destination directory above, and the active index is untouched.
+    previous_cwd = Path.cwd()
+    try:
+        os.chdir(PROJECT_ROOT)
+        vectorstore.save_local(str(relative_output_path))
+    finally:
+        os.chdir(previous_cwd)
 
     return {
         "status": "candidate_built",
         "vector_store": vectorstore,
-        "candidate_index_path": output_path.as_posix(),
+        "candidate_index_path": relative_output_path.as_posix(),
         "platforms": list(TARGET_PLATFORMS),
         "final_files": len(files),
         "chunks": len(all_splits),
