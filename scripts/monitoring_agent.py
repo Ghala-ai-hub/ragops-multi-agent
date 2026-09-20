@@ -203,7 +203,13 @@ class MonitoringAgent:
                     self._first_relevant_rank(expanded_results)
                 )
 
-            failure_detected = not baseline_relevant_found
+            # A retrieval can contain the expected service and still expose
+            # a chunking-quality problem (for example, an extremely short or
+            # fragmented chunk). Keep that evidence visible to Diagnosis.
+            failure_detected = (
+                not baseline_relevant_found
+                or self._chunking_signal(baseline_results)
+            )
         else:
             # In production we do not invent relevance. A complete lack of
             # retrieval or a clearly broken/tiny chunk is enough to flag the
