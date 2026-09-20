@@ -9,8 +9,8 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from typing import Dict, List
 
-from scripts.diagnosis_agent import DiagnosisAgent
-from scripts.monitoring_agent import (
+from diagnosis_agent import DiagnosisAgent
+from monitoring_agent import (
     DEFAULT_BASELINE_K,
     MonitoringAgent,
 )
