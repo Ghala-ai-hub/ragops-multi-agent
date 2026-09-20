@@ -135,7 +135,59 @@ def run_tests():
         "validation",
     ]
 
-    print("LangGraph RAGOps orchestration tests passed.")
+
+    # 2) Healthy baseline: graph stops after Diagnosis with no optimization.
+    healthy_report = {
+        "original_query": "healthy query",
+        "baseline_k": 4,
+        "failure_detected": False,
+        "baseline_relevant_found": True,
+        "baseline_first_relevant_rank": 1,
+        "expanded_first_relevant_rank": None,
+        "chunking_signal": False,
+        "retrieved_results": [
+            {
+                "rank": 1,
+                "platform": "balady",
+                "service": "commercial_license_renewal",
+                "relevant": True,
+            }
+        ],
+    }
+    healthy_workflow = LangGraphRAGOps(
+        monitoring_agent=FakeMonitoring(healthy_report),
+        diagnosis_agent=DiagnosisAgent(),
+        optimization_agent=OptimizationAgent(),
+        action_executor=executor,
+    )
+    healthy_before = {
+        "query": "healthy query",
+        "top_k": 4,
+        "retrieved_results": healthy_report["retrieved_results"],
+        "latency_seconds": 0.01,
+    }
+    healthy_state = healthy_workflow.invoke(
+        {
+            "query": "healthy query",
+            "before_run": healthy_before,
+            "expected_platform": "balady",
+            "expected_service": "commercial_license_renewal",
+            "trace": [],
+        },
+        thread_id="langgraph-healthy-test",
+    )
+    assert healthy_state["final_status"] == "NO_ACTION_REQUIRED"
+    assert "optimization_proposal" not in healthy_state
+    assert "execution_result" not in healthy_state
+    assert [
+        item["stage"]
+        for item in healthy_state["trace"]
+    ] == ["monitoring", "diagnosis"]
+
+    print(
+        "LangGraph RAGOps orchestration tests passed "
+        "(Top-K + healthy baseline)."
+    )
 
 
 if __name__ == "__main__":
