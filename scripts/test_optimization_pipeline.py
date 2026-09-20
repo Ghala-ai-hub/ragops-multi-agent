@@ -1,4 +1,4 @@
-from scripts.optimization_agent import OptimizationAgent
+from optimization_agent import OptimizationAgent
 
 
 def run_pipeline_test():
