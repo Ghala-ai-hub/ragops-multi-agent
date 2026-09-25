@@ -7,45 +7,51 @@
     "relevance_level": "platform_and_service"
   },
   "summary": {
-    "total_queries": 36,
+    "total_queries": 48,
     "k": 4,
     "overall": {
-      "recall_at_k": 0.9722222222222222,
-      "precision_at_k": 0.4027777777777778,
-      "mrr": 0.8356481481481481
+      "recall_at_k": 0.8958333333333334,
+      "precision_at_k": 0.4895833333333333,
+      "mrr": 0.7986111111111112
     },
     "by_query_type": {
       "standard": {
-        "count": 18,
-        "recall_at_k": 1.0,
-        "precision_at_k": 0.4305555555555556,
-        "mrr": 0.8935185185185185
+        "count": 24,
+        "recall_at_k": 0.9583333333333334,
+        "precision_at_k": 0.53125,
+        "mrr": 0.8888888888888888
       },
       "query_mismatch": {
-        "count": 18,
-        "recall_at_k": 0.9444444444444444,
-        "precision_at_k": 0.375,
-        "mrr": 0.7777777777777778
+        "count": 24,
+        "recall_at_k": 0.8333333333333334,
+        "precision_at_k": 0.4479166666666667,
+        "mrr": 0.7083333333333334
       }
     },
     "by_platform": {
       "balady": {
         "count": 12,
-        "recall_at_k": 0.9166666666666666,
-        "precision_at_k": 0.5,
-        "mrr": 0.8125
+        "recall_at_k": 0.6666666666666666,
+        "precision_at_k": 0.4166666666666667,
+        "mrr": 0.625
       },
       "najiz": {
         "count": 12,
         "recall_at_k": 1.0,
         "precision_at_k": 0.3958333333333333,
-        "mrr": 0.8888888888888888
+        "mrr": 0.8472222222222222
       },
       "sakani": {
         "count": 12,
         "recall_at_k": 1.0,
         "precision_at_k": 0.3125,
         "mrr": 0.8055555555555555
+      },
+      "absher": {
+        "count": 12,
+        "recall_at_k": 0.9166666666666666,
+        "precision_at_k": 0.8333333333333334,
+        "mrr": 0.9166666666666666
       }
     }
   },
@@ -57,10 +63,10 @@
       "query": "ما خطوات التقديم على إصدار رخصة بناء عبر منصة بلدي؟",
       "query_type": "standard",
       "k": 4,
-      "recall_at_k": 1.0,
-      "precision_at_k": 0.25,
-      "reciprocal_rank": 0.25,
-      "first_relevant_rank": 4,
+      "recall_at_k": 0.0,
+      "precision_at_k": 0.0,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
       "retrieved": [
         {
           "rank": 1,
@@ -80,19 +86,19 @@
         },
         {
           "rank": 3,
-          "platform": "balady",
-          "service": "health_certificate_issuance",
-          "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
-          "chunk_index": 3,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 4,
           "relevant": false
         },
         {
           "rank": 4,
           "platform": "balady",
-          "service": "building_permit_issuance",
-          "source": "knowledge_base/balady/building_permit_issuance/content_final.md",
-          "chunk_index": 1,
-          "relevant": true
+          "service": "health_certificate_issuance",
+          "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+          "chunk_index": 3,
+          "relevant": false
         }
       ]
     },
@@ -172,18 +178,18 @@
         },
         {
           "rank": 3,
-          "platform": "balady",
-          "service": "commercial_license_renewal",
-          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
           "chunk_index": 4,
           "relevant": false
         },
         {
           "rank": 4,
-          "platform": "balady",
-          "service": "commercial_license_renewal",
-          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
-          "chunk_index": 7,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 3,
           "relevant": false
         }
       ]
@@ -195,41 +201,41 @@
       "query": "أبي أقفل رخصة المحل في بلدي، وش الخطوات؟",
       "query_type": "query_mismatch",
       "k": 4,
-      "recall_at_k": 1.0,
-      "precision_at_k": 0.5,
-      "reciprocal_rank": 1.0,
-      "first_relevant_rank": 1,
+      "recall_at_k": 0.0,
+      "precision_at_k": 0.0,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
       "retrieved": [
         {
           "rank": 1,
-          "platform": "balady",
-          "service": "commercial_license_cancellation",
-          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-          "chunk_index": 8,
-          "relevant": true
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 10,
+          "relevant": false
         },
         {
           "rank": 2,
-          "platform": "balady",
-          "service": "commercial_license_cancellation",
-          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-          "chunk_index": 2,
-          "relevant": true
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 5,
+          "relevant": false
         },
         {
           "rank": 3,
-          "platform": "balady",
-          "service": "commercial_license_modification",
-          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
-          "chunk_index": 8,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 3,
           "relevant": false
         },
         {
           "rank": 4,
-          "platform": "sakani",
-          "service": "housing_support_eligibility",
-          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
-          "chunk_index": 0,
+          "platform": "absher",
+          "service": "driving_license_renewal",
+          "source": "knowledge_base/absher/driving_license_renewal/content_final.md",
+          "chunk_index": 3,
           "relevant": false
         }
       ]
@@ -310,19 +316,19 @@
         },
         {
           "rank": 3,
+          "platform": "absher",
+          "service": "driving_license_renewal",
+          "source": "knowledge_base/absher/driving_license_renewal/content_final.md",
+          "chunk_index": 5,
+          "relevant": false
+        },
+        {
+          "rank": 4,
           "platform": "balady",
           "service": "commercial_license_modification",
           "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
           "chunk_index": 13,
           "relevant": true
-        },
-        {
-          "rank": 4,
-          "platform": "balady",
-          "service": "commercial_license_cancellation",
-          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-          "chunk_index": 2,
-          "relevant": false
         }
       ]
     },
@@ -335,11 +341,19 @@
       "k": 4,
       "recall_at_k": 1.0,
       "precision_at_k": 0.5,
-      "reciprocal_rank": 1.0,
-      "first_relevant_rank": 1,
+      "reciprocal_rank": 0.5,
+      "first_relevant_rank": 2,
       "retrieved": [
         {
           "rank": 1,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 4,
+          "relevant": false
+        },
+        {
+          "rank": 2,
           "platform": "balady",
           "service": "commercial_license_renewal",
           "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
@@ -347,7 +361,7 @@
           "relevant": true
         },
         {
-          "rank": 2,
+          "rank": 3,
           "platform": "balady",
           "service": "commercial_license_renewal",
           "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
@@ -355,19 +369,11 @@
           "relevant": true
         },
         {
-          "rank": 3,
-          "platform": "balady",
-          "service": "commercial_license_modification",
-          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
-          "chunk_index": 14,
-          "relevant": false
-        },
-        {
           "rank": 4,
-          "platform": "balady",
-          "service": "commercial_license_cancellation",
-          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-          "chunk_index": 2,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 3,
           "relevant": false
         }
       ]
@@ -386,34 +392,34 @@
       "retrieved": [
         {
           "rank": 1,
-          "platform": "balady",
-          "service": "commercial_license_cancellation",
-          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-          "chunk_index": 8,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 6,
           "relevant": false
         },
         {
           "rank": 2,
-          "platform": "balady",
-          "service": "commercial_license_modification",
-          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
-          "chunk_index": 14,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 4,
           "relevant": false
         },
         {
           "rank": 3,
-          "platform": "sakani",
-          "service": "housing_support_eligibility",
-          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
-          "chunk_index": 0,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 2,
           "relevant": false
         },
         {
           "rank": 4,
-          "platform": "balady",
-          "service": "commercial_license_cancellation",
-          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-          "chunk_index": 7,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 4,
           "relevant": false
         }
       ]
@@ -471,41 +477,41 @@
       "query": "أبي أطلع كرت صحي للعامل من بلدي، كيف أقدّم عليه؟",
       "query_type": "query_mismatch",
       "k": 4,
-      "recall_at_k": 1.0,
-      "precision_at_k": 0.25,
-      "reciprocal_rank": 0.5,
-      "first_relevant_rank": 2,
+      "recall_at_k": 0.0,
+      "precision_at_k": 0.0,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
       "retrieved": [
         {
           "rank": 1,
-          "platform": "balady",
-          "service": "commercial_license_cancellation",
-          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-          "chunk_index": 8,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 5,
           "relevant": false
         },
         {
           "rank": 2,
-          "platform": "balady",
-          "service": "health_certificate_issuance",
-          "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
           "chunk_index": 3,
-          "relevant": true
+          "relevant": false
         },
         {
           "rank": 3,
-          "platform": "balady",
-          "service": "commercial_license_modification",
-          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
-          "chunk_index": 8,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 10,
           "relevant": false
         },
         {
           "rank": 4,
-          "platform": "balady",
-          "service": "commercial_license_renewal",
-          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
-          "chunk_index": 19,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 10,
           "relevant": false
         }
       ]
@@ -670,26 +676,26 @@
         },
         {
           "rank": 2,
-          "platform": "balady",
-          "service": "commercial_license_cancellation",
-          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-          "chunk_index": 8,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 5,
           "relevant": false
         },
         {
           "rank": 3,
-          "platform": "balady",
-          "service": "commercial_license_modification",
-          "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
-          "chunk_index": 14,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 10,
           "relevant": false
         },
         {
           "rank": 4,
-          "platform": "balady",
-          "service": "commercial_license_renewal",
-          "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
-          "chunk_index": 13,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 3,
           "relevant": false
         }
       ]
@@ -1025,11 +1031,19 @@
       "k": 4,
       "recall_at_k": 1.0,
       "precision_at_k": 0.25,
-      "reciprocal_rank": 1.0,
-      "first_relevant_rank": 1,
+      "reciprocal_rank": 0.5,
+      "first_relevant_rank": 2,
       "retrieved": [
         {
           "rank": 1,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 5,
+          "relevant": false
+        },
+        {
+          "rank": 2,
           "platform": "najiz",
           "service": "statement_of_claim",
           "source": "knowledge_base/najiz/statement_of_claim/content_final.md",
@@ -1037,7 +1051,7 @@
           "relevant": true
         },
         {
-          "rank": 2,
+          "rank": 3,
           "platform": "najiz",
           "service": "urgent_lawsuits",
           "source": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
@@ -1045,19 +1059,11 @@
           "relevant": false
         },
         {
-          "rank": 3,
-          "platform": "najiz",
-          "service": "proof_of_payment",
-          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
-          "chunk_index": 3,
-          "relevant": false
-        },
-        {
           "rank": 4,
-          "platform": "najiz",
-          "service": "proof_of_payment",
-          "source": "knowledge_base/najiz/proof_of_payment/content_final.md",
-          "chunk_index": 5,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 10,
           "relevant": false
         }
       ]
@@ -1322,18 +1328,18 @@
         },
         {
           "rank": 3,
-          "platform": "balady",
-          "service": "commercial_license_cancellation",
-          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "platform": "absher",
+          "service": "firearm_transport_permit",
+          "source": "knowledge_base/absher/firearm_transport_permit/content_final.md",
           "chunk_index": 8,
           "relevant": false
         },
         {
           "rank": 4,
-          "platform": "sakani",
-          "service": "real_estate_advisor",
-          "source": "knowledge_base/sakani/real_estate_advisor/content_final.md",
-          "chunk_index": 0,
+          "platform": "balady",
+          "service": "commercial_license_cancellation",
+          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+          "chunk_index": 8,
           "relevant": false
         }
       ]
@@ -1422,10 +1428,10 @@
         },
         {
           "rank": 4,
-          "platform": "sakani",
-          "service": "housing_support_eligibility",
-          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
-          "chunk_index": 1,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 5,
           "relevant": false
         }
       ]
@@ -1514,10 +1520,10 @@
         },
         {
           "rank": 4,
-          "platform": "sakani",
-          "service": "online_financing",
-          "source": "knowledge_base/sakani/online_financing/content_final.md",
-          "chunk_index": 0,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 5,
           "relevant": false
         }
       ]
@@ -1598,18 +1604,18 @@
         },
         {
           "rank": 3,
-          "platform": "sakani",
-          "service": "housing_support_eligibility",
-          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
-          "chunk_index": 1,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 2,
           "relevant": false
         },
         {
           "rank": 4,
-          "platform": "balady",
-          "service": "commercial_license_cancellation",
-          "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-          "chunk_index": 7,
+          "platform": "sakani",
+          "service": "housing_support_eligibility",
+          "source": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+          "chunk_index": 1,
           "relevant": false
         }
       ]
@@ -1698,11 +1704,563 @@
         },
         {
           "rank": 4,
-          "platform": "sakani",
-          "service": "real_estate_advisor",
-          "source": "knowledge_base/sakani/real_estate_advisor/content_final.md",
-          "chunk_index": 0,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 5,
           "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "absher_driving_license_renewal_001",
+      "platform": "absher",
+      "service": "driving_license_renewal",
+      "query": "ما هي شروط تجديد رخصة القيادة؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.75,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "driving_license_renewal",
+          "source": "knowledge_base/absher/driving_license_renewal/content_final.md",
+          "chunk_index": 2,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 4,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "driving_license_renewal",
+          "source": "knowledge_base/absher/driving_license_renewal/content_final.md",
+          "chunk_index": 7,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "driving_license_renewal",
+          "source": "knowledge_base/absher/driving_license_renewal/content_final.md",
+          "chunk_index": 9,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "absher_driving_license_renewal_002",
+      "platform": "absher",
+      "service": "driving_license_renewal",
+      "query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 0.0,
+      "precision_at_k": 0.0,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 3,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 2,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 4,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "lost_stolen_plate_report",
+          "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+          "chunk_index": 9,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "absher_vehicle_registration_renewal_001",
+      "platform": "absher",
+      "service": "vehicle_registration_renewal",
+      "query": "كيف يتم احتساب تاريخ انتهاء رخصة السير بعد التجديد؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.75,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 8,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 9,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 4,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "driving_license_renewal",
+          "source": "knowledge_base/absher/driving_license_renewal/content_final.md",
+          "chunk_index": 10,
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "id": "absher_vehicle_registration_renewal_002",
+      "platform": "absher",
+      "service": "vehicle_registration_renewal",
+      "query": "استمارة سيارتي خلصت ابي اجددها",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.75,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 9,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 2,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 10,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "vehicle_registration_renewal",
+          "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+          "chunk_index": 3,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "absher_exit_reentry_final_exit_visa_001",
+      "platform": "absher",
+      "service": "exit_reentry_final_exit_visa",
+      "query": "ما متطلبات إصدار تأشيرة خروج وعودة أو خروج نهائي عبر أبشر؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 6,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 4,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 10,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "absher_exit_reentry_final_exit_visa_002",
+      "platform": "absher",
+      "service": "exit_reentry_final_exit_visa",
+      "query": "اقامتي منتهية اقدر اطلع تأشيرة خروج وعودة؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 12,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 6,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 4,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "exit_reentry_final_exit_visa",
+          "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+          "chunk_index": 10,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "absher_lost_passport_replacement_001",
+      "platform": "absher",
+      "service": "lost_passport_replacement",
+      "query": "هل يشترط الإبلاغ عن فقدان الجواز لإصدار بدل مفقود؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 9,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 8,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 10,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 11,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "absher_lost_passport_replacement_002",
+      "platform": "absher",
+      "service": "lost_passport_replacement",
+      "query": "ضاع جوازي كيف أطلع بدل فاقد؟",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 10,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 11,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 7,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "lost_passport_replacement",
+          "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "absher_lost_stolen_plate_report_001",
+      "platform": "absher",
+      "service": "lost_stolen_plate_report",
+      "query": "كيف أبلغ عن فقدان أو سرقة لوحة مركبة عبر أبشر؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "lost_stolen_plate_report",
+          "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "lost_stolen_plate_report",
+          "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+          "chunk_index": 8,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "lost_stolen_plate_report",
+          "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+          "chunk_index": 3,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "lost_stolen_plate_report",
+          "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+          "chunk_index": 7,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "absher_lost_stolen_plate_report_002",
+      "platform": "absher",
+      "service": "lost_stolen_plate_report",
+      "query": "ضاعت لوحة سيارتي كيف ابلغ عنها",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "lost_stolen_plate_report",
+          "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "lost_stolen_plate_report",
+          "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+          "chunk_index": 8,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "lost_stolen_plate_report",
+          "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+          "chunk_index": 3,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "lost_stolen_plate_report",
+          "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "absher_firearm_transport_permit_001",
+      "platform": "absher",
+      "service": "firearm_transport_permit",
+      "query": "ما هي رسوم إذن التنقل بالسلاح الناري؟",
+      "query_type": "standard",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.75,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "firearm_transport_permit",
+          "source": "knowledge_base/absher/firearm_transport_permit/content_final.md",
+          "chunk_index": 9,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "driving_license_renewal",
+          "source": "knowledge_base/absher/driving_license_renewal/content_final.md",
+          "chunk_index": 7,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "firearm_transport_permit",
+          "source": "knowledge_base/absher/firearm_transport_permit/content_final.md",
+          "chunk_index": 10,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "firearm_transport_permit",
+          "source": "knowledge_base/absher/firearm_transport_permit/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "id": "absher_firearm_transport_permit_002",
+      "platform": "absher",
+      "service": "firearm_transport_permit",
+      "query": "ابي انقل سلاحي من مدينة لمدينة وش اسوي",
+      "query_type": "query_mismatch",
+      "k": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "platform": "absher",
+          "service": "firearm_transport_permit",
+          "source": "knowledge_base/absher/firearm_transport_permit/content_final.md",
+          "chunk_index": 9,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "platform": "absher",
+          "service": "firearm_transport_permit",
+          "source": "knowledge_base/absher/firearm_transport_permit/content_final.md",
+          "chunk_index": 1,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "platform": "absher",
+          "service": "firearm_transport_permit",
+          "source": "knowledge_base/absher/firearm_transport_permit/content_final.md",
+          "chunk_index": 10,
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "platform": "absher",
+          "service": "firearm_transport_permit",
+          "source": "knowledge_base/absher/firearm_transport_permit/content_final.md",
+          "chunk_index": 0,
+          "relevant": true
         }
       ]
     }

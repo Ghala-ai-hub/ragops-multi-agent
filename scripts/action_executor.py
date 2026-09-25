@@ -1,9 +1,9 @@
-"""Approved optimization action executor for the RAGOps integration layer.
+"""Approved optimization action executor.
 
-The Optimization Agent only proposes an action. This executor is invoked *after*
-HITL approval, applies the approved action through explicit callbacks, reruns the
-candidate retrieval/RAG path, and returns the ``after_run`` contract consumed by
-ValidationAgent.
+Execution is separate from diagnosis/proposal generation so that structural
+changes cannot happen before approval. Re-chunking is intentionally callback-
+based so integration can build a candidate index without overwriting the
+active index.
 """
 from __future__ import annotations
 
@@ -16,13 +16,11 @@ RechunkCandidate = Callable[[Dict[str, Any]], Dict[str, Any]]
 
 
 class ApprovedActionExecutor:
-    """Execute only proposals that passed the Human Approval gate."""
-
     def __init__(
         self,
         *,
         run_candidate: RunCandidate,
-        default_k: int = 3,
+        default_k: int = 4,
         rewrite_function: Optional[RewriteFunction] = None,
         rechunk_candidate: Optional[RechunkCandidate] = None,
     ) -> None:
@@ -33,25 +31,36 @@ class ApprovedActionExecutor:
 
     @staticmethod
     def _default_rewrite_function(original_query: str) -> str:
-        # Lazy import keeps offline tests independent of LangChain/OpenAI while
-        # using Person 3's real rewrite tool in a live API-backed run.
         try:
             from scripts.optimization_tools import rewrite_query
         except ModuleNotFoundError:
             from optimization_tools import rewrite_query
         return rewrite_query(original_query)
 
-    def __call__(self, approved_proposal: Dict[str, Any]) -> Dict[str, Any]:
+    def __call__(
+        self,
+        approved_proposal: Dict[str, Any],
+    ) -> Dict[str, Any]:
         if approved_proposal.get("execution_allowed") is not True:
-            raise PermissionError("Optimization execution requires human approval")
+            raise PermissionError(
+                "optimization execution is not approved"
+            )
 
         action = approved_proposal.get("action")
-        parameters = dict(approved_proposal.get("parameters") or {})
-        original_query = str(parameters.get("original_query", "")).strip()
-        baseline_k = int(parameters.get("baseline_k", self.default_k))
+        parameters = dict(
+            approved_proposal.get("parameters") or {}
+        )
+        original_query = str(
+            parameters.get("original_query", "")
+        ).strip()
+        baseline_k = int(
+            parameters.get("baseline_k", self.default_k)
+        )
 
         if not original_query:
-            raise ValueError("approved proposal is missing parameters.original_query")
+            raise ValueError(
+                "proposal is missing parameters.original_query"
+            )
 
         if action == "change_top_k":
             new_k = int(parameters.get("new_k", baseline_k))
@@ -63,13 +72,25 @@ class ApprovedActionExecutor:
             }
 
         elif action == "rewrite_query":
-            rewritten_query = str(parameters.get("rewritten_query", "")).strip()
+            rewritten_query = str(
+                parameters.get("rewritten_query", "")
+            ).strip()
+
             if not rewritten_query:
-                rewrite_fn = self.rewrite_function or self._default_rewrite_function
+                rewrite_fn = (
+                    self.rewrite_function
+                    or self._default_rewrite_function
+                )
                 rewritten_query = rewrite_fn(original_query).strip()
+
             if not rewritten_query:
-                raise ValueError("query rewrite produced an empty query")
-            after_run = self.run_candidate(rewritten_query, baseline_k)
+                raise ValueError(
+                    "query rewrite produced an empty query"
+                )
+
+            after_run = self.run_candidate(
+                rewritten_query, baseline_k
+            )
             action_result = {
                 "status": "applied",
                 "action": action,
@@ -80,25 +101,36 @@ class ApprovedActionExecutor:
         elif action == "rechunk_and_reindex":
             if self.rechunk_candidate is None:
                 raise RuntimeError(
-                    "rechunk_and_reindex requires a non-destructive candidate "
-                    "index callback before it can be executed"
+                    "rechunk_and_reindex requires a "
+                    "non-destructive candidate-index callback"
                 )
+
             candidate_result = self.rechunk_candidate(parameters)
-            if not isinstance(candidate_result, dict) or not isinstance(
-                candidate_result.get("after_run"), dict
+
+            if (
+                not isinstance(candidate_result, dict)
+                or not isinstance(
+                    candidate_result.get("after_run"), dict
+                )
             ):
                 raise ValueError(
-                    "rechunk_candidate must return a dictionary containing 'after_run'"
+                    "rechunk_candidate must return "
+                    "{'after_run': {...}}"
                 )
+
             after_run = candidate_result["after_run"]
             action_result = {
                 "status": "applied",
                 "action": action,
-                **dict(candidate_result.get("action_result") or {}),
+                **dict(
+                    candidate_result.get("action_result") or {}
+                ),
             }
 
         else:
-            raise ValueError(f"Unsupported approved action: {action!r}")
+            raise ValueError(
+                f"unsupported approved action: {action!r}"
+            )
 
         return {
             "action_result": action_result,

@@ -1,12 +1,15 @@
 """Validation Agent for RAGOps.
 
-Compares a baseline RAG run with an optimized candidate run using retrieval
-quality, answer quality, and latency. This module does not apply optimizations;
-it only validates their measured impact.
+Compares BEFORE vs AFTER retrieval/RAG runs and returns one of:
+IMPROVED, SAME, WORSE.
+
+The current project validation is retrieval-first:
+Recall@K -> Reciprocal Rank -> Precision@K.
+An optional judge_score can be included later for answer-level evaluation.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from typing import Any, Dict, Iterable, Optional
 
 
@@ -20,11 +23,15 @@ class RunMetrics:
 
 
 class ValidationAgent:
-    """Compare BEFORE and AFTER RAG runs and return a measurable verdict."""
+    """Validate an optimized candidate against the baseline."""
 
-    def __init__(self, min_judge_gain: float = 0.5, latency_tolerance: float = 2.0):
+    def __init__(
+        self,
+        min_judge_gain: float = 0.5,
+        latency_tolerance_seconds: float = 2.0,
+    ) -> None:
         self.min_judge_gain = min_judge_gain
-        self.latency_tolerance = latency_tolerance
+        self.latency_tolerance_seconds = latency_tolerance_seconds
 
     @staticmethod
     def retrieval_metrics(
@@ -34,15 +41,20 @@ class ValidationAgent:
     ) -> Dict[str, float]:
         results = list(retrieved_results)
         relevant_count = 0
-        first_relevant_rank = None
+        first_relevant_rank: Optional[int] = None
 
         for rank, item in enumerate(results, start=1):
-            # Prefer an explicit relevance label when the evaluator provides one.
             if "relevant" in item:
                 relevant = bool(item["relevant"])
             else:
-                platform_ok = expected_platform is None or item.get("platform") == expected_platform
-                service_ok = expected_service is None or item.get("service") == expected_service
+                platform_ok = (
+                    expected_platform is None
+                    or item.get("platform") == expected_platform
+                )
+                service_ok = (
+                    expected_service is None
+                    or item.get("service") == expected_service
+                )
                 relevant = platform_ok and service_ok
 
             if relevant:
@@ -50,13 +62,16 @@ class ValidationAgent:
                 if first_relevant_rank is None:
                     first_relevant_rank = rank
 
-        recall_at_k = 1.0 if relevant_count else 0.0
-        precision_at_k = relevant_count / len(results) if results else 0.0
-        reciprocal_rank = 1.0 / first_relevant_rank if first_relevant_rank else 0.0
         return {
-            "recall_at_k": recall_at_k,
-            "precision_at_k": precision_at_k,
-            "reciprocal_rank": reciprocal_rank,
+            "recall_at_k": 1.0 if relevant_count else 0.0,
+            "precision_at_k": (
+                relevant_count / len(results) if results else 0.0
+            ),
+            "reciprocal_rank": (
+                1.0 / first_relevant_rank
+                if first_relevant_rank is not None
+                else 0.0
+            ),
         }
 
     def build_metrics(
@@ -83,44 +98,75 @@ class ValidationAgent:
         expected_platform: Optional[str] = None,
         expected_service: Optional[str] = None,
     ) -> Dict[str, Any]:
-        before = self.build_metrics(before_run, expected_platform, expected_service)
-        after = self.build_metrics(after_run, expected_platform, expected_service)
+        before = self.build_metrics(
+            before_run, expected_platform, expected_service
+        )
+        after = self.build_metrics(
+            after_run, expected_platform, expected_service
+        )
 
         delta = {
             "recall_at_k": after.recall_at_k - before.recall_at_k,
             "precision_at_k": after.precision_at_k - before.precision_at_k,
-            "reciprocal_rank": after.reciprocal_rank - before.reciprocal_rank,
+            "reciprocal_rank": (
+                after.reciprocal_rank - before.reciprocal_rank
+            ),
             "judge_score": None,
-            "latency_seconds": after.latency_seconds - before.latency_seconds,
+            "latency_seconds": (
+                after.latency_seconds - before.latency_seconds
+            ),
         }
-        if before.judge_score is not None and after.judge_score is not None:
-            delta["judge_score"] = after.judge_score - before.judge_score
 
-        quality_improved = any(
-            delta[key] > 0
-            for key in ("recall_at_k", "precision_at_k", "reciprocal_rank")
-        )
-        if delta["judge_score"] is not None:
-            quality_improved = quality_improved or delta["judge_score"] >= self.min_judge_gain
+        if (
+            before.judge_score is not None
+            and after.judge_score is not None
+        ):
+            delta["judge_score"] = (
+                after.judge_score - before.judge_score
+            )
 
-        quality_worse = any(
-            delta[key] < 0
-            for key in ("recall_at_k", "precision_at_k", "reciprocal_rank")
-        )
-        if delta["judge_score"] is not None:
-            quality_worse = quality_worse or delta["judge_score"] <= -self.min_judge_gain
-
-        excessive_latency = delta["latency_seconds"] > self.latency_tolerance
-
-        if quality_worse:
-            verdict = "WORSE"
-            recommendation = "RETAIN_BASELINE"
-        elif quality_improved and not excessive_latency:
-            verdict = "IMPROVED"
-            recommendation = "ACCEPT_OPTIMIZED"
+        # Retrieval-first priority:
+        # 1) Recall@K, 2) first relevant rank (RR), 3) Precision@K.
+        if after.recall_at_k != before.recall_at_k:
+            verdict = (
+                "IMPROVED"
+                if after.recall_at_k > before.recall_at_k
+                else "WORSE"
+            )
+        elif after.reciprocal_rank != before.reciprocal_rank:
+            verdict = (
+                "IMPROVED"
+                if after.reciprocal_rank > before.reciprocal_rank
+                else "WORSE"
+            )
+        elif after.precision_at_k != before.precision_at_k:
+            verdict = (
+                "IMPROVED"
+                if after.precision_at_k > before.precision_at_k
+                else "WORSE"
+            )
+        elif delta["judge_score"] is not None:
+            if delta["judge_score"] >= self.min_judge_gain:
+                verdict = "IMPROVED"
+            elif delta["judge_score"] <= -self.min_judge_gain:
+                verdict = "WORSE"
+            else:
+                verdict = "SAME"
         else:
-            verdict = "NO_MEANINGFUL_CHANGE"
-            recommendation = "RETAIN_BASELINE"
+            verdict = "SAME"
+
+        # Do not accept a quality gain if it causes an excessive latency cost.
+        excessive_latency = (
+            delta["latency_seconds"] > self.latency_tolerance_seconds
+        )
+        if verdict == "IMPROVED" and excessive_latency:
+            verdict = "SAME"
+
+        recommendation = (
+            "ACCEPT_OPTIMIZED"
+            if verdict == "IMPROVED"
+            else "RETAIN_BASELINE"
+        )
 
         return {
             "verdict": verdict,

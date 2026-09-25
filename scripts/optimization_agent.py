@@ -1,98 +1,133 @@
-from typing import Dict, Any, Optional
-from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings
-from optimization_tools import change_top_k, rewrite_query, rechunk_and_reindex
+"""Optimization Agent for RAGOps.
+
+This agent converts Diagnosis output into a structured optimization proposal.
+It does not execute structural changes itself. Execution is handled by the
+integration workflow after risk-based approval routing.
+"""
+from __future__ import annotations
+
+from typing import Any, Dict
+
 
 class OptimizationAgent:
-    def __init__(self, vector_store_path: str = "vector_store/balady_najiz_index"):
-        self.embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
-        self.vector_store_path = vector_store_path
-        self.vector_store = FAISS.load_local(
-            vector_store_path, 
-            self.embeddings, 
-            allow_dangerous_deserialization=True
-        )
+    SUPPORTED_ACTIONS = {
+        "Top-K": "change_top_k",
+        "Query Mismatch": "rewrite_query",
+        "Chunking Quality": "rechunk_and_reindex",
+    }
 
-    def process_optimization(self, diagnosis_report: Dict[str, Any], user_approval: Optional[bool] = None) -> Dict[str, Any]:
-        """
-        استلام تقرير التشخيص واتخاذ إجراء التحسين المناسب
-        diagnosis_report يحتوي على:
-        - issue_type: ("Top-K", "Query Mismatch", "Chunking Quality")
-        - original_query: نص السؤال
-        """
+    def propose(self, diagnosis_report: Dict[str, Any]) -> Dict[str, Any]:
         issue_type = diagnosis_report.get("issue_type")
-        query = diagnosis_report.get("original_query", "")
-        
-        print(f"\n [Optimization Agent] بدء معالجة المشكلة: {issue_type}")
-        
-        # Scenario 1: مشكلة Top-K
-        if issue_type == "Top-K":
-            new_k = diagnosis_report.get("recommended_k", 6)
-            retriever = change_top_k(self.vector_store, new_k=new_k)
-            return {
-                "action_taken": "change_top_k",
-                "status": "applied",
-                "retriever": retriever,
-                "applied_k": new_k
-            }
-            
-        # Scenario 2: مشكلة عدم تطابق الاستعلام Query Mismatch
-        elif issue_type == "Query Mismatch":
-            new_query = rewrite_query(query)
-            return {
-                "action_taken": "rewrite_query",
-                "status": "applied",
-                "new_query": new_query
-            }
-            
-        # Scenario 3: مشكلة جودة التقسيم Chunking Quality (تتطلب Human Approval HITL)
-        elif issue_type == "Chunking Quality":
-            if user_approval is None:
-                print("[Optimization Agent] الإجراء يحتاج موافقة بشرية (HITL) لإعادة تقسيم القاعدة.")
-                return {
-                    "action_taken": "rechunk_and_reindex",
-                    "status": "pending_approval",
-                    "message": "هل توافق على إعادة بناء الفهرس بأحجام Chunks أصغر؟ (Approve/Reject)"
-                }
-            elif user_approval is True:
-                new_chunk_size = diagnosis_report.get("new_chunk_size", 500)
-                new_overlap = diagnosis_report.get("new_chunk_overlap", 100)
-                new_vectorstore = rechunk_and_reindex(chunk_size=new_chunk_size, chunk_overlap=new_overlap)
-                self.vector_store = new_vectorstore
-                return {
-                    "action_taken": "rechunk_and_reindex",
-                    "status": "completed",
-                    "vector_store": new_vectorstore
-                }
-            else:
-                return {
-                    "action_taken": "rechunk_and_reindex",
-                    "status": "rejected_by_user",
-                    "message": "تم إلغاء عملية إعادة التقسيم بطلب من المستخدم."
-                }
-        else:
-            return {"status": "unknown_issue", "message": "لم يتم التعرف على نوع المشكلة."}
+        recommended_action = diagnosis_report.get("recommended_action")
+        original_query = str(
+            diagnosis_report.get("original_query", "")
+        ).strip()
 
-# تجربة تشغيلية سريعة لوكيل التحسين
+        if recommended_action in (None, "none", "needs_review"):
+            return {
+                "issue_type": issue_type,
+                "action": recommended_action or "none",
+                "status": "no_executable_action",
+                "reason": diagnosis_report.get("reason", ""),
+                "confidence": diagnosis_report.get("confidence"),
+                "parameters": {
+                    "original_query": original_query,
+                    "baseline_k": int(
+                        diagnosis_report.get("baseline_k", 4)
+                    ),
+                },
+            }
+
+        expected_action = self.SUPPORTED_ACTIONS.get(issue_type)
+        if expected_action is None:
+            raise ValueError(
+                f"Unsupported diagnosis issue_type: {issue_type!r}"
+            )
+
+        if recommended_action != expected_action:
+            raise ValueError(
+                "Diagnosis action does not match issue type: "
+                f"{issue_type!r} -> expected {expected_action!r}, "
+                f"got {recommended_action!r}"
+            )
+
+        parameters: Dict[str, Any] = {
+            "original_query": original_query,
+            "baseline_k": int(
+                diagnosis_report.get("baseline_k", 4)
+            ),
+        }
+
+        if recommended_action == "change_top_k":
+            parameters["new_k"] = int(
+                diagnosis_report.get("recommended_k", 6)
+            )
+
+        elif recommended_action == "rewrite_query":
+            if diagnosis_report.get("rewritten_query"):
+                parameters["rewritten_query"] = str(
+                    diagnosis_report["rewritten_query"]
+                ).strip()
+
+        elif recommended_action == "rechunk_and_reindex":
+            parameters["chunk_size"] = int(
+                diagnosis_report.get("new_chunk_size", 500)
+            )
+            parameters["chunk_overlap"] = int(
+                diagnosis_report.get("new_chunk_overlap", 100)
+            )
+
+        return {
+            "issue_type": issue_type,
+            "action": recommended_action,
+            "parameters": parameters,
+            "reason": diagnosis_report.get("reason", ""),
+            "confidence": diagnosis_report.get("confidence"),
+            "status": "proposed",
+        }
+
+    def process_optimization(
+        self,
+        diagnosis_report: Dict[str, Any],
+        user_approval: Any = None,
+    ) -> Dict[str, Any]:
+        """Backward-compatible adapter for older callers.
+
+        The old implementation executed actions directly. The integration
+        review intentionally changes this behavior: the Optimization Agent now
+        proposes; HITL/auto-apply routing and execution happen downstream.
+        """
+        proposal = self.propose(diagnosis_report)
+        proposal["legacy_user_approval_argument_ignored"] = (
+            user_approval is not None
+        )
+        return proposal
+
+
 if __name__ == "__main__":
     agent = OptimizationAgent()
-    
-    # تجربة 1: حل مشكلة Query Mismatch
-    report_1 = {
-        "issue_type": "Query Mismatch",
-        "original_query": "وش اسوي لو انتهت رخصتي حق بلدي"
-    }
-    res_1 = agent.process_optimization(report_1)
-    print("النتيجة:", res_1)
-    
-    # تجربة 2: طلب موافقة بشرية لإعادة الـ Chunking
-    report_2 = {
-        "issue_type": "Chunking Quality",
-        "original_query": "خطوات التقديم على خدمة ناجز"
-    }
-    res_2_pending = agent.process_optimization(report_2)
-    print("\nطلب الموافقة:", res_2_pending)
-    
-    # موافقة المستخدم
-    res_2_approved = agent.process_optimization(report_2, user_approval=True)
-    print("\nبعد الموافقة:", res_2_approved["status"])
+
+    examples = [
+        {
+            "issue_type": "Top-K",
+            "original_query": "مثال Top-K",
+            "recommended_action": "change_top_k",
+            "recommended_k": 6,
+            "baseline_k": 4,
+        },
+        {
+            "issue_type": "Query Mismatch",
+            "original_query": "وش اسوي لو انتهت رخصتي حق بلدي",
+            "recommended_action": "rewrite_query",
+            "baseline_k": 4,
+        },
+        {
+            "issue_type": "Chunking Quality",
+            "original_query": "مثال جودة التقسيم",
+            "recommended_action": "rechunk_and_reindex",
+            "baseline_k": 4,
+        },
+    ]
+
+    for report in examples:
+        print(agent.propose(report))

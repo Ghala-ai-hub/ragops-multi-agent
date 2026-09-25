@@ -16,331 +16,419 @@
     "expected_answer": "يبدأ المستفيد بتسجيل الدخول إلى منصة بلدي، ثم من لوحة التحكم يختار الطلبات وتقديم جديد، وبعدها الرخص الإنشائية ثم إصدار رخصة بناء. بعد بدء الخدمة والتحقق من رقم الجوال واختيار نوع الرخصة، يتم استكمال بيانات الطلب والتعاقد ورفع المرفقات ثم إرسال الطلب إلى المكتب الهندسي.",
     "expected_document": "knowledge_base/balady/building_permit_issuance/content_final.md",
     "query_type": "query_mismatch"
-  }
-  ,
-
+  },
   {
-  "id": "balady_commercial_license_cancellation_001",
-  "platform": "balady",
-  "service": "commercial_license_cancellation",
-  "query": "ما خطوات إلغاء رخصة نشاط تجاري عبر منصة بلدي؟",
-  "expected_answer": "بعد تسجيل الدخول إلى منصة بلدي يتم اختيار عرض جميع المنتجات، ثم الرخص التجارية وخدمة إلغاء رخصة نشاط تجاري والضغط على بدء الخدمة. يحدد المستخدم صفة مقدم الطلب ويختار الرخصة المراد إلغاؤها ثم يتقدم بالطلب، ويستكمل بيانات مقدم الطلب والنشاط والموقع وبيانات المحل وسبب الإلغاء والمرفقات. بعد ذلك يتم حساب الرسوم واختيار طريقة الدفع وسداد الفاتورة، وبعد إتمام الدفع تصبح حالة الطلب منتهي.",
-  "expected_document": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "balady_commercial_license_cancellation_002",
-  "platform": "balady",
-  "service": "commercial_license_cancellation",
-  "query": "أبي أقفل رخصة المحل في بلدي، وش الخطوات؟",
-  "expected_answer": "يتم الدخول إلى منصة بلدي واختيار الرخص التجارية ثم خدمة إلغاء رخصة نشاط تجاري. بعد اختيار صفة مقدم الطلب والرخصة المطلوب إلغاؤها، يتم استكمال بيانات الطلب وتحديد سبب الإلغاء ورفع المرفقات، ثم حساب الرسوم وسداد الفاتورة. بعد إتمام الدفع تصبح حالة الطلب منتهي.",
-  "expected_document": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-
-{
-  "id": "balady_commercial_license_modification_001",
-  "platform": "balady",
-  "service": "commercial_license_modification",
-  "query": "ما خطوات تعديل رخصة نشاط تجاري عبر منصة بلدي؟",
-  "expected_answer": "بعد تسجيل الدخول إلى منصة بلدي يتم اختيار الرخص التجارية ثم خدمة تعديل رخصة نشاط تجاري وبدء الخدمة. يحدد المستخدم صفة مقدم الطلب ويختار الرخصة المراد تعديلها، ثم يتحقق من رقم الجوال ويستكمل بيانات مقدم الطلب والنشاط والتعديلات المطلوبة. بعد ذلك يستكمل بيانات الموقع والمحل واللوحات والمرفقات، ثم يتم حساب الرسوم وإرسال الطلب.",
-  "expected_document": "knowledge_base/balady/commercial_license_modification/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "balady_commercial_license_modification_002",
-  "platform": "balady",
-  "service": "commercial_license_modification",
-  "query": "أبي أغير بيانات أو نشاط رخصة المحل في بلدي، وش أسوي؟",
-  "expected_answer": "يتم الدخول إلى منصة بلدي واختيار الرخص التجارية ثم خدمة تعديل رخصة نشاط تجاري. بعد اختيار صفة مقدم الطلب والرخصة المطلوب تعديلها، يتم التحقق من رقم الجوال وتعديل بيانات النشاط أو البيانات المطلوبة، ثم استكمال بيانات الموقع والمحل والمرفقات وحساب الرسوم وإرسال الطلب.",
-  "expected_document": "knowledge_base/balady/commercial_license_modification/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-
-{
-  "id": "balady_commercial_license_renewal_001",
-  "platform": "balady",
-  "service": "commercial_license_renewal",
-  "query": "ما خطوات تجديد رخصة تجارية عبر منصة بلدي؟",
-  "expected_answer": "بعد تسجيل الدخول إلى منصة بلدي يتم البحث عن منتج الرخص التجارية ثم خدمة تجديد رخصة تجارية. يحدد المستخدم صفة مقدم الطلب ويختار الرخصة، ثم يختار تجديد الرخصة ويستكمل بيانات النشاط والموقع والمحل واللوحات والمرفقات. بعد ذلك يتم تحديد نوع التجديد وحساب الرسوم، ثم استكمال إجراءات الدفع أو إرسال الطلب بحسب مسار الرسوم المطبق.",
-  "expected_document": "knowledge_base/balady/commercial_license_renewal/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "balady_commercial_license_renewal_002",
-  "platform": "balady",
-  "service": "commercial_license_renewal",
-  "query": "رخصة المحل انتهت وأبي أجددها من بلدي، وش الخطوات؟",
-  "expected_answer": "يتم الدخول إلى منصة بلدي واختيار الرخص التجارية ثم خدمة تجديد رخصة تجارية. بعد تحديد صفة مقدم الطلب واختيار الرخصة، يتم استكمال بيانات النشاط والموقع والمحل والمرفقات، ثم اختيار نوع التجديد وحساب الرسوم واستكمال الدفع أو إرسال الطلب حسب الإجراء المتاح.",
-  "expected_document": "knowledge_base/balady/commercial_license_renewal/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "balady_health_certificate_issuance_001",
-  "platform": "balady",
-  "service": "health_certificate_issuance",
-  "query": "ما خطوات إصدار شهادة صحية عبر منصة بلدي؟",
-  "expected_answer": "بعد تسجيل الدخول إلى منصة بلدي يتم اختيار الشهادات الصحية ثم خدمة إصدار شهادة صحية والضغط على بدء الخدمة. يحدد المستخدم صفة مقدم الطلب وموقع المحل، ثم يستكمل بيانات الطلب وبيانات العاملين ويتحقق من بياناتهم، وبعد ذلك يوافق على الإقرار الخاص ببيانات رخصة المحل ويرسل الطلب. يمكن متابعة حالة الطلب من شاشة طلباتي، وبعد اكتماله يمكن طباعة الشهادة أو الشهادات الصحية.",
-  "expected_document": "knowledge_base/balady/health_certificate_issuance/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "balady_health_certificate_issuance_002",
-  "platform": "balady",
-  "service": "health_certificate_issuance",
-  "query": "أبي أطلع كرت صحي للعامل من بلدي، كيف أقدّم عليه؟",
-  "expected_answer": "يتم الدخول إلى منصة بلدي واختيار الشهادات الصحية ثم إصدار شهادة صحية. بعد بدء الخدمة يتم تحديد صفة مقدم الطلب وموقع المحل، ثم إدخال بيانات العامل والتحقق منها وإضافته إلى قائمة العمال، واستكمال بيانات رخصة المحل والإقرار المطلوب ثم إرسال الطلب ومتابعته من شاشة طلباتي.",
-  "expected_document": "knowledge_base/balady/health_certificate_issuance/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "balady_health_certificate_renewal_001",
-  "platform": "balady",
-  "service": "health_certificate_renewal",
-  "query": "ما خطوات تجديد شهادة صحية عبر منصة بلدي؟",
-  "expected_answer": "بعد تسجيل الدخول إلى منصة بلدي يتم اختيار الشهادات الصحية ثم خدمة تجديد شهادة صحية والضغط على بدء الخدمة. يحدد المستخدم صفة مقدم الطلب ويؤكد موقع المحل، ثم يختار العامل أو يضيف بياناته ويتحقق منها، ويستكمل بيانات رخصة المحل ويوافق على الإقرار ثم يرسل الطلب. بعد ذلك يمكن متابعة الطلب من شاشة طلباتي واستكمال دفع الفاتورة، وبعد الدفع تصبح حالة الطلب منتهي ويمكن طباعة الشهادة.",
-  "expected_document": "knowledge_base/balady/health_certificate_renewal/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "balady_health_certificate_renewal_002",
-  "platform": "balady",
-  "service": "health_certificate_renewal",
-  "query": "الكرت الصحي للعامل قرب ينتهي، كيف أجدده من بلدي؟",
-  "expected_answer": "يتم الدخول إلى منصة بلدي واختيار الشهادات الصحية ثم تجديد شهادة صحية. بعد بدء الخدمة يتم تحديد صفة مقدم الطلب وتأكيد موقع المحل، ثم اختيار العامل أو إدخال بياناته والتحقق منها واستكمال بيانات رخصة المحل، وبعد إرسال الطلب تتم متابعة الطلب ودفع الفاتورة حتى يصبح منتهي ويمكن بعدها طباعة الشهادة.",
-  "expected_document": "knowledge_base/balady/health_certificate_renewal/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "najiz_electronic_power_of_attorney_001",
-  "platform": "najiz",
-  "service": "electronic_power_of_attorney",
-  "query": "ما خطوات إصدار وكالة فردية عبر بوابة ناجز؟",
-  "expected_answer": "يتم تسجيل الدخول إلى بوابة ناجز، ثم اختيار جميع الخدمات الإلكترونية وباقة الوكالات والإقرارات، والدخول إلى خدمة إصدار وكالة فردية واختيار تقديم طلب جديد. بعد ذلك يتم تعبئة بيانات الموكل والوكيل، واختيار بنود الوكالة ومدتها، ثم مراجعة الوكالة واعتماد رفع الطلب.",
-  "expected_document": "knowledge_base/najiz/electronic_power_of_attorney/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "najiz_electronic_power_of_attorney_002",
-  "platform": "najiz",
-  "service": "electronic_power_of_attorney",
-  "query": "أبي أسوي وكالة لشخص عن طريق ناجز، كيف أطلعها؟",
-  "expected_answer": "يتم الدخول إلى ناجز واختيار جميع الخدمات الإلكترونية ثم باقة الوكالات والإقرارات وخدمة إصدار وكالة فردية. بعد تقديم طلب جديد يتم إدخال بيانات الموكل ثم الوكيل، واختيار بنود الوكالة ومدتها، وبعد مراجعة البيانات يتم اعتماد رفع الطلب.",
-  "expected_document": "knowledge_base/najiz/electronic_power_of_attorney/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "najiz_enforcement_request_001",
-  "platform": "najiz",
-  "service": "enforcement_request",
-  "query": "ما خطوات تقديم طلب تنفيذ عبر بوابة ناجز؟",
-  "expected_answer": "يتم تسجيل الدخول إلى بوابة ناجز ثم اختيار جميع الخدمات الإلكترونية وباقة التنفيذ والدخول إلى خدمة تقديم طلب تنفيذ، ثم اختيار تقديم طلب جديد. بعد ذلك يتم تحديد نوع طلب التنفيذ ونوع السند وصفة مقدم الطلب، ثم استكمال بيانات طالب التنفيذ والمنفذ ضده ومضمون الطلب وإرفاق المستندات المطلوبة. بعد مراجعة البيانات وتحديد المحكمة يتم الضغط على حفظ وإرسال، ثم تظهر رسالة نجاح تقديم الطلب ورقم الطلب.",
-  "expected_document": "knowledge_base/najiz/enforcement_request/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "najiz_enforcement_request_002",
-  "platform": "najiz",
-  "service": "enforcement_request",
-  "query": "عندي سند وأبي أطالب بتنفيذه من ناجز، كيف أرفع الطلب؟",
-  "expected_answer": "يتم الدخول إلى ناجز واختيار باقة التنفيذ ثم خدمة تقديم طلب تنفيذ وفتح طلب جديد. بعد تحديد نوع التنفيذ والسند وصفة مقدم الطلب، يتم إدخال بيانات طالب التنفيذ والمنفذ ضده وبيانات السند وإرفاق المستندات المطلوبة، ثم مراجعة الطلب وتحديد المحكمة وحفظه وإرساله.",
-  "expected_document": "knowledge_base/najiz/enforcement_request/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "najiz_enforcement_termination_001",
-  "platform": "najiz",
-  "service": "enforcement_termination",
-  "query": "ما خطوات طلب إنهاء السند التنفيذي عبر بوابة ناجز؟",
-  "expected_answer": "يتم تسجيل الدخول إلى بوابة ناجز ثم اختيار جميع الخدمات الإلكترونية وباقة التنفيذ والدخول إلى خدمة طلب إنهاء السند التنفيذي. بعد ذلك يتم اختيار الطلب المراد إنهاؤه، ثم اختيار إجراء طلب إنهاء السند التنفيذي وتحديد سبب الإنهاء والعملة والمبلغ المستلم، والموافقة على الإقرار، ثم الضغط على حفظ وإرسال وتأكيد إنهاء الطلب.",
-  "expected_document": "knowledge_base/najiz/enforcement_termination/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "najiz_enforcement_termination_002",
-  "platform": "najiz",
-  "service": "enforcement_termination",
-  "query": "خلص موضوع التنفيذ وأبي أقفل الطلب في ناجز، وش أسوي؟",
-  "expected_answer": "يتم الدخول إلى ناجز واختيار الطلب التنفيذي المطلوب، ثم اختيار إجراء طلب إنهاء السند التنفيذي. بعد ذلك يتم تحديد سبب الإنهاء والعملة والمبلغ المستلم، ثم الموافقة على الإقرار وحفظ الطلب وإرساله وتأكيد الإنهاء.",
-  "expected_document": "knowledge_base/najiz/enforcement_termination/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "najiz_proof_of_payment_001",
-  "platform": "najiz",
-  "service": "proof_of_payment",
-  "query": "ما خطوات تقديم طلب إثبات السداد عبر بوابة ناجز؟",
-  "expected_answer": "يتم الدخول إلى منصة ناجز ثم اختيار الخدمات الإلكترونية وباقة التنفيذ وخدمة إثبات السداد، ثم تقديم طلب جديد. بعد تسجيل الدخول يتم اختيار طلب التنفيذ المطلوب وتحديد طلب إثبات سداد، ثم اختيار نوع السداد وطالب التنفيذ المسدد له وإدخال قيمة الوفاء وإرفاق ما يثبت السداد. بعد ذلك يتم الإقرار بصحة المعلومات والضغط على حفظ وإرسال.",
-  "expected_document": "knowledge_base/najiz/proof_of_payment/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "najiz_proof_of_payment_002",
-  "platform": "najiz",
-  "service": "proof_of_payment",
-  "query": "أنا سددت المبلغ في قضية تنفيذ وأبي أثبت لناجز إني دفعت، كيف أسوي؟",
-  "expected_answer": "إذا كان طلب التنفيذ ضمن الحالات التي تسمح بخدمة إثبات السداد، يتم الدخول إلى ناجز واختيار طلب التنفيذ ثم طلب إثبات سداد. بعد ذلك يتم تحديد نوع السداد وطالب التنفيذ الذي تم السداد له، وإدخال قيمة الوفاء وإرفاق ما يثبت الدفع مثل الحوالة أو الشيك، ثم الإقرار بصحة المعلومات وحفظ الطلب وإرساله.",
-  "expected_document": "knowledge_base/najiz/proof_of_payment/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "najiz_statement_of_claim_001",
-  "platform": "najiz",
-  "service": "statement_of_claim",
-  "query": "ما خطوات تقديم صحيفة دعوى عبر بوابة ناجز؟",
-  "expected_answer": "يتم تسجيل الدخول إلى بوابة ناجز ثم اختيار جميع الخدمات الإلكترونية وباقة القضاء والدخول إلى خدمة صحيفة الدعوى، ثم اختيار تقديم طلب جديد. بعد ذلك يتم تحديد التصنيف الرئيسي والفرعي ونوع الدعوى والتعهد بصحة البيانات، ثم إضافة بيانات المدعين والمدعى عليهم وتعبئة بيانات موضوع الدعوى حسب نوعها وإضافة المرفقات المطلوبة ثم إرسال الطلب.",
-  "expected_document": "knowledge_base/najiz/statement_of_claim/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "najiz_statement_of_claim_002",
-  "platform": "najiz",
-  "service": "statement_of_claim",
-  "query": "أبي أرفع دعوى على شخص عن طريق ناجز، من وين أبدأ؟",
-  "expected_answer": "يتم الدخول إلى ناجز واختيار باقة القضاء ثم خدمة صحيفة الدعوى وتقديم طلب جديد. بعد تحديد تصنيف الدعوى ونوعها، يتم إدخال بيانات أطراف الدعوى وموضوعها وإضافة المرفقات المطلوبة حسب نوع الدعوى، ثم إرسال الطلب.",
-  "expected_document": "knowledge_base/najiz/statement_of_claim/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "najiz_urgent_lawsuits_001",
-  "platform": "najiz",
-  "service": "urgent_lawsuits",
-  "query": "ما خطوات تقديم دعوى مستعجلة عبر بوابة ناجز؟",
-  "expected_answer": "يتم تسجيل الدخول إلى بوابة ناجز ثم اختيار جميع الخدمات الإلكترونية وباقة القضاء والدخول إلى خدمة الدعاوى المستعجلة، ثم اختيار تقديم طلب جديد. بعد ذلك يتم تحديد التصنيف الرئيسي والفرعي ونوع الدعوى والتعهد بصحة البيانات، ثم إضافة بيانات المدعين والمدعى عليهم وتعبئة بيانات موضوع الدعوى حسب نوعها وإضافة المرفقات المطلوبة ثم إرسال الطلب.",
-  "expected_document": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "najiz_urgent_lawsuits_002",
-  "platform": "najiz",
-  "service": "urgent_lawsuits",
-  "query": "عندي موضوع مستعجل وأبي أرفع دعوى بسرعة من ناجز، كيف أقدم؟",
-  "expected_answer": "يتم الدخول إلى ناجز واختيار باقة القضاء ثم خدمة الدعاوى المستعجلة وتقديم طلب جديد. بعد تحديد تصنيف الدعوى ونوعها، يتم إدخال بيانات أطراف الدعوى وموضوعها وإضافة المرفقات المطلوبة حسب نوع الدعوى، ثم إرسال الطلب.",
-  "expected_document": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "sakani_housing_support_eligibility_001",
-  "platform": "sakani",
-  "service": "housing_support_eligibility",
-  "query": "ما خطوات التحقق من أهلية الاستحقاق للدعم السكني عبر منصة سكني؟",
-  "expected_answer": "بعد تسجيل الدخول إلى منصة سكني يتم اختيار ملفي الشخصي ثم الضغط على تحقق من حالة الاستحقاق. بعد ذلك يتم قراءة الشروط والأحكام والموافقة عليها، والإجابة على الإقرار، ثم تعبئة البيانات الشخصية وتأكيدها. بعدها يتم التحقق من أهلية الاستحقاق، وفي حال عدم الأهلية يمكن تقديم اعتراض إذا كانت شروط لائحة الدعم السكني مستوفاة.",
-  "expected_document": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "sakani_housing_support_eligibility_002",
-  "platform": "sakani",
-  "service": "housing_support_eligibility",
-  "query": "كيف أعرف إذا أنا مستحق للدعم السكني في سكني؟",
-  "expected_answer": "يتم الدخول إلى منصة سكني ثم اختيار ملفي الشخصي والضغط على تحقق من حالة الاستحقاق. بعد الموافقة على الشروط والأحكام والإجابة على الإقرار وتعبئة البيانات الشخصية، تظهر نتيجة التحقق من الأهلية. وإذا ظهرت نتيجة عدم الأهلية، يمكن تقديم اعتراض عند استيفاء شروط لائحة الدعم السكني.",
-  "expected_document": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "sakani_housing_unit_rental_001",
-  "platform": "sakani",
-  "service": "housing_unit_rental",
-  "query": "ما خطوات طلب تأجير وحدة سكنية عبر منصة سكني؟",
-  "expected_answer": "يتم الدخول إلى منصة سكني ثم الضغط على إدارة الملف الشخصي، واختيار الحجوزات المكتملة ثم عرض الحجز. بعد اكتمال الحجز يتم طلب استئجار وحدة مدعومة، ثم بدء الخدمة والموافقة على الشروط والأحكام ورفع المرفقات المطلوبة وإرسال الطلب. بعد معالجة الطلب يتم اعتماده أو إرجاعه مع تعليقات للتعديل.",
-  "expected_document": "knowledge_base/sakani/housing_unit_rental/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "sakani_housing_unit_rental_002",
-  "platform": "sakani",
-  "service": "housing_unit_rental",
-  "query": "عندي حجز مكتمل في سكني وأبي أستأجر وحدة مدعومة، وش أسوي؟",
-  "expected_answer": "يتم الدخول إلى سكني ثم إدارة الملف الشخصي واختيار الحجوزات المكتملة وعرض الحجز. بعد ذلك يتم طلب استئجار وحدة مدعومة، وبدء الخدمة والموافقة على الشروط والأحكام، ثم رفع المرفقات المطلوبة وإرسال الطلب. بعد المعالجة يتم اعتماد الطلب أو إرجاعه للتعديل.",
-  "expected_document": "knowledge_base/sakani/housing_unit_rental/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "sakani_online_financing_001",
-  "platform": "sakani",
-  "service": "online_financing",
-  "query": "ما خطوات طلب التمويل العقاري الإلكتروني عبر منصة سكني؟",
-  "expected_answer": "يبدأ المستفيد بالدخول إلى السوق العقاري واختيار الوحدة، ثم اختيار طلب تمويل عقاري إلكتروني. بعد تسجيل الدخول عند الحاجة، يتم تحديد الوحدة المراد تقديم التمويل عليها والانتقال للخطوة التالية، ثم تعبئة النموذج. بعد ذلك يتم استعراض العروض التمويلية المتاحة واختيار العرض المناسب.",
-  "expected_document": "knowledge_base/sakani/online_financing/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "sakani_online_financing_002",
-  "platform": "sakani",
-  "service": "online_financing",
-  "query": "لقيت وحدة في سكني وأبي أشوف عروض التمويل عليها، كيف أقدم؟",
-  "expected_answer": "يتم الدخول إلى السوق العقاري في سكني واختيار الوحدة، ثم اختيار طلب تمويل عقاري إلكتروني. بعد تسجيل الدخول يتم تحديد الوحدة وتعبئة نموذج التمويل، ثم يعرض النظام العروض التمويلية المتاحة ليختار المستفيد العرض المناسب.",
-  "expected_document": "knowledge_base/sakani/online_financing/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "sakani_real_estate_advisor_001",
-  "platform": "sakani",
-  "service": "real_estate_advisor",
-  "query": "ما خطوات التسجيل في المستشار العقاري عبر منصة سكني؟",
-  "expected_answer": "بعد تسجيل الدخول إلى منصة سكني يتم الدخول إلى الخدمات ثم عرض جميع الخدمات واختيار خدمة المستشار العقاري والضغط على بدء الخدمة. بعد ذلك يتم تعبئة البيانات المالية وجهة العمل واختيار نوع المنتج، ثم الاطلاع على خيارات الدعم والشروط والموافقة عليها والضغط على إرسال. بعد ذلك يكتمل التسجيل ويتم إصدار التوصية المالية.",
-  "expected_document": "knowledge_base/sakani/real_estate_advisor/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "sakani_real_estate_advisor_002",
-  "platform": "sakani",
-  "service": "real_estate_advisor",
-  "query": "أبي أعرف وش التمويل أو الدعم المناسب لي في سكني، كيف أستخدم المستشار العقاري؟",
-  "expected_answer": "يتم الدخول إلى سكني ثم الخدمات واختيار خدمة المستشار العقاري وبدء الخدمة. بعد تعبئة البيانات المالية وجهة العمل واختيار نوع المنتج، يعرض النظام خيارات الدعم المتاحة، ثم يتم الموافقة على الشروط وإرسال الطلب لإكمال التسجيل وإصدار التوصية المالية.",
-  "expected_document": "knowledge_base/sakani/real_estate_advisor/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "sakani_real_estate_transaction_tax_support_001",
-  "platform": "sakani",
-  "service": "real_estate_transaction_tax_support",
-  "query": "ما خطوات إصدار شهادة تحمل ضريبة التصرفات العقارية للمسكن الأول عبر سكني؟",
-  "expected_answer": "بعد تسجيل الدخول إلى سكني يتم اختيار الخدمات ثم خدمات ومنتجات الدعم السكني والدخول إلى خدمة تحمل ضريبة التصرفات العقارية للمسكن الأول. بعد ذلك يتم تعبئة البيانات المطلوبة والمتابعة، ثم مراجعة الإعلان والموافقة عليه وإرسال الطلب. بعد ثبوت الأهلية يقوم النظام بإصدار الشهادة وإتاحتها في حساب المستخدم للاستعراض والتحميل.",
-  "expected_document": "knowledge_base/sakani/real_estate_transaction_tax_support/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "sakani_real_estate_transaction_tax_support_002",
-  "platform": "sakani",
-  "service": "real_estate_transaction_tax_support",
-  "query": "كيف أطلع شهادة إعفاء ضريبة المسكن الأول من سكني؟",
-  "expected_answer": "يتم الدخول إلى سكني ثم اختيار خدمات ومنتجات الدعم السكني وخدمة تحمل ضريبة التصرفات العقارية للمسكن الأول. بعد تعبئة البيانات المطلوبة ومراجعة الإعلان والموافقة عليه يتم إرسال الطلب، وبعد ثبوت الأهلية يصدر النظام الشهادة ويمكن استعراضها وتحميلها من الحساب.",
-  "expected_document": "knowledge_base/sakani/real_estate_transaction_tax_support/content_final.md",
-  "query_type": "query_mismatch"
-}
-,
-{
-  "id": "sakani_residential_lands_001",
-  "platform": "sakani",
-  "service": "residential_lands",
-  "query": "ما خطوات الحجز على منتج أرضك دعمك عبر منصة سكني؟",
-  "expected_answer": "بعد الحصول على الاستحقاق وتسجيل الدخول إلى سكني يتم اختيار عقارات الشراء ثم أراضي، وبعدها تصفية النتائج واختيار أراضي الوزارة. يتم اختيار المخطط ثم قطعة الأرض المناسبة والضغط على حجز قطعة أرض، ثم الإقرار بالشروط والأحكام وقبول وتوقيع العقد. بعد ذلك يتم إدخال رمز التحقق المرسل للجوال، وعند نجاح التوقيع يمكن عرض تفاصيل الحجز.",
-  "expected_document": "knowledge_base/sakani/residential_lands/content_final.md",
-  "query_type": "standard"
-},
-{
-  "id": "sakani_residential_lands_002",
-  "platform": "sakani",
-  "service": "residential_lands",
-  "query": "أنا مستحق للدعم وأبي أحجز أرض من سكني، كيف أسوي؟",
-  "expected_answer": "بعد تسجيل الدخول إلى سكني يتم الدخول إلى عقارات الشراء ثم اختيار أراضي وأراضي الوزارة، ثم اختيار المخطط وقطعة الأرض المناسبة والضغط على حجز قطعة أرض. بعد الموافقة على الشروط يتم قبول وتوقيع العقد وإدخال رمز التحقق المرسل للجوال لإتمام التوقيع الإلكتروني.",
-  "expected_document": "knowledge_base/sakani/residential_lands/content_final.md",
-  "query_type": "query_mismatch"
-}
+    "id": "balady_commercial_license_cancellation_001",
+    "platform": "balady",
+    "service": "commercial_license_cancellation",
+    "query": "ما خطوات إلغاء رخصة نشاط تجاري عبر منصة بلدي؟",
+    "expected_answer": "بعد تسجيل الدخول إلى منصة بلدي يتم اختيار عرض جميع المنتجات، ثم الرخص التجارية وخدمة إلغاء رخصة نشاط تجاري والضغط على بدء الخدمة. يحدد المستخدم صفة مقدم الطلب ويختار الرخصة المراد إلغاؤها ثم يتقدم بالطلب، ويستكمل بيانات مقدم الطلب والنشاط والموقع وبيانات المحل وسبب الإلغاء والمرفقات. بعد ذلك يتم حساب الرسوم واختيار طريقة الدفع وسداد الفاتورة، وبعد إتمام الدفع تصبح حالة الطلب منتهي.",
+    "expected_document": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "balady_commercial_license_cancellation_002",
+    "platform": "balady",
+    "service": "commercial_license_cancellation",
+    "query": "أبي أقفل رخصة المحل في بلدي، وش الخطوات؟",
+    "expected_answer": "يتم الدخول إلى منصة بلدي واختيار الرخص التجارية ثم خدمة إلغاء رخصة نشاط تجاري. بعد اختيار صفة مقدم الطلب والرخصة المطلوب إلغاؤها، يتم استكمال بيانات الطلب وتحديد سبب الإلغاء ورفع المرفقات، ثم حساب الرسوم وسداد الفاتورة. بعد إتمام الدفع تصبح حالة الطلب منتهي.",
+    "expected_document": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "balady_commercial_license_modification_001",
+    "platform": "balady",
+    "service": "commercial_license_modification",
+    "query": "ما خطوات تعديل رخصة نشاط تجاري عبر منصة بلدي؟",
+    "expected_answer": "بعد تسجيل الدخول إلى منصة بلدي يتم اختيار الرخص التجارية ثم خدمة تعديل رخصة نشاط تجاري وبدء الخدمة. يحدد المستخدم صفة مقدم الطلب ويختار الرخصة المراد تعديلها، ثم يتحقق من رقم الجوال ويستكمل بيانات مقدم الطلب والنشاط والتعديلات المطلوبة. بعد ذلك يستكمل بيانات الموقع والمحل واللوحات والمرفقات، ثم يتم حساب الرسوم وإرسال الطلب.",
+    "expected_document": "knowledge_base/balady/commercial_license_modification/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "balady_commercial_license_modification_002",
+    "platform": "balady",
+    "service": "commercial_license_modification",
+    "query": "أبي أغير بيانات أو نشاط رخصة المحل في بلدي، وش أسوي؟",
+    "expected_answer": "يتم الدخول إلى منصة بلدي واختيار الرخص التجارية ثم خدمة تعديل رخصة نشاط تجاري. بعد اختيار صفة مقدم الطلب والرخصة المطلوب تعديلها، يتم التحقق من رقم الجوال وتعديل بيانات النشاط أو البيانات المطلوبة، ثم استكمال بيانات الموقع والمحل والمرفقات وحساب الرسوم وإرسال الطلب.",
+    "expected_document": "knowledge_base/balady/commercial_license_modification/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "balady_commercial_license_renewal_001",
+    "platform": "balady",
+    "service": "commercial_license_renewal",
+    "query": "ما خطوات تجديد رخصة تجارية عبر منصة بلدي؟",
+    "expected_answer": "بعد تسجيل الدخول إلى منصة بلدي يتم البحث عن منتج الرخص التجارية ثم خدمة تجديد رخصة تجارية. يحدد المستخدم صفة مقدم الطلب ويختار الرخصة، ثم يختار تجديد الرخصة ويستكمل بيانات النشاط والموقع والمحل واللوحات والمرفقات. بعد ذلك يتم تحديد نوع التجديد وحساب الرسوم، ثم استكمال إجراءات الدفع أو إرسال الطلب بحسب مسار الرسوم المطبق.",
+    "expected_document": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "balady_commercial_license_renewal_002",
+    "platform": "balady",
+    "service": "commercial_license_renewal",
+    "query": "رخصة المحل انتهت وأبي أجددها من بلدي، وش الخطوات؟",
+    "expected_answer": "يتم الدخول إلى منصة بلدي واختيار الرخص التجارية ثم خدمة تجديد رخصة تجارية. بعد تحديد صفة مقدم الطلب واختيار الرخصة، يتم استكمال بيانات النشاط والموقع والمحل والمرفقات، ثم اختيار نوع التجديد وحساب الرسوم واستكمال الدفع أو إرسال الطلب حسب الإجراء المتاح.",
+    "expected_document": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "balady_health_certificate_issuance_001",
+    "platform": "balady",
+    "service": "health_certificate_issuance",
+    "query": "ما خطوات إصدار شهادة صحية عبر منصة بلدي؟",
+    "expected_answer": "بعد تسجيل الدخول إلى منصة بلدي يتم اختيار الشهادات الصحية ثم خدمة إصدار شهادة صحية والضغط على بدء الخدمة. يحدد المستخدم صفة مقدم الطلب وموقع المحل، ثم يستكمل بيانات الطلب وبيانات العاملين ويتحقق من بياناتهم، وبعد ذلك يوافق على الإقرار الخاص ببيانات رخصة المحل ويرسل الطلب. يمكن متابعة حالة الطلب من شاشة طلباتي، وبعد اكتماله يمكن طباعة الشهادة أو الشهادات الصحية.",
+    "expected_document": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "balady_health_certificate_issuance_002",
+    "platform": "balady",
+    "service": "health_certificate_issuance",
+    "query": "أبي أطلع كرت صحي للعامل من بلدي، كيف أقدّم عليه؟",
+    "expected_answer": "يتم الدخول إلى منصة بلدي واختيار الشهادات الصحية ثم إصدار شهادة صحية. بعد بدء الخدمة يتم تحديد صفة مقدم الطلب وموقع المحل، ثم إدخال بيانات العامل والتحقق منها وإضافته إلى قائمة العمال، واستكمال بيانات رخصة المحل والإقرار المطلوب ثم إرسال الطلب ومتابعته من شاشة طلباتي.",
+    "expected_document": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "balady_health_certificate_renewal_001",
+    "platform": "balady",
+    "service": "health_certificate_renewal",
+    "query": "ما خطوات تجديد شهادة صحية عبر منصة بلدي؟",
+    "expected_answer": "بعد تسجيل الدخول إلى منصة بلدي يتم اختيار الشهادات الصحية ثم خدمة تجديد شهادة صحية والضغط على بدء الخدمة. يحدد المستخدم صفة مقدم الطلب ويؤكد موقع المحل، ثم يختار العامل أو يضيف بياناته ويتحقق منها، ويستكمل بيانات رخصة المحل ويوافق على الإقرار ثم يرسل الطلب. بعد ذلك يمكن متابعة الطلب من شاشة طلباتي واستكمال دفع الفاتورة، وبعد الدفع تصبح حالة الطلب منتهي ويمكن طباعة الشهادة.",
+    "expected_document": "knowledge_base/balady/health_certificate_renewal/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "balady_health_certificate_renewal_002",
+    "platform": "balady",
+    "service": "health_certificate_renewal",
+    "query": "الكرت الصحي للعامل قرب ينتهي، كيف أجدده من بلدي؟",
+    "expected_answer": "يتم الدخول إلى منصة بلدي واختيار الشهادات الصحية ثم تجديد شهادة صحية. بعد بدء الخدمة يتم تحديد صفة مقدم الطلب وتأكيد موقع المحل، ثم اختيار العامل أو إدخال بياناته والتحقق منها واستكمال بيانات رخصة المحل، وبعد إرسال الطلب تتم متابعة الطلب ودفع الفاتورة حتى يصبح منتهي ويمكن بعدها طباعة الشهادة.",
+    "expected_document": "knowledge_base/balady/health_certificate_renewal/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "najiz_electronic_power_of_attorney_001",
+    "platform": "najiz",
+    "service": "electronic_power_of_attorney",
+    "query": "ما خطوات إصدار وكالة فردية عبر بوابة ناجز؟",
+    "expected_answer": "يتم تسجيل الدخول إلى بوابة ناجز، ثم اختيار جميع الخدمات الإلكترونية وباقة الوكالات والإقرارات، والدخول إلى خدمة إصدار وكالة فردية واختيار تقديم طلب جديد. بعد ذلك يتم تعبئة بيانات الموكل والوكيل، واختيار بنود الوكالة ومدتها، ثم مراجعة الوكالة واعتماد رفع الطلب.",
+    "expected_document": "knowledge_base/najiz/electronic_power_of_attorney/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "najiz_electronic_power_of_attorney_002",
+    "platform": "najiz",
+    "service": "electronic_power_of_attorney",
+    "query": "أبي أسوي وكالة لشخص عن طريق ناجز، كيف أطلعها؟",
+    "expected_answer": "يتم الدخول إلى ناجز واختيار جميع الخدمات الإلكترونية ثم باقة الوكالات والإقرارات وخدمة إصدار وكالة فردية. بعد تقديم طلب جديد يتم إدخال بيانات الموكل ثم الوكيل، واختيار بنود الوكالة ومدتها، وبعد مراجعة البيانات يتم اعتماد رفع الطلب.",
+    "expected_document": "knowledge_base/najiz/electronic_power_of_attorney/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "najiz_enforcement_request_001",
+    "platform": "najiz",
+    "service": "enforcement_request",
+    "query": "ما خطوات تقديم طلب تنفيذ عبر بوابة ناجز؟",
+    "expected_answer": "يتم تسجيل الدخول إلى بوابة ناجز ثم اختيار جميع الخدمات الإلكترونية وباقة التنفيذ والدخول إلى خدمة تقديم طلب تنفيذ، ثم اختيار تقديم طلب جديد. بعد ذلك يتم تحديد نوع طلب التنفيذ ونوع السند وصفة مقدم الطلب، ثم استكمال بيانات طالب التنفيذ والمنفذ ضده ومضمون الطلب وإرفاق المستندات المطلوبة. بعد مراجعة البيانات وتحديد المحكمة يتم الضغط على حفظ وإرسال، ثم تظهر رسالة نجاح تقديم الطلب ورقم الطلب.",
+    "expected_document": "knowledge_base/najiz/enforcement_request/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "najiz_enforcement_request_002",
+    "platform": "najiz",
+    "service": "enforcement_request",
+    "query": "عندي سند وأبي أطالب بتنفيذه من ناجز، كيف أرفع الطلب؟",
+    "expected_answer": "يتم الدخول إلى ناجز واختيار باقة التنفيذ ثم خدمة تقديم طلب تنفيذ وفتح طلب جديد. بعد تحديد نوع التنفيذ والسند وصفة مقدم الطلب، يتم إدخال بيانات طالب التنفيذ والمنفذ ضده وبيانات السند وإرفاق المستندات المطلوبة، ثم مراجعة الطلب وتحديد المحكمة وحفظه وإرساله.",
+    "expected_document": "knowledge_base/najiz/enforcement_request/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "najiz_enforcement_termination_001",
+    "platform": "najiz",
+    "service": "enforcement_termination",
+    "query": "ما خطوات طلب إنهاء السند التنفيذي عبر بوابة ناجز؟",
+    "expected_answer": "يتم تسجيل الدخول إلى بوابة ناجز ثم اختيار جميع الخدمات الإلكترونية وباقة التنفيذ والدخول إلى خدمة طلب إنهاء السند التنفيذي. بعد ذلك يتم اختيار الطلب المراد إنهاؤه، ثم اختيار إجراء طلب إنهاء السند التنفيذي وتحديد سبب الإنهاء والعملة والمبلغ المستلم، والموافقة على الإقرار، ثم الضغط على حفظ وإرسال وتأكيد إنهاء الطلب.",
+    "expected_document": "knowledge_base/najiz/enforcement_termination/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "najiz_enforcement_termination_002",
+    "platform": "najiz",
+    "service": "enforcement_termination",
+    "query": "خلص موضوع التنفيذ وأبي أقفل الطلب في ناجز، وش أسوي؟",
+    "expected_answer": "يتم الدخول إلى ناجز واختيار الطلب التنفيذي المطلوب، ثم اختيار إجراء طلب إنهاء السند التنفيذي. بعد ذلك يتم تحديد سبب الإنهاء والعملة والمبلغ المستلم، ثم الموافقة على الإقرار وحفظ الطلب وإرساله وتأكيد الإنهاء.",
+    "expected_document": "knowledge_base/najiz/enforcement_termination/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "najiz_proof_of_payment_001",
+    "platform": "najiz",
+    "service": "proof_of_payment",
+    "query": "ما خطوات تقديم طلب إثبات السداد عبر بوابة ناجز؟",
+    "expected_answer": "يتم الدخول إلى منصة ناجز ثم اختيار الخدمات الإلكترونية وباقة التنفيذ وخدمة إثبات السداد، ثم تقديم طلب جديد. بعد تسجيل الدخول يتم اختيار طلب التنفيذ المطلوب وتحديد طلب إثبات سداد، ثم اختيار نوع السداد وطالب التنفيذ المسدد له وإدخال قيمة الوفاء وإرفاق ما يثبت السداد. بعد ذلك يتم الإقرار بصحة المعلومات والضغط على حفظ وإرسال.",
+    "expected_document": "knowledge_base/najiz/proof_of_payment/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "najiz_proof_of_payment_002",
+    "platform": "najiz",
+    "service": "proof_of_payment",
+    "query": "أنا سددت المبلغ في قضية تنفيذ وأبي أثبت لناجز إني دفعت، كيف أسوي؟",
+    "expected_answer": "إذا كان طلب التنفيذ ضمن الحالات التي تسمح بخدمة إثبات السداد، يتم الدخول إلى ناجز واختيار طلب التنفيذ ثم طلب إثبات سداد. بعد ذلك يتم تحديد نوع السداد وطالب التنفيذ الذي تم السداد له، وإدخال قيمة الوفاء وإرفاق ما يثبت الدفع مثل الحوالة أو الشيك، ثم الإقرار بصحة المعلومات وحفظ الطلب وإرساله.",
+    "expected_document": "knowledge_base/najiz/proof_of_payment/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "najiz_statement_of_claim_001",
+    "platform": "najiz",
+    "service": "statement_of_claim",
+    "query": "ما خطوات تقديم صحيفة دعوى عبر بوابة ناجز؟",
+    "expected_answer": "يتم تسجيل الدخول إلى بوابة ناجز ثم اختيار جميع الخدمات الإلكترونية وباقة القضاء والدخول إلى خدمة صحيفة الدعوى، ثم اختيار تقديم طلب جديد. بعد ذلك يتم تحديد التصنيف الرئيسي والفرعي ونوع الدعوى والتعهد بصحة البيانات، ثم إضافة بيانات المدعين والمدعى عليهم وتعبئة بيانات موضوع الدعوى حسب نوعها وإضافة المرفقات المطلوبة ثم إرسال الطلب.",
+    "expected_document": "knowledge_base/najiz/statement_of_claim/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "najiz_statement_of_claim_002",
+    "platform": "najiz",
+    "service": "statement_of_claim",
+    "query": "أبي أرفع دعوى على شخص عن طريق ناجز، من وين أبدأ؟",
+    "expected_answer": "يتم الدخول إلى ناجز واختيار باقة القضاء ثم خدمة صحيفة الدعوى وتقديم طلب جديد. بعد تحديد تصنيف الدعوى ونوعها، يتم إدخال بيانات أطراف الدعوى وموضوعها وإضافة المرفقات المطلوبة حسب نوع الدعوى، ثم إرسال الطلب.",
+    "expected_document": "knowledge_base/najiz/statement_of_claim/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "najiz_urgent_lawsuits_001",
+    "platform": "najiz",
+    "service": "urgent_lawsuits",
+    "query": "ما خطوات تقديم دعوى مستعجلة عبر بوابة ناجز؟",
+    "expected_answer": "يتم تسجيل الدخول إلى بوابة ناجز ثم اختيار جميع الخدمات الإلكترونية وباقة القضاء والدخول إلى خدمة الدعاوى المستعجلة، ثم اختيار تقديم طلب جديد. بعد ذلك يتم تحديد التصنيف الرئيسي والفرعي ونوع الدعوى والتعهد بصحة البيانات، ثم إضافة بيانات المدعين والمدعى عليهم وتعبئة بيانات موضوع الدعوى حسب نوعها وإضافة المرفقات المطلوبة ثم إرسال الطلب.",
+    "expected_document": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "najiz_urgent_lawsuits_002",
+    "platform": "najiz",
+    "service": "urgent_lawsuits",
+    "query": "عندي موضوع مستعجل وأبي أرفع دعوى بسرعة من ناجز، كيف أقدم؟",
+    "expected_answer": "يتم الدخول إلى ناجز واختيار باقة القضاء ثم خدمة الدعاوى المستعجلة وتقديم طلب جديد. بعد تحديد تصنيف الدعوى ونوعها، يتم إدخال بيانات أطراف الدعوى وموضوعها وإضافة المرفقات المطلوبة حسب نوع الدعوى، ثم إرسال الطلب.",
+    "expected_document": "knowledge_base/najiz/urgent_lawsuits/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "sakani_housing_support_eligibility_001",
+    "platform": "sakani",
+    "service": "housing_support_eligibility",
+    "query": "ما خطوات التحقق من أهلية الاستحقاق للدعم السكني عبر منصة سكني؟",
+    "expected_answer": "بعد تسجيل الدخول إلى منصة سكني يتم اختيار ملفي الشخصي ثم الضغط على تحقق من حالة الاستحقاق. بعد ذلك يتم قراءة الشروط والأحكام والموافقة عليها، والإجابة على الإقرار، ثم تعبئة البيانات الشخصية وتأكيدها. بعدها يتم التحقق من أهلية الاستحقاق، وفي حال عدم الأهلية يمكن تقديم اعتراض إذا كانت شروط لائحة الدعم السكني مستوفاة.",
+    "expected_document": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "sakani_housing_support_eligibility_002",
+    "platform": "sakani",
+    "service": "housing_support_eligibility",
+    "query": "كيف أعرف إذا أنا مستحق للدعم السكني في سكني؟",
+    "expected_answer": "يتم الدخول إلى منصة سكني ثم اختيار ملفي الشخصي والضغط على تحقق من حالة الاستحقاق. بعد الموافقة على الشروط والأحكام والإجابة على الإقرار وتعبئة البيانات الشخصية، تظهر نتيجة التحقق من الأهلية. وإذا ظهرت نتيجة عدم الأهلية، يمكن تقديم اعتراض عند استيفاء شروط لائحة الدعم السكني.",
+    "expected_document": "knowledge_base/sakani/housing_support_eligibility/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "sakani_housing_unit_rental_001",
+    "platform": "sakani",
+    "service": "housing_unit_rental",
+    "query": "ما خطوات طلب تأجير وحدة سكنية عبر منصة سكني؟",
+    "expected_answer": "يتم الدخول إلى منصة سكني ثم الضغط على إدارة الملف الشخصي، واختيار الحجوزات المكتملة ثم عرض الحجز. بعد اكتمال الحجز يتم طلب استئجار وحدة مدعومة، ثم بدء الخدمة والموافقة على الشروط والأحكام ورفع المرفقات المطلوبة وإرسال الطلب. بعد معالجة الطلب يتم اعتماده أو إرجاعه مع تعليقات للتعديل.",
+    "expected_document": "knowledge_base/sakani/housing_unit_rental/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "sakani_housing_unit_rental_002",
+    "platform": "sakani",
+    "service": "housing_unit_rental",
+    "query": "عندي حجز مكتمل في سكني وأبي أستأجر وحدة مدعومة، وش أسوي؟",
+    "expected_answer": "يتم الدخول إلى سكني ثم إدارة الملف الشخصي واختيار الحجوزات المكتملة وعرض الحجز. بعد ذلك يتم طلب استئجار وحدة مدعومة، وبدء الخدمة والموافقة على الشروط والأحكام، ثم رفع المرفقات المطلوبة وإرسال الطلب. بعد المعالجة يتم اعتماد الطلب أو إرجاعه للتعديل.",
+    "expected_document": "knowledge_base/sakani/housing_unit_rental/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "sakani_online_financing_001",
+    "platform": "sakani",
+    "service": "online_financing",
+    "query": "ما خطوات طلب التمويل العقاري الإلكتروني عبر منصة سكني؟",
+    "expected_answer": "يبدأ المستفيد بالدخول إلى السوق العقاري واختيار الوحدة، ثم اختيار طلب تمويل عقاري إلكتروني. بعد تسجيل الدخول عند الحاجة، يتم تحديد الوحدة المراد تقديم التمويل عليها والانتقال للخطوة التالية، ثم تعبئة النموذج. بعد ذلك يتم استعراض العروض التمويلية المتاحة واختيار العرض المناسب.",
+    "expected_document": "knowledge_base/sakani/online_financing/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "sakani_online_financing_002",
+    "platform": "sakani",
+    "service": "online_financing",
+    "query": "لقيت وحدة في سكني وأبي أشوف عروض التمويل عليها، كيف أقدم؟",
+    "expected_answer": "يتم الدخول إلى السوق العقاري في سكني واختيار الوحدة، ثم اختيار طلب تمويل عقاري إلكتروني. بعد تسجيل الدخول يتم تحديد الوحدة وتعبئة نموذج التمويل، ثم يعرض النظام العروض التمويلية المتاحة ليختار المستفيد العرض المناسب.",
+    "expected_document": "knowledge_base/sakani/online_financing/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "sakani_real_estate_advisor_001",
+    "platform": "sakani",
+    "service": "real_estate_advisor",
+    "query": "ما خطوات التسجيل في المستشار العقاري عبر منصة سكني؟",
+    "expected_answer": "بعد تسجيل الدخول إلى منصة سكني يتم الدخول إلى الخدمات ثم عرض جميع الخدمات واختيار خدمة المستشار العقاري والضغط على بدء الخدمة. بعد ذلك يتم تعبئة البيانات المالية وجهة العمل واختيار نوع المنتج، ثم الاطلاع على خيارات الدعم والشروط والموافقة عليها والضغط على إرسال. بعد ذلك يكتمل التسجيل ويتم إصدار التوصية المالية.",
+    "expected_document": "knowledge_base/sakani/real_estate_advisor/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "sakani_real_estate_advisor_002",
+    "platform": "sakani",
+    "service": "real_estate_advisor",
+    "query": "أبي أعرف وش التمويل أو الدعم المناسب لي في سكني، كيف أستخدم المستشار العقاري؟",
+    "expected_answer": "يتم الدخول إلى سكني ثم الخدمات واختيار خدمة المستشار العقاري وبدء الخدمة. بعد تعبئة البيانات المالية وجهة العمل واختيار نوع المنتج، يعرض النظام خيارات الدعم المتاحة، ثم يتم الموافقة على الشروط وإرسال الطلب لإكمال التسجيل وإصدار التوصية المالية.",
+    "expected_document": "knowledge_base/sakani/real_estate_advisor/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "sakani_real_estate_transaction_tax_support_001",
+    "platform": "sakani",
+    "service": "real_estate_transaction_tax_support",
+    "query": "ما خطوات إصدار شهادة تحمل ضريبة التصرفات العقارية للمسكن الأول عبر سكني؟",
+    "expected_answer": "بعد تسجيل الدخول إلى سكني يتم اختيار الخدمات ثم خدمات ومنتجات الدعم السكني والدخول إلى خدمة تحمل ضريبة التصرفات العقارية للمسكن الأول. بعد ذلك يتم تعبئة البيانات المطلوبة والمتابعة، ثم مراجعة الإعلان والموافقة عليه وإرسال الطلب. بعد ثبوت الأهلية يقوم النظام بإصدار الشهادة وإتاحتها في حساب المستخدم للاستعراض والتحميل.",
+    "expected_document": "knowledge_base/sakani/real_estate_transaction_tax_support/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "sakani_real_estate_transaction_tax_support_002",
+    "platform": "sakani",
+    "service": "real_estate_transaction_tax_support",
+    "query": "كيف أطلع شهادة إعفاء ضريبة المسكن الأول من سكني؟",
+    "expected_answer": "يتم الدخول إلى سكني ثم اختيار خدمات ومنتجات الدعم السكني وخدمة تحمل ضريبة التصرفات العقارية للمسكن الأول. بعد تعبئة البيانات المطلوبة ومراجعة الإعلان والموافقة عليه يتم إرسال الطلب، وبعد ثبوت الأهلية يصدر النظام الشهادة ويمكن استعراضها وتحميلها من الحساب.",
+    "expected_document": "knowledge_base/sakani/real_estate_transaction_tax_support/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "sakani_residential_lands_001",
+    "platform": "sakani",
+    "service": "residential_lands",
+    "query": "ما خطوات الحجز على منتج أرضك دعمك عبر منصة سكني؟",
+    "expected_answer": "بعد الحصول على الاستحقاق وتسجيل الدخول إلى سكني يتم اختيار عقارات الشراء ثم أراضي، وبعدها تصفية النتائج واختيار أراضي الوزارة. يتم اختيار المخطط ثم قطعة الأرض المناسبة والضغط على حجز قطعة أرض، ثم الإقرار بالشروط والأحكام وقبول وتوقيع العقد. بعد ذلك يتم إدخال رمز التحقق المرسل للجوال، وعند نجاح التوقيع يمكن عرض تفاصيل الحجز.",
+    "expected_document": "knowledge_base/sakani/residential_lands/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "sakani_residential_lands_002",
+    "platform": "sakani",
+    "service": "residential_lands",
+    "query": "أنا مستحق للدعم وأبي أحجز أرض من سكني، كيف أسوي؟",
+    "expected_answer": "بعد تسجيل الدخول إلى سكني يتم الدخول إلى عقارات الشراء ثم اختيار أراضي وأراضي الوزارة، ثم اختيار المخطط وقطعة الأرض المناسبة والضغط على حجز قطعة أرض. بعد الموافقة على الشروط يتم قبول وتوقيع العقد وإدخال رمز التحقق المرسل للجوال لإتمام التوقيع الإلكتروني.",
+    "expected_document": "knowledge_base/sakani/residential_lands/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "absher_driving_license_renewal_001",
+    "platform": "absher",
+    "service": "driving_license_renewal",
+    "query": "ما هي شروط تجديد رخصة القيادة؟",
+    "expected_answer": "تشمل شروط تجديد رخصة القيادة سداد رسوم التجديد والمخالفات المرورية إن وجدت، وأن تكون المدة المتبقية من صلاحية الرخصة أقل من 365 يومًا، ووجود فحص طبي من مركز معتمد. وتشمل الخدمة الرخصة الخصوصية ورخصة قيادة الدراجة النارية الآلية.",
+    "expected_document": "knowledge_base/absher/driving_license_renewal/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "absher_driving_license_renewal_002",
+    "platform": "absher",
+    "service": "driving_license_renewal",
+    "query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+    "expected_answer": "بعد استكمال التجديد وتعبئة بيانات العنوان الوطني ودفع أجور التوصيل، تكون المدة المتوقعة لتسليم الوثيقة من 5 إلى 7 أيام.",
+    "expected_document": "knowledge_base/absher/driving_license_renewal/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "absher_vehicle_registration_renewal_001",
+    "platform": "absher",
+    "service": "vehicle_registration_renewal",
+    "query": "كيف يتم احتساب تاريخ انتهاء رخصة السير بعد التجديد؟",
+    "expected_answer": "يتم احتساب الصلاحية لمدة 3 سنوات من تاريخ انتهاء الرخصة السابقة إذا تم التجديد بعد انتهائها، أو من تاريخ التجديد إذا تم التجديد قبل تاريخ الانتهاء.",
+    "expected_document": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "absher_vehicle_registration_renewal_002",
+    "platform": "absher",
+    "service": "vehicle_registration_renewal",
+    "query": "استمارة سيارتي خلصت ابي اجددها",
+    "expected_answer": "يمكن تجديد رخصة سير المركبة عبر أبشر باختيار المركبات ثم إدارة المركبات واختيار المركبة، وبعدها اختيار تجديد رخصة سير. يتحقق النظام من الأهلية ثم يتم تأكيد التجديد، مع ضرورة استيفاء التأمين والفحص الفني والرسوم والمخالفات المطلوبة.",
+    "expected_document": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "absher_exit_reentry_final_exit_visa_001",
+    "platform": "absher",
+    "service": "exit_reentry_final_exit_visa",
+    "query": "ما متطلبات إصدار تأشيرة خروج وعودة أو خروج نهائي عبر أبشر؟",
+    "expected_answer": "من متطلبات الخدمة أن يكون المستفيد داخل المملكة، وأن تكون الإقامة سارية وفق شروط الخدمة، وتوفر البصمة للمستفيد من عمر 15 سنة فأعلى، مع استيفاء شروط الصلاحية والرسوم المرتبطة بنوع التأشيرة.",
+    "expected_document": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "absher_exit_reentry_final_exit_visa_002",
+    "platform": "absher",
+    "service": "exit_reentry_final_exit_visa",
+    "query": "اقامتي منتهية اقدر اطلع تأشيرة خروج وعودة؟",
+    "expected_answer": "لا، سريان الإقامة متطلب لإصدار تأشيرة الخروج والعودة أو الخروج النهائي.",
+    "expected_document": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "absher_lost_passport_replacement_001",
+    "platform": "absher",
+    "service": "lost_passport_replacement",
+    "query": "هل يشترط الإبلاغ عن فقدان الجواز لإصدار بدل مفقود؟",
+    "expected_answer": "نعم، يشترط الإبلاغ عن فقدان أو سرقة الجواز أولًا قبل تقديم طلب إصدار جواز بدل مفقود.",
+    "expected_document": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "absher_lost_passport_replacement_002",
+    "platform": "absher",
+    "service": "lost_passport_replacement",
+    "query": "ضاع جوازي كيف أطلع بدل فاقد؟",
+    "expected_answer": "يتم تسجيل الدخول إلى أبشر ثم خدماتي ثم خدمات جواز السفر السعودي، واختيار طلب جديد ثم إصدار جواز بدل مفقود. بعد ذلك تتم مراجعة وتعبئة عنوان التوصيل واختيار الناقل ودفع أجور التوصيل، مع استيفاء شروط الخدمة.",
+    "expected_document": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "absher_lost_stolen_plate_report_001",
+    "platform": "absher",
+    "service": "lost_stolen_plate_report",
+    "query": "كيف أبلغ عن فقدان أو سرقة لوحة مركبة عبر أبشر؟",
+    "expected_answer": "يتم تسجيل الدخول إلى أبشر ثم المركبات ثم خدمات ثم إدارة المركبات واختيار الإبلاغ عن سرقة أو فقدان لوحة مركبة، وبعد مراجعة الشروط يتم تعبئة نموذج البلاغ وتقديمه.",
+    "expected_document": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "absher_lost_stolen_plate_report_002",
+    "platform": "absher",
+    "service": "lost_stolen_plate_report",
+    "query": "ضاعت لوحة سيارتي كيف ابلغ عنها",
+    "expected_answer": "يمكن تقديم البلاغ إلكترونيًا من أبشر عبر المركبات ثم خدمات ثم إدارة المركبات واختيار الإبلاغ عن سرقة أو فقدان لوحة مركبة. يجب أن يكون مقدم الطلب مالك المركبة وألا يوجد بلاغ سابق لنفس المركبة.",
+    "expected_document": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+    "query_type": "query_mismatch"
+  },
+  {
+    "id": "absher_firearm_transport_permit_001",
+    "platform": "absher",
+    "service": "firearm_transport_permit",
+    "query": "ما هي رسوم إذن التنقل بالسلاح الناري؟",
+    "expected_answer": "تكلفة خدمة إذن التنقل بالسلاح الناري هي 57.5 ريال وتُدفع عند تقديم الطلب.",
+    "expected_document": "knowledge_base/absher/firearm_transport_permit/content_final.md",
+    "query_type": "standard"
+  },
+  {
+    "id": "absher_firearm_transport_permit_002",
+    "platform": "absher",
+    "service": "firearm_transport_permit",
+    "query": "ابي انقل سلاحي من مدينة لمدينة وش اسوي",
+    "expected_answer": "يتم تسجيل الدخول إلى أبشر ثم خدماتي ثم الأمن العام ثم إدارة الأسلحة، واختيار الخدمة المطلوبة وتعبئة بيانات مسار التنقل والمنطقة وتاريخ بداية التصريح وعدد الذخائر ثم تأكيد الطلب. ويشترط أن يكون السلاح ضمن رخصة الاقتناء.",
+    "expected_document": "knowledge_base/absher/firearm_transport_permit/content_final.md",
+    "query_type": "query_mismatch"
+  }
 ]
