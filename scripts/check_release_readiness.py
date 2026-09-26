@@ -201,15 +201,14 @@ def main() -> None:
         )
     )
     results.append(
-        _check(
-            "local scratch frontend is not tracked",
-            not any(
-                path == "frontend"
-                or path.startswith("frontend/")
-                for path in tracked
-            ),
-        )
+    _check(
+        "official frontend is tracked",
+        "app.py" in tracked
+        and "frontend/adapter.py" in tracked
+        and "frontend/observability.py" in tracked,
     )
+)
+    
     results.append(
         _check(
             "candidate indexes are not tracked",

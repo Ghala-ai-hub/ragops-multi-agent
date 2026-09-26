@@ -1,6 +1,7 @@
 """Optimization tools for the four-platform RAGOps corpus."""
 from __future__ import annotations
 
+from uuid import uuid4
 import os
 from datetime import datetime, timezone
 from pathlib import Path
@@ -165,10 +166,11 @@ def rechunk_and_reindex(
     vectorstore = FAISS.from_documents(all_splits, embeddings)
 
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    unique_suffix = uuid4().hex[:8]
     relative_output_path = (
         Path("vector_store")
         / "candidates"
-        / f"rechunk_{chunk_size}_{chunk_overlap}_{stamp}"
+        / f"rechunk_{chunk_size}_{chunk_overlap}_{stamp}_{unique_suffix}"
     )
     output_path = PROJECT_ROOT / relative_output_path
     output_path.mkdir(parents=True, exist_ok=True)
