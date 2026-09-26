@@ -1,6 +1,7 @@
 ﻿.env
 .venv/
 __pycache__/
-vector_store/evaluation_index/
+!vector_store/evaluation_index/index.faiss
+!vector_store/evaluation_index/index.pkl
 vector_store/candidates/
 logs/
