@@ -1,0 +1,1305 @@
+{
+  "configuration": {
+    "baseline_chunk_size": 1000,
+    "baseline_chunk_overlap": 200,
+    "candidate_chunk_size": 750,
+    "candidate_chunk_overlap": 150,
+    "k": 4,
+    "candidate_index_path": "vector_store/candidates/rechunk_750_150_20260920T144902Z",
+    "active_index_overwritten": false
+  },
+  "counts": {
+    "IMPROVED": 9,
+    "SAME": 33,
+    "WORSE": 6
+  },
+  "recovered_failures": [
+    {
+      "id": "balady_building_permit_001",
+      "platform": "balady",
+      "service": "building_permit_issuance",
+      "query_type": "standard",
+      "query": "ما خطوات التقديم على إصدار رخصة بناء عبر منصة بلدي؟",
+      "before": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.25,
+        "first_relevant_rank": 4
+      },
+      "verdict": "IMPROVED"
+    }
+  ],
+  "new_failures": [],
+  "improved_queries": [
+    {
+      "id": "balady_building_permit_001",
+      "platform": "balady",
+      "service": "building_permit_issuance",
+      "query_type": "standard",
+      "query": "ما خطوات التقديم على إصدار رخصة بناء عبر منصة بلدي؟",
+      "before": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.25,
+        "first_relevant_rank": 4
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "balady_building_permit_002",
+      "platform": "balady",
+      "service": "building_permit_issuance",
+      "query_type": "query_mismatch",
+      "query": "أبي أطلع تصريح بناء من بلدي، كيف أبدأ وأرسل الطلب للمكتب الهندسي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "balady_commercial_license_renewal_001",
+      "platform": "balady",
+      "service": "commercial_license_renewal",
+      "query_type": "standard",
+      "query": "ما خطوات تجديد رخصة تجارية عبر منصة بلدي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "najiz_enforcement_request_002",
+      "platform": "najiz",
+      "service": "enforcement_request",
+      "query_type": "query_mismatch",
+      "query": "عندي سند وأبي أطالب بتنفيذه من ناجز، كيف أرفع الطلب؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "sakani_real_estate_advisor_002",
+      "platform": "sakani",
+      "service": "real_estate_advisor",
+      "query_type": "query_mismatch",
+      "query": "أبي أعرف وش التمويل أو الدعم المناسب لي في سكني، كيف أستخدم المستشار العقاري؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "sakani_real_estate_transaction_tax_support_001",
+      "platform": "sakani",
+      "service": "real_estate_transaction_tax_support",
+      "query_type": "standard",
+      "query": "ما خطوات إصدار شهادة تحمل ضريبة التصرفات العقارية للمسكن الأول عبر سكني؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "sakani_real_estate_transaction_tax_support_002",
+      "platform": "sakani",
+      "service": "real_estate_transaction_tax_support",
+      "query_type": "query_mismatch",
+      "query": "كيف أطلع شهادة إعفاء ضريبة المسكن الأول من سكني؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "sakani_residential_lands_002",
+      "platform": "sakani",
+      "service": "residential_lands",
+      "query_type": "query_mismatch",
+      "query": "أنا مستحق للدعم وأبي أحجز أرض من سكني، كيف أسوي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "absher_vehicle_registration_renewal_001",
+      "platform": "absher",
+      "service": "vehicle_registration_renewal",
+      "query_type": "standard",
+      "query": "كيف يتم احتساب تاريخ انتهاء رخصة السير بعد التجديد؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "IMPROVED"
+    }
+  ],
+  "worse_queries": [
+    {
+      "id": "balady_commercial_license_modification_001",
+      "platform": "balady",
+      "service": "commercial_license_modification",
+      "query_type": "standard",
+      "query": "ما خطوات تعديل رخصة نشاط تجاري عبر منصة بلدي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "balady_commercial_license_modification_002",
+      "platform": "balady",
+      "service": "commercial_license_modification",
+      "query_type": "query_mismatch",
+      "query": "أبي أغير بيانات أو نشاط رخصة المحل في بلدي، وش أسوي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "balady_health_certificate_renewal_002",
+      "platform": "balady",
+      "service": "health_certificate_renewal",
+      "query_type": "query_mismatch",
+      "query": "الكرت الصحي للعامل قرب ينتهي، كيف أجدده من بلدي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "najiz_proof_of_payment_002",
+      "platform": "najiz",
+      "service": "proof_of_payment",
+      "query_type": "query_mismatch",
+      "query": "أنا سددت المبلغ في قضية تنفيذ وأبي أثبت لناجز إني دفعت، كيف أسوي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "sakani_online_financing_002",
+      "platform": "sakani",
+      "service": "online_financing",
+      "query_type": "query_mismatch",
+      "query": "لقيت وحدة في سكني وأبي أشوف عروض التمويل عليها، كيف أقدم؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "absher_lost_stolen_plate_report_001",
+      "platform": "absher",
+      "service": "lost_stolen_plate_report",
+      "query_type": "standard",
+      "query": "كيف أبلغ عن فقدان أو سرقة لوحة مركبة عبر أبشر؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "WORSE"
+    }
+  ],
+  "results": [
+    {
+      "id": "balady_building_permit_001",
+      "platform": "balady",
+      "service": "building_permit_issuance",
+      "query_type": "standard",
+      "query": "ما خطوات التقديم على إصدار رخصة بناء عبر منصة بلدي؟",
+      "before": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.25,
+        "first_relevant_rank": 4
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "balady_building_permit_002",
+      "platform": "balady",
+      "service": "building_permit_issuance",
+      "query_type": "query_mismatch",
+      "query": "أبي أطلع تصريح بناء من بلدي، كيف أبدأ وأرسل الطلب للمكتب الهندسي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "balady_commercial_license_cancellation_001",
+      "platform": "balady",
+      "service": "commercial_license_cancellation",
+      "query_type": "standard",
+      "query": "ما خطوات إلغاء رخصة نشاط تجاري عبر منصة بلدي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "balady_commercial_license_cancellation_002",
+      "platform": "balady",
+      "service": "commercial_license_cancellation",
+      "query_type": "query_mismatch",
+      "query": "أبي أقفل رخصة المحل في بلدي، وش الخطوات؟",
+      "before": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "after": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "balady_commercial_license_modification_001",
+      "platform": "balady",
+      "service": "commercial_license_modification",
+      "query_type": "standard",
+      "query": "ما خطوات تعديل رخصة نشاط تجاري عبر منصة بلدي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "balady_commercial_license_modification_002",
+      "platform": "balady",
+      "service": "commercial_license_modification",
+      "query_type": "query_mismatch",
+      "query": "أبي أغير بيانات أو نشاط رخصة المحل في بلدي، وش أسوي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "balady_commercial_license_renewal_001",
+      "platform": "balady",
+      "service": "commercial_license_renewal",
+      "query_type": "standard",
+      "query": "ما خطوات تجديد رخصة تجارية عبر منصة بلدي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "balady_commercial_license_renewal_002",
+      "platform": "balady",
+      "service": "commercial_license_renewal",
+      "query_type": "query_mismatch",
+      "query": "رخصة المحل انتهت وأبي أجددها من بلدي، وش الخطوات؟",
+      "before": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "after": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "balady_health_certificate_issuance_001",
+      "platform": "balady",
+      "service": "health_certificate_issuance",
+      "query_type": "standard",
+      "query": "ما خطوات إصدار شهادة صحية عبر منصة بلدي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "balady_health_certificate_issuance_002",
+      "platform": "balady",
+      "service": "health_certificate_issuance",
+      "query_type": "query_mismatch",
+      "query": "أبي أطلع كرت صحي للعامل من بلدي، كيف أقدّم عليه؟",
+      "before": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "after": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "balady_health_certificate_renewal_001",
+      "platform": "balady",
+      "service": "health_certificate_renewal",
+      "query_type": "standard",
+      "query": "ما خطوات تجديد شهادة صحية عبر منصة بلدي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "balady_health_certificate_renewal_002",
+      "platform": "balady",
+      "service": "health_certificate_renewal",
+      "query_type": "query_mismatch",
+      "query": "الكرت الصحي للعامل قرب ينتهي، كيف أجدده من بلدي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "najiz_electronic_power_of_attorney_001",
+      "platform": "najiz",
+      "service": "electronic_power_of_attorney",
+      "query_type": "standard",
+      "query": "ما خطوات إصدار وكالة فردية عبر بوابة ناجز؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "najiz_electronic_power_of_attorney_002",
+      "platform": "najiz",
+      "service": "electronic_power_of_attorney",
+      "query_type": "query_mismatch",
+      "query": "أبي أسوي وكالة لشخص عن طريق ناجز، كيف أطلعها؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "najiz_enforcement_request_001",
+      "platform": "najiz",
+      "service": "enforcement_request",
+      "query_type": "standard",
+      "query": "ما خطوات تقديم طلب تنفيذ عبر بوابة ناجز؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "najiz_enforcement_request_002",
+      "platform": "najiz",
+      "service": "enforcement_request",
+      "query_type": "query_mismatch",
+      "query": "عندي سند وأبي أطالب بتنفيذه من ناجز، كيف أرفع الطلب؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "najiz_enforcement_termination_001",
+      "platform": "najiz",
+      "service": "enforcement_termination",
+      "query_type": "standard",
+      "query": "ما خطوات طلب إنهاء السند التنفيذي عبر بوابة ناجز؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "najiz_enforcement_termination_002",
+      "platform": "najiz",
+      "service": "enforcement_termination",
+      "query_type": "query_mismatch",
+      "query": "خلص موضوع التنفيذ وأبي أقفل الطلب في ناجز، وش أسوي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "najiz_proof_of_payment_001",
+      "platform": "najiz",
+      "service": "proof_of_payment",
+      "query_type": "standard",
+      "query": "ما خطوات تقديم طلب إثبات السداد عبر بوابة ناجز؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "najiz_proof_of_payment_002",
+      "platform": "najiz",
+      "service": "proof_of_payment",
+      "query_type": "query_mismatch",
+      "query": "أنا سددت المبلغ في قضية تنفيذ وأبي أثبت لناجز إني دفعت، كيف أسوي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "najiz_statement_of_claim_001",
+      "platform": "najiz",
+      "service": "statement_of_claim",
+      "query_type": "standard",
+      "query": "ما خطوات تقديم صحيفة دعوى عبر بوابة ناجز؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "najiz_statement_of_claim_002",
+      "platform": "najiz",
+      "service": "statement_of_claim",
+      "query_type": "query_mismatch",
+      "query": "أبي أرفع دعوى على شخص عن طريق ناجز، من وين أبدأ؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "najiz_urgent_lawsuits_001",
+      "platform": "najiz",
+      "service": "urgent_lawsuits",
+      "query_type": "standard",
+      "query": "ما خطوات تقديم دعوى مستعجلة عبر بوابة ناجز؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "najiz_urgent_lawsuits_002",
+      "platform": "najiz",
+      "service": "urgent_lawsuits",
+      "query_type": "query_mismatch",
+      "query": "عندي موضوع مستعجل وأبي أرفع دعوى بسرعة من ناجز، كيف أقدم؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "sakani_housing_support_eligibility_001",
+      "platform": "sakani",
+      "service": "housing_support_eligibility",
+      "query_type": "standard",
+      "query": "ما خطوات التحقق من أهلية الاستحقاق للدعم السكني عبر منصة سكني؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "sakani_housing_support_eligibility_002",
+      "platform": "sakani",
+      "service": "housing_support_eligibility",
+      "query_type": "query_mismatch",
+      "query": "كيف أعرف إذا أنا مستحق للدعم السكني في سكني؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "sakani_housing_unit_rental_001",
+      "platform": "sakani",
+      "service": "housing_unit_rental",
+      "query_type": "standard",
+      "query": "ما خطوات طلب تأجير وحدة سكنية عبر منصة سكني؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "sakani_housing_unit_rental_002",
+      "platform": "sakani",
+      "service": "housing_unit_rental",
+      "query_type": "query_mismatch",
+      "query": "عندي حجز مكتمل في سكني وأبي أستأجر وحدة مدعومة، وش أسوي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "sakani_online_financing_001",
+      "platform": "sakani",
+      "service": "online_financing",
+      "query_type": "standard",
+      "query": "ما خطوات طلب التمويل العقاري الإلكتروني عبر منصة سكني؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "sakani_online_financing_002",
+      "platform": "sakani",
+      "service": "online_financing",
+      "query_type": "query_mismatch",
+      "query": "لقيت وحدة في سكني وأبي أشوف عروض التمويل عليها، كيف أقدم؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "sakani_real_estate_advisor_001",
+      "platform": "sakani",
+      "service": "real_estate_advisor",
+      "query_type": "standard",
+      "query": "ما خطوات التسجيل في المستشار العقاري عبر منصة سكني؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "sakani_real_estate_advisor_002",
+      "platform": "sakani",
+      "service": "real_estate_advisor",
+      "query_type": "query_mismatch",
+      "query": "أبي أعرف وش التمويل أو الدعم المناسب لي في سكني، كيف أستخدم المستشار العقاري؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "sakani_real_estate_transaction_tax_support_001",
+      "platform": "sakani",
+      "service": "real_estate_transaction_tax_support",
+      "query_type": "standard",
+      "query": "ما خطوات إصدار شهادة تحمل ضريبة التصرفات العقارية للمسكن الأول عبر سكني؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "sakani_real_estate_transaction_tax_support_002",
+      "platform": "sakani",
+      "service": "real_estate_transaction_tax_support",
+      "query_type": "query_mismatch",
+      "query": "كيف أطلع شهادة إعفاء ضريبة المسكن الأول من سكني؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "sakani_residential_lands_001",
+      "platform": "sakani",
+      "service": "residential_lands",
+      "query_type": "standard",
+      "query": "ما خطوات الحجز على منتج أرضك دعمك عبر منصة سكني؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "sakani_residential_lands_002",
+      "platform": "sakani",
+      "service": "residential_lands",
+      "query_type": "query_mismatch",
+      "query": "أنا مستحق للدعم وأبي أحجز أرض من سكني، كيف أسوي؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.25,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "absher_driving_license_renewal_001",
+      "platform": "absher",
+      "service": "driving_license_renewal",
+      "query_type": "standard",
+      "query": "ما هي شروط تجديد رخصة القيادة؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "absher_driving_license_renewal_002",
+      "platform": "absher",
+      "service": "driving_license_renewal",
+      "query_type": "query_mismatch",
+      "query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+      "before": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "after": {
+        "recall_at_k": 0.0,
+        "precision_at_k": 0.0,
+        "reciprocal_rank": 0.0,
+        "first_relevant_rank": null
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "absher_vehicle_registration_renewal_001",
+      "platform": "absher",
+      "service": "vehicle_registration_renewal",
+      "query_type": "standard",
+      "query": "كيف يتم احتساب تاريخ انتهاء رخصة السير بعد التجديد؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "IMPROVED"
+    },
+    {
+      "id": "absher_vehicle_registration_renewal_002",
+      "platform": "absher",
+      "service": "vehicle_registration_renewal",
+      "query_type": "query_mismatch",
+      "query": "استمارة سيارتي خلصت ابي اجددها",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "absher_exit_reentry_final_exit_visa_001",
+      "platform": "absher",
+      "service": "exit_reentry_final_exit_visa",
+      "query_type": "standard",
+      "query": "ما متطلبات إصدار تأشيرة خروج وعودة أو خروج نهائي عبر أبشر؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "absher_exit_reentry_final_exit_visa_002",
+      "platform": "absher",
+      "service": "exit_reentry_final_exit_visa",
+      "query_type": "query_mismatch",
+      "query": "اقامتي منتهية اقدر اطلع تأشيرة خروج وعودة؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "absher_lost_passport_replacement_001",
+      "platform": "absher",
+      "service": "lost_passport_replacement",
+      "query_type": "standard",
+      "query": "هل يشترط الإبلاغ عن فقدان الجواز لإصدار بدل مفقود؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "absher_lost_passport_replacement_002",
+      "platform": "absher",
+      "service": "lost_passport_replacement",
+      "query_type": "query_mismatch",
+      "query": "ضاع جوازي كيف أطلع بدل فاقد؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "absher_lost_stolen_plate_report_001",
+      "platform": "absher",
+      "service": "lost_stolen_plate_report",
+      "query_type": "standard",
+      "query": "كيف أبلغ عن فقدان أو سرقة لوحة مركبة عبر أبشر؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "WORSE"
+    },
+    {
+      "id": "absher_lost_stolen_plate_report_002",
+      "platform": "absher",
+      "service": "lost_stolen_plate_report",
+      "query_type": "query_mismatch",
+      "query": "ضاعت لوحة سيارتي كيف ابلغ عنها",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "absher_firearm_transport_permit_001",
+      "platform": "absher",
+      "service": "firearm_transport_permit",
+      "query_type": "standard",
+      "query": "ما هي رسوم إذن التنقل بالسلاح الناري؟",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.75,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    },
+    {
+      "id": "absher_firearm_transport_permit_002",
+      "platform": "absher",
+      "service": "firearm_transport_permit",
+      "query_type": "query_mismatch",
+      "query": "ابي انقل سلاحي من مدينة لمدينة وش اسوي",
+      "before": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "after": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1
+      },
+      "verdict": "SAME"
+    }
+  ]
+}

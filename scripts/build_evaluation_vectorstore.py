@@ -14,7 +14,7 @@ load_dotenv()
 
 def build_evaluation_vectorstore():
     knowledge_base_dir = Path("knowledge_base")
-    target_platforms = ["balady", "najiz", "sakani"]
+    target_platforms = ["absher", "balady", "najiz", "sakani"]
 
     files = []
 
@@ -85,23 +85,15 @@ def build_evaluation_vectorstore():
 
         all_splits.extend(splits)
 
-        print(
-            f"{platform}/{service}: "
-            f"{len(splits)} chunks"
-        )
+        print(f"{platform}/{service}: {len(splits)} chunks")
 
     print(f"TOTAL CHUNKS: {len(all_splits)}")
 
-    embeddings = OpenAIEmbeddings(
-        model="text-embedding-3-small"
-    )
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
     print("Building evaluation FAISS index...")
 
-    vectorstore = FAISS.from_documents(
-        all_splits,
-        embeddings,
-    )
+    vectorstore = FAISS.from_documents(all_splits, embeddings)
 
     output_path = "vector_store/evaluation_index"
     os.makedirs(output_path, exist_ok=True)

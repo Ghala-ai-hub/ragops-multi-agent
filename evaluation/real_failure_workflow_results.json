@@ -1,0 +1,732 @@
+{
+  "configuration": {
+    "embedding_model": "text-embedding-3-small",
+    "baseline_k": 4,
+    "expanded_k": 10,
+    "failed_queries": 5
+  },
+  "results": [
+    {
+      "id": "balady_building_permit_001",
+      "platform": "balady",
+      "service": "building_permit_issuance",
+      "query_type": "standard",
+      "original_query": "ما خطوات التقديم على إصدار رخصة بناء عبر منصة بلدي؟",
+      "rewritten_query": "ما هي خطوات التقديم لإصدار رخصة بناء من خلال منصة بلدي؟",
+      "diagnosis": {
+        "issue_type": "Query Mismatch",
+        "original_query": "ما خطوات التقديم على إصدار رخصة بناء عبر منصة بلدي؟",
+        "recommended_action": "rewrite_query",
+        "confidence": 0.95,
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "baseline_first_relevant_rank": null,
+        "rewritten_first_relevant_rank": 3,
+        "baseline_k": 4,
+        "rewritten_query": "ما هي خطوات التقديم لإصدار رخصة بناء من خلال منصة بلدي؟"
+      },
+      "proposal": {
+        "issue_type": "Query Mismatch",
+        "action": "rewrite_query",
+        "parameters": {
+          "original_query": "ما خطوات التقديم على إصدار رخصة بناء عبر منصة بلدي؟",
+          "baseline_k": 4,
+          "rewritten_query": "ما هي خطوات التقديم لإصدار رخصة بناء من خلال منصة بلدي؟"
+        },
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "confidence": 0.95,
+        "status": "proposed"
+      },
+      "approval": {
+        "issue_type": "Query Mismatch",
+        "action": "rewrite_query",
+        "parameters": {
+          "original_query": "ما خطوات التقديم على إصدار رخصة بناء عبر منصة بلدي؟",
+          "baseline_k": 4,
+          "rewritten_query": "ما هي خطوات التقديم لإصدار رخصة بناء من خلال منصة بلدي؟"
+        },
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "confidence": 0.95,
+        "status": "proposed",
+        "reviewed_at": "2026-09-20T14:23:37.666575+00:00",
+        "approval_mode": "auto",
+        "approval_status": "auto_approved",
+        "execution_allowed": true,
+        "next_step": "execute_approved_action"
+      },
+      "execution": {
+        "action_result": {
+          "status": "applied",
+          "action": "rewrite_query",
+          "rewritten_query": "ما هي خطوات التقديم لإصدار رخصة بناء من خلال منصة بلدي؟",
+          "applied_k": 4
+        },
+        "after_run": {
+          "query": "ما هي خطوات التقديم لإصدار رخصة بناء من خلال منصة بلدي؟",
+          "top_k": 4,
+          "retrieved_results": [
+            {
+              "rank": 1,
+              "platform": "balady",
+              "service": "commercial_license_modification",
+              "source": "knowledge_base/balady/commercial_license_modification/content_final.md",
+              "chunk_index": 1,
+              "text": "طريقة التقديم ثم تظهر الشاشة التالية، حيث يمكن للمستخدم معرفة المتطلبات، الاشتراطات، والغرامات، وبدء الخدمة، ولبدء إجراءات التقديم للخدمة يتم الضغط على الزر.  \nبعدها تظهر الشاشة أدناه، حيث يمكن اختيار صفة مقدم الطلب (نفسي، مالك/مدير منشأة، مفوض/مدير حساب منشأة) وإضافة رخصة قديمة من خلال الضغط على الزر (استكمال الإجراءات من قبل المستفيد).  \nعن نفسي يقوم النظام بإظهار الرخص المسجلة بالهوية الوطنية في حال تم اختيار صفة مقدم الطلب.  \nمالك/مدير منشأة يظهر الحقل (السجل التجاري) ليقوم المستخدم بإدخال رقم السجل التجاري الخاص بمالك/مدير المنشأة فيه، ثم الضغط على الزر (استعراض).  \nمفوض/مدير حساب منشأة يقوم المستخدم باختيار (السجل التجاري/رقم) من القائمة المنسدلة ثم الضغط على الزر (استعراض).  \nبعد اختيار صفة مقدم الطلب، الرخصة المراد تعديلها يقوم النظام بعرض بياناتها، حيث يقوم المستخدم بالتقديم للطلب من أجل البدء بعملية تعديل الرخصة بالضغط على الزر.  \nبيانات المقدم والنشاط حيث يطلب النظام التحقق من رقم جوال المستخدم، وذلك من خلال إدخال قيمة الحقل (رقم الجوال) ثم الضغط على الزر (تحقق).",
+              "raw_score": 1.0593900680541992,
+              "relevant": false
+            },
+            {
+              "rank": 2,
+              "platform": "balady",
+              "service": "commercial_license_cancellation",
+              "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+              "chunk_index": 1,
+              "text": "طريقة التقديم، ثم تظهر الشاشة التالية، حيث يمكن للمستخدم معرفة المتطلبات، الاشتراطات والغرامات.. إلخ.  \nلبدء إجراءات التقديم للخدمة يتم الضغط على الزر (بدء الخدمة).  \nوبعدها تظهر الشاشة أدناه، حيث يسمح النظام للمستخدم باختيار صفة مقدم الطلب (عن نفسي، مالك/مدير منشأة، مفوض عن منشأة). مع السماح للمستفيد بإضافة رخصة قديمة من خلال الزر (إضافة رخصة قديمة من قبل المستفيد).  \nفي حال اختيار صفة مقدم الطلب (عن نفسي) يتم عرض الرخص المسجلة بالهوية الوطنية للاختيار منها.  \nفي حال اختيار صفة مقدم الطلب (مالك/مدير منشأة) يظهر للمستخدم حقل جديد باسم (الرقم الموحد للمنشأة) ليتم إدخال قيمته ثم الضغط على الزر (استعراض).  \nفي حال اختيار صفة مقدم الطلب (مفوض عن منشأة) تظهر قائمة منسدلة بالرقم الموحد للمنشأة ليتم الاختيار منها ثم الضغط على الزر (استعراض).  \nفي المثال التالي تم اختيار صفة مقدم الطلب (مالك/مدير منشأة)، حيث ظهر للمستخدم حقل جديد باسم (الرقم الموحد للمنشأة) ليتم إدخال قيمته ثم الضغط على الزر (استعراض). وبعدها يتم عرض الرخص التجارية حسب الرقم الموحد المدخل، كما في الشكل أدناه.",
+              "raw_score": 1.0863873958587646,
+              "relevant": false
+            },
+            {
+              "rank": 3,
+              "platform": "balady",
+              "service": "building_permit_issuance",
+              "source": "knowledge_base/balady/building_permit_issuance/content_final.md",
+              "chunk_index": 1,
+              "text": "تظهر شاشة التعريف بالخدمة، حيث يمكن للمستفيد معرفة متطلبات الخدمة من خلال القوائم مثل طريقة التقديم، المتطلبات، الاشتراطات، والغرامات. ولبدء إجراءات التقديم يتم الضغط على زر بدء الخدمة.  \nتظهر شاشة اختيار نوع الرخصة من الخيارات التالية: إصدار رخصة إنشائية، إصدار رخصة تسوير. في هذا المثال سيتم اختيار إصدار رخصة إنشائية. يجب أولاً التحقق من رقم جوال مقدم الطلب من خلال إدخال القيمة في حقل رقم الجوال ثم الضغط على زر تحقق.  \nيتم إرسال رمز تحقق إلى جوال المستفيد، ليتم إدخاله في الحقل ثم الضغط على زر تأكيد. تظهر رسالة \"شكرًا، تم التحقق بنجاح\". يتم اختيار نوع الرخصة.  \nيلاحظ وجود مسارين في هذه الشاشة، إما أن يتم إصدار القرار المساحي من خلال المكتب الهندسي، أو أن يتم اختيار رقم قرار مساحي من الأرقام الظاهرة للمستفيد.  \nإصدار القرار المساحي من خلال المكتب الهندسي\nبعد الضغط على إصدار القرار المساحي يتم نقل المستفيد لمرحلة بيانات الطلب ليتم اختيار الموقع الجغرافي من القوائم المنسدلة التالية: الأمانة، البلدية. بعد اختيار الموقع الجغرافي، يتم الضغط على الزر التالي للانتقال للمرحلة التالية.",
+              "raw_score": 1.0901174545288086,
+              "relevant": true
+            },
+            {
+              "rank": 4,
+              "platform": "absher",
+              "service": "vehicle_registration_renewal",
+              "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+              "chunk_index": 4,
+              "text": "اختيار \"تجديد رخصة سير\"، ثم يتحقّق النظام آليًا من أهلية المستفيد للتجديد وفقًا لشروط ومتطلبات الخدمة، ثم اختيار \"تأكيد التجديد\" لإتمام تجديد رخصة السير بنجاح.",
+              "raw_score": 1.1030609607696533,
+              "relevant": false
+            }
+          ],
+          "answer": "",
+          "judge_score": null,
+          "latency_seconds": 0.31004090001806617
+        }
+      },
+      "validation": {
+        "verdict": "IMPROVED",
+        "recommendation": "ACCEPT_OPTIMIZED",
+        "before": {
+          "recall_at_k": 0.0,
+          "precision_at_k": 0.0,
+          "reciprocal_rank": 0.0,
+          "judge_score": null,
+          "latency_seconds": 1.2010611000005156
+        },
+        "after": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.25,
+          "reciprocal_rank": 0.3333333333333333,
+          "judge_score": null,
+          "latency_seconds": 0.31004090001806617
+        },
+        "delta": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.25,
+          "reciprocal_rank": 0.3333333333333333,
+          "judge_score": null,
+          "latency_seconds": -0.8910201999824494
+        },
+        "answer_comparison": {
+          "before": "",
+          "after": ""
+        }
+      },
+      "final_status": "IMPROVED"
+    },
+    {
+      "id": "balady_commercial_license_cancellation_002",
+      "platform": "balady",
+      "service": "commercial_license_cancellation",
+      "query_type": "query_mismatch",
+      "original_query": "أبي أقفل رخصة المحل في بلدي، وش الخطوات؟",
+      "rewritten_query": "ما هي خطوات إغلاق رخصة المحل في منصة بلدي؟",
+      "diagnosis": {
+        "issue_type": "Query Mismatch",
+        "original_query": "أبي أقفل رخصة المحل في بلدي، وش الخطوات؟",
+        "recommended_action": "rewrite_query",
+        "confidence": 0.95,
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "baseline_first_relevant_rank": null,
+        "rewritten_first_relevant_rank": 1,
+        "baseline_k": 4,
+        "rewritten_query": "ما هي خطوات إغلاق رخصة المحل في منصة بلدي؟"
+      },
+      "proposal": {
+        "issue_type": "Query Mismatch",
+        "action": "rewrite_query",
+        "parameters": {
+          "original_query": "أبي أقفل رخصة المحل في بلدي، وش الخطوات؟",
+          "baseline_k": 4,
+          "rewritten_query": "ما هي خطوات إغلاق رخصة المحل في منصة بلدي؟"
+        },
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "confidence": 0.95,
+        "status": "proposed"
+      },
+      "approval": {
+        "issue_type": "Query Mismatch",
+        "action": "rewrite_query",
+        "parameters": {
+          "original_query": "أبي أقفل رخصة المحل في بلدي، وش الخطوات؟",
+          "baseline_k": 4,
+          "rewritten_query": "ما هي خطوات إغلاق رخصة المحل في منصة بلدي؟"
+        },
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "confidence": 0.95,
+        "status": "proposed",
+        "reviewed_at": "2026-09-20T14:23:39.146915+00:00",
+        "approval_mode": "auto",
+        "approval_status": "auto_approved",
+        "execution_allowed": true,
+        "next_step": "execute_approved_action"
+      },
+      "execution": {
+        "action_result": {
+          "status": "applied",
+          "action": "rewrite_query",
+          "rewritten_query": "ما هي خطوات إغلاق رخصة المحل في منصة بلدي؟",
+          "applied_k": 4
+        },
+        "after_run": {
+          "query": "ما هي خطوات إغلاق رخصة المحل في منصة بلدي؟",
+          "top_k": 4,
+          "retrieved_results": [
+            {
+              "rank": 1,
+              "platform": "balady",
+              "service": "commercial_license_cancellation",
+              "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+              "chunk_index": 2,
+              "text": "وبعد اختيار الرخصة المراد إلغائها يقوم النظام بعرض بياناتها كما في الشكل التالي، حيث يقوم المستخدم بالضغط على الزر (التقدم للطلب) لأجل البدء بعملية إلغاء الرخصة.  \n1) إلغاء رخصة تجارية\nفي حال كانت الرخصة المراد إلغائها رخصة تجارية يقوم النظام بإظهار الشاشة أدناه، والتي تمثل المرحلة الثانية، مرحلة بيانات مقدم الطلب والنشاط.  \nيمكن من خلال الضغط على الزر (تغيير قائمة المرسل لهم) تعديل الإشعارات.  \nيتم اختيار نوع العاملين من الخيارات (رجال، نساء، رجال، نساء)، بعدها يتم الضغط على الزر (التالي) للانتقال إلى المرحلة الثالثة.  \nثم تظهر مرحلة (بيانات الموقع الجغرافي)، حيث يقوم المستخدم بالضغط على الزر (التالي) للانتقال إلى المرحلة الرابعة، مع إمكانية حفظ الطلب كمسودة للرجوع إليه لاحقًا، وذلك من خلال الزر (حفظ كمسودة)، وإمكانية الرجوع للمرحلة السابقة من خلال الزر (رجوع).  \nوبعدها يظهر الشكل أدناه، والذي يمثل مرحلة (بيانات المحل)، حيث يقوم المستخدم باختيار سبب الإلغاء من القائمة المنسدلة، مع إدخال قيمة رقم العقار في الحقل.  \nفي الشكل أدناه تظهر القيم الموجودة في القائمة المنسدلة سبب الإلغاء.",
+              "raw_score": 1.0915122032165527,
+              "relevant": true
+            },
+            {
+              "rank": 2,
+              "platform": "absher",
+              "service": "vehicle_registration_renewal",
+              "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+              "chunk_index": 3,
+              "text": "الدخول إلى منصة أبشر، ثم اختيار \"المركبات\"، ثم اختيار \"إدارة المركبات\" من قائمة الخدمات، ثم اختيار المركبة المراد تجديد رخصتها.",
+              "raw_score": 1.1246322393417358,
+              "relevant": false
+            },
+            {
+              "rank": 3,
+              "platform": "balady",
+              "service": "commercial_license_renewal",
+              "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+              "chunk_index": 4,
+              "text": "13) في قائمة إثبات موقع المحل، يسمح النظام للمستخدم في حالة تجديد الرخصة التجارية بالإجابة عن السؤال ما هي صفة مقدم الطلب؟ حيث يمكن للمستخدم تعديل صفة مقدم الطلب (مالك / مستأجر).\nملاحظة: تظهر رسالة تنبيه فقط في حال تجديد الرخصة التجارية على مسار البلدية سيتم توجيه طلب التجديد إلى البلدية لاعتماد الطلب.\n14) يتم الموافقة على التعهد بالضغط على مربع الاختيار.\n15) للانتقال إلى المرحلة التالية يتم الضغط على الزر.\n16) تظهر شاشة بيانات المرفقات، حيث يتم إضافة المرفقات المطلوبة من خلال الضغط على الزر، ثم اختيار المرفق من الجهاز.\n17) يمكن للمستخدم إضافة الملاحظات في خانة ملاحظات المستفيد، ثم يتم الضغط على الزر للانتقال إلى المرحلة التالية.  \nحساب الرسوم في حال تفعيل إعدادات تحصيل رسوم الشركة من منصة سالمة\n1) تظهر شاشة مرحلة حساب الرسوم، حيث يتم تحديد نوع التجديد (تجديد الرخصة حتى تكون سارية، تجديد الرخصة وإضافة سنوات).\n2) في حال اختيار الخيار تجديد الرخصة حتى تكون سارية، تظهر قوائم ليقوم النظام بحساب تكلفة الرسوم الإضافية، ثم يتم الضغط على الزر.",
+              "raw_score": 1.1550893783569336,
+              "relevant": false
+            },
+            {
+              "rank": 4,
+              "platform": "absher",
+              "service": "vehicle_registration_renewal",
+              "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+              "chunk_index": 7,
+              "text": "- تجديد رخصة السير الرقمي إلكتروني بالكامل ولا يحتاج زيارة مقار المرور.\n- قناة تقديم الخدمة (منصة أبشر تحديدًا مقابل تطبيق الجوال) غير محددة بوضوح في المصدر الرسمي المرفق لهذه الخدمة.",
+              "raw_score": 1.1785989999771118,
+              "relevant": false
+            }
+          ],
+          "answer": "",
+          "judge_score": null,
+          "latency_seconds": 0.30403089997707866
+        }
+      },
+      "validation": {
+        "verdict": "IMPROVED",
+        "recommendation": "ACCEPT_OPTIMIZED",
+        "before": {
+          "recall_at_k": 0.0,
+          "precision_at_k": 0.0,
+          "reciprocal_rank": 0.0,
+          "judge_score": null,
+          "latency_seconds": 0.30151269998168573
+        },
+        "after": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.25,
+          "reciprocal_rank": 1.0,
+          "judge_score": null,
+          "latency_seconds": 0.30403089997707866
+        },
+        "delta": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.25,
+          "reciprocal_rank": 1.0,
+          "judge_score": null,
+          "latency_seconds": 0.0025181999953929335
+        },
+        "answer_comparison": {
+          "before": "",
+          "after": ""
+        }
+      },
+      "final_status": "IMPROVED"
+    },
+    {
+      "id": "balady_commercial_license_renewal_002",
+      "platform": "balady",
+      "service": "commercial_license_renewal",
+      "query_type": "query_mismatch",
+      "original_query": "رخصة المحل انتهت وأبي أجددها من بلدي، وش الخطوات؟",
+      "rewritten_query": "كيفية تجديد رخصة المحل عبر منصة بلدي؟",
+      "diagnosis": {
+        "issue_type": "Query Mismatch",
+        "original_query": "رخصة المحل انتهت وأبي أجددها من بلدي، وش الخطوات؟",
+        "recommended_action": "rewrite_query",
+        "confidence": 0.95,
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "baseline_first_relevant_rank": null,
+        "rewritten_first_relevant_rank": 4,
+        "baseline_k": 4,
+        "rewritten_query": "كيفية تجديد رخصة المحل عبر منصة بلدي؟"
+      },
+      "proposal": {
+        "issue_type": "Query Mismatch",
+        "action": "rewrite_query",
+        "parameters": {
+          "original_query": "رخصة المحل انتهت وأبي أجددها من بلدي، وش الخطوات؟",
+          "baseline_k": 4,
+          "rewritten_query": "كيفية تجديد رخصة المحل عبر منصة بلدي؟"
+        },
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "confidence": 0.95,
+        "status": "proposed"
+      },
+      "approval": {
+        "issue_type": "Query Mismatch",
+        "action": "rewrite_query",
+        "parameters": {
+          "original_query": "رخصة المحل انتهت وأبي أجددها من بلدي، وش الخطوات؟",
+          "baseline_k": 4,
+          "rewritten_query": "كيفية تجديد رخصة المحل عبر منصة بلدي؟"
+        },
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "confidence": 0.95,
+        "status": "proposed",
+        "reviewed_at": "2026-09-20T14:23:40.783535+00:00",
+        "approval_mode": "auto",
+        "approval_status": "auto_approved",
+        "execution_allowed": true,
+        "next_step": "execute_approved_action"
+      },
+      "execution": {
+        "action_result": {
+          "status": "applied",
+          "action": "rewrite_query",
+          "rewritten_query": "كيفية تجديد رخصة المحل عبر منصة بلدي؟",
+          "applied_k": 4
+        },
+        "after_run": {
+          "query": "كيفية تجديد رخصة المحل عبر منصة بلدي؟",
+          "top_k": 4,
+          "retrieved_results": [
+            {
+              "rank": 1,
+              "platform": "absher",
+              "service": "vehicle_registration_renewal",
+              "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+              "chunk_index": 4,
+              "text": "اختيار \"تجديد رخصة سير\"، ثم يتحقّق النظام آليًا من أهلية المستفيد للتجديد وفقًا لشروط ومتطلبات الخدمة، ثم اختيار \"تأكيد التجديد\" لإتمام تجديد رخصة السير بنجاح.",
+              "raw_score": 0.8384500741958618,
+              "relevant": false
+            },
+            {
+              "rank": 2,
+              "platform": "absher",
+              "service": "vehicle_registration_renewal",
+              "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+              "chunk_index": 3,
+              "text": "الدخول إلى منصة أبشر، ثم اختيار \"المركبات\"، ثم اختيار \"إدارة المركبات\" من قائمة الخدمات، ثم اختيار المركبة المراد تجديد رخصتها.",
+              "raw_score": 0.9217536449432373,
+              "relevant": false
+            },
+            {
+              "rank": 3,
+              "platform": "balady",
+              "service": "commercial_license_cancellation",
+              "source": "knowledge_base/balady/commercial_license_cancellation/content_final.md",
+              "chunk_index": 2,
+              "text": "وبعد اختيار الرخصة المراد إلغائها يقوم النظام بعرض بياناتها كما في الشكل التالي، حيث يقوم المستخدم بالضغط على الزر (التقدم للطلب) لأجل البدء بعملية إلغاء الرخصة.  \n1) إلغاء رخصة تجارية\nفي حال كانت الرخصة المراد إلغائها رخصة تجارية يقوم النظام بإظهار الشاشة أدناه، والتي تمثل المرحلة الثانية، مرحلة بيانات مقدم الطلب والنشاط.  \nيمكن من خلال الضغط على الزر (تغيير قائمة المرسل لهم) تعديل الإشعارات.  \nيتم اختيار نوع العاملين من الخيارات (رجال، نساء، رجال، نساء)، بعدها يتم الضغط على الزر (التالي) للانتقال إلى المرحلة الثالثة.  \nثم تظهر مرحلة (بيانات الموقع الجغرافي)، حيث يقوم المستخدم بالضغط على الزر (التالي) للانتقال إلى المرحلة الرابعة، مع إمكانية حفظ الطلب كمسودة للرجوع إليه لاحقًا، وذلك من خلال الزر (حفظ كمسودة)، وإمكانية الرجوع للمرحلة السابقة من خلال الزر (رجوع).  \nوبعدها يظهر الشكل أدناه، والذي يمثل مرحلة (بيانات المحل)، حيث يقوم المستخدم باختيار سبب الإلغاء من القائمة المنسدلة، مع إدخال قيمة رقم العقار في الحقل.  \nفي الشكل أدناه تظهر القيم الموجودة في القائمة المنسدلة سبب الإلغاء.",
+              "raw_score": 1.068381667137146,
+              "relevant": false
+            },
+            {
+              "rank": 4,
+              "platform": "balady",
+              "service": "commercial_license_renewal",
+              "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+              "chunk_index": 0,
+              "text": "خدمة تجديد رخصة تجارية  \nتسجيل الدخول إلى النظام\nبعد الدخول إلى رابط النظام تظهر الشاشة الرئيسية لمنصة بلدي، ويتم من شريط القوائم الرئيسية الضغط على الزر (تسجيل الدخول).\nتظهر شاشة تسجيل الدخول، يتم إدخال بيانات المستخدم (هوية وطنية / إقامة، كلمة المرور)، ثم يتم الضغط على الزر، مع إمكانية الدخول من خلال منصة النفاذ الوطني الموحد.\nيتم إرسال رمز التحقق على جوال المستخدم ليتم إدخاله في حقل رمز التحقق، ثم الضغط على الزر.  \nخطوات طلب الخدمة\n1) يتم الضغط على الزر من قائمة منتجات بلدي.\n2) تظهر شاشة منتجات بلدي، ويتم البحث عن منتج الرخص التجارية من خانة البحث.\n3) يتم اختيار منتج الرخص التجارية بالضغط على الزر.\n4) تظهر شاشة منتج الرخص التجارية، ويتم البحث عن خدمة تجديد رخصة تجارية من خانة البحث.\n5) يتم اختيار خدمة تجديد رخصة تجارية بالضغط على الزر، ويمكن للمستخدم الاطلاع على تفاصيل الخدمة بالضغط على الزر.\n6) تظهر شاشة مرحلة بيانات مقدم الطلب، حيث يقوم المستخدم بتحديد صفة مقدم الطلب من الخيارات التالية (عن نفسي، مالك/مدير منشأة، مفوض/مدير حساب منشأة).",
+              "raw_score": 1.068516492843628,
+              "relevant": true
+            }
+          ],
+          "answer": "",
+          "judge_score": null,
+          "latency_seconds": 0.34448619998875074
+        }
+      },
+      "validation": {
+        "verdict": "IMPROVED",
+        "recommendation": "ACCEPT_OPTIMIZED",
+        "before": {
+          "recall_at_k": 0.0,
+          "precision_at_k": 0.0,
+          "reciprocal_rank": 0.0,
+          "judge_score": null,
+          "latency_seconds": 0.2961328999954276
+        },
+        "after": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.25,
+          "reciprocal_rank": 0.25,
+          "judge_score": null,
+          "latency_seconds": 0.34448619998875074
+        },
+        "delta": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.25,
+          "reciprocal_rank": 0.25,
+          "judge_score": null,
+          "latency_seconds": 0.04835329999332316
+        },
+        "answer_comparison": {
+          "before": "",
+          "after": ""
+        }
+      },
+      "final_status": "IMPROVED"
+    },
+    {
+      "id": "balady_health_certificate_issuance_002",
+      "platform": "balady",
+      "service": "health_certificate_issuance",
+      "query_type": "query_mismatch",
+      "original_query": "أبي أطلع كرت صحي للعامل من بلدي، كيف أقدّم عليه؟",
+      "rewritten_query": "كيف يمكنني تقديم طلب للحصول على كرت صحي للعامل من منصة بلدي؟",
+      "diagnosis": {
+        "issue_type": "Query Mismatch",
+        "original_query": "أبي أطلع كرت صحي للعامل من بلدي، كيف أقدّم عليه؟",
+        "recommended_action": "rewrite_query",
+        "confidence": 0.95,
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "baseline_first_relevant_rank": null,
+        "rewritten_first_relevant_rank": 1,
+        "baseline_k": 4,
+        "rewritten_query": "كيف يمكنني تقديم طلب للحصول على كرت صحي للعامل من منصة بلدي؟"
+      },
+      "proposal": {
+        "issue_type": "Query Mismatch",
+        "action": "rewrite_query",
+        "parameters": {
+          "original_query": "أبي أطلع كرت صحي للعامل من بلدي، كيف أقدّم عليه؟",
+          "baseline_k": 4,
+          "rewritten_query": "كيف يمكنني تقديم طلب للحصول على كرت صحي للعامل من منصة بلدي؟"
+        },
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "confidence": 0.95,
+        "status": "proposed"
+      },
+      "approval": {
+        "issue_type": "Query Mismatch",
+        "action": "rewrite_query",
+        "parameters": {
+          "original_query": "أبي أطلع كرت صحي للعامل من بلدي، كيف أقدّم عليه؟",
+          "baseline_k": 4,
+          "rewritten_query": "كيف يمكنني تقديم طلب للحصول على كرت صحي للعامل من منصة بلدي؟"
+        },
+        "reason": "A rewritten version of the query improved retrieval ranking compared with the original query.",
+        "confidence": 0.95,
+        "status": "proposed",
+        "reviewed_at": "2026-09-20T14:23:42.396746+00:00",
+        "approval_mode": "auto",
+        "approval_status": "auto_approved",
+        "execution_allowed": true,
+        "next_step": "execute_approved_action"
+      },
+      "execution": {
+        "action_result": {
+          "status": "applied",
+          "action": "rewrite_query",
+          "rewritten_query": "كيف يمكنني تقديم طلب للحصول على كرت صحي للعامل من منصة بلدي؟",
+          "applied_k": 4
+        },
+        "after_run": {
+          "query": "كيف يمكنني تقديم طلب للحصول على كرت صحي للعامل من منصة بلدي؟",
+          "top_k": 4,
+          "retrieved_results": [
+            {
+              "rank": 1,
+              "platform": "balady",
+              "service": "health_certificate_issuance",
+              "source": "knowledge_base/balady/health_certificate_issuance/content_final.md",
+              "chunk_index": 3,
+              "text": "في حال اختيار صفة مقدم الطلب هو مفوض، يظهر حقل باسم الرقم الموحد للمنشأة حيث يتم اختيار السجل من القائمة المنسدلة ثم الضغط على الزر استعراض(16).  \nالمستفيد- لخدمة إصدار شهادة صحية\nيقوم النظام بإظهار قسم إشعارات الخدمة وبيانات المنشأة (الرقم الوطني للسجل التجاري، المدينة، تاريخ الإصدار، تاريخ الانتهاء) ثم يتم الضغط على الزر التقدم للطلب ليتم نقل المستخدم للمرحلة التالية(17).  \nالمستفيد- لخدمة إصدار شهادة صحية\nثم يتم نقل المستخدم لمرحلة الخطوة الأولى استعراض بيانات الطلب، والتي تشمل بيانات المالك الرئيسية، بيانات مقدم الطلب(18).  \nالمستفيد- لخدمة إصدار شهادة صحية\nوفي الجزء الثاني من الشاشة يتم تحديد موقع المحل على الخريطة الجغرافية، يختار المستخدم قيم القوائم المنسدلة التالية (المدينة، الحي، الشارع) على التوالي، ثم يتم الضغط على الخريطة لتحديد الموقع. ثم يتم الضغط على الزر موافق(19).  \nالمستفيد- لخدمة إصدار شهادة صحية\nفي حال اختيار أمانة الرياض تظهر رسالة تنبيه ليتم إصدار الشهادة الصحية من خلال الضغط على الرابط هنا(20).  \nالمستفيد- لخدمة إصدار شهادة صحية",
+              "raw_score": 1.2129056453704834,
+              "relevant": true
+            },
+            {
+              "rank": 2,
+              "platform": "balady",
+              "service": "commercial_license_renewal",
+              "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+              "chunk_index": 0,
+              "text": "خدمة تجديد رخصة تجارية  \nتسجيل الدخول إلى النظام\nبعد الدخول إلى رابط النظام تظهر الشاشة الرئيسية لمنصة بلدي، ويتم من شريط القوائم الرئيسية الضغط على الزر (تسجيل الدخول).\nتظهر شاشة تسجيل الدخول، يتم إدخال بيانات المستخدم (هوية وطنية / إقامة، كلمة المرور)، ثم يتم الضغط على الزر، مع إمكانية الدخول من خلال منصة النفاذ الوطني الموحد.\nيتم إرسال رمز التحقق على جوال المستخدم ليتم إدخاله في حقل رمز التحقق، ثم الضغط على الزر.  \nخطوات طلب الخدمة\n1) يتم الضغط على الزر من قائمة منتجات بلدي.\n2) تظهر شاشة منتجات بلدي، ويتم البحث عن منتج الرخص التجارية من خانة البحث.\n3) يتم اختيار منتج الرخص التجارية بالضغط على الزر.\n4) تظهر شاشة منتج الرخص التجارية، ويتم البحث عن خدمة تجديد رخصة تجارية من خانة البحث.\n5) يتم اختيار خدمة تجديد رخصة تجارية بالضغط على الزر، ويمكن للمستخدم الاطلاع على تفاصيل الخدمة بالضغط على الزر.\n6) تظهر شاشة مرحلة بيانات مقدم الطلب، حيث يقوم المستخدم بتحديد صفة مقدم الطلب من الخيارات التالية (عن نفسي، مالك/مدير منشأة، مفوض/مدير حساب منشأة).",
+              "raw_score": 1.2263689041137695,
+              "relevant": false
+            },
+            {
+              "rank": 3,
+              "platform": "balady",
+              "service": "commercial_license_renewal",
+              "source": "knowledge_base/balady/commercial_license_renewal/content_final.md",
+              "chunk_index": 14,
+              "text": "2) تظهر شاشة طلباتي، ويتم البحث عن الطلب برقم الطلب في خانة البحث.  \nفي حال عدم تفعيل إعدادات تحصيل رسوم الشركة من منصة سالمة (المسار الغير فوري)\n1) يتم عرض تفاصيل الطلب، وتكون حالة الطلب.\n2) عند اعتماد الطلب من موظف استقبال الرخص التجارية، تصبح حالة الطلب.\n3) عند اعتماد الطلب من مراقب الرخص التجارية، تصبح حالة الطلب.\n4) عند اعتماد الطلب من مشرف الرخص التجارية، تصبح حالة الطلب.\n5) لإتمام عملية الدفع، يتم الضغط على الزر من قائمة الإجراءات.\n6) تظهر شاشة بيانات الفاتورة، حيث يمكن للمستخدم الدفع من خلال قنوات الدفع المتوفرة.\n7) بعد عملية الدفع، تظهر رسالة تنبيه تم دفع الفاتورة الخاصة بإصدار رخصة تجارية بمبلغ ****** ريال، رقم الفاتورة ******************.\n8) تصبح حالة الطلب بعد إتمام عملية الدفع.  \nفي حال تفعيل إعدادات تحصيل رسوم الشركة من منصة سالمة (المسار الغير فوري)\n1) يتم عرض تفاصيل الطلب، وتكون حالة الطلب.\n2) عند اعتماد الطلب من موظف استقبال الرخص التجارية، تصبح حالة الطلب.\n3) عند اعتماد الطلب من مراقب الرخص التجارية، تصبح حالة الطلب.",
+              "raw_score": 1.253640055656433,
+              "relevant": false
+            },
+            {
+              "rank": 4,
+              "platform": "absher",
+              "service": "exit_reentry_final_exit_visa",
+              "source": "knowledge_base/absher/exit_reentry_final_exit_visa/content_final.md",
+              "chunk_index": 3,
+              "text": "الدخول إلى منصة أبشر، ثم اختيار \"خدمات العمالة\"، ثم اختيار \"التأشيرات\"، ثم اختيار العامل المطلوب إصدار التأشيرة له.",
+              "raw_score": 1.2628408670425415,
+              "relevant": false
+            }
+          ],
+          "answer": "",
+          "judge_score": null,
+          "latency_seconds": 0.32899609999731183
+        }
+      },
+      "validation": {
+        "verdict": "IMPROVED",
+        "recommendation": "ACCEPT_OPTIMIZED",
+        "before": {
+          "recall_at_k": 0.0,
+          "precision_at_k": 0.0,
+          "reciprocal_rank": 0.0,
+          "judge_score": null,
+          "latency_seconds": 0.2844263000006322
+        },
+        "after": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.25,
+          "reciprocal_rank": 1.0,
+          "judge_score": null,
+          "latency_seconds": 0.32899609999731183
+        },
+        "delta": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.25,
+          "reciprocal_rank": 1.0,
+          "judge_score": null,
+          "latency_seconds": 0.04456979999667965
+        },
+        "answer_comparison": {
+          "before": "",
+          "after": ""
+        }
+      },
+      "final_status": "IMPROVED"
+    },
+    {
+      "id": "absher_driving_license_renewal_002",
+      "platform": "absher",
+      "service": "driving_license_renewal",
+      "query_type": "query_mismatch",
+      "original_query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+      "rewritten_query": "ما هي المدة اللازمة لتجديد رخصتي؟",
+      "diagnosis": {
+        "issue_type": "Top-K",
+        "original_query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+        "recommended_action": "change_top_k",
+        "recommended_k": 9,
+        "confidence": 0.85,
+        "reason": "Relevant content was not found within Top-4 but appeared at rank 9 when the retrieval window was expanded.",
+        "baseline_k": 4
+      },
+      "proposal": {
+        "issue_type": "Top-K",
+        "action": "change_top_k",
+        "parameters": {
+          "original_query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+          "baseline_k": 4,
+          "new_k": 9
+        },
+        "reason": "Relevant content was not found within Top-4 but appeared at rank 9 when the retrieval window was expanded.",
+        "confidence": 0.85,
+        "status": "proposed"
+      },
+      "approval": {
+        "issue_type": "Top-K",
+        "action": "change_top_k",
+        "parameters": {
+          "original_query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+          "baseline_k": 4,
+          "new_k": 9
+        },
+        "reason": "Relevant content was not found within Top-4 but appeared at rank 9 when the retrieval window was expanded.",
+        "confidence": 0.85,
+        "status": "proposed",
+        "reviewed_at": "2026-09-20T14:23:43.957400+00:00",
+        "approval_mode": "auto",
+        "approval_status": "auto_approved",
+        "execution_allowed": true,
+        "next_step": "execute_approved_action"
+      },
+      "execution": {
+        "action_result": {
+          "status": "applied",
+          "action": "change_top_k",
+          "applied_k": 9
+        },
+        "after_run": {
+          "query": "ابغى اجدد رخصتي كم تاخذ توصل لي",
+          "top_k": 9,
+          "retrieved_results": [
+            {
+              "rank": 1,
+              "platform": "absher",
+              "service": "vehicle_registration_renewal",
+              "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+              "chunk_index": 3,
+              "text": "الدخول إلى منصة أبشر، ثم اختيار \"المركبات\"، ثم اختيار \"إدارة المركبات\" من قائمة الخدمات، ثم اختيار المركبة المراد تجديد رخصتها.",
+              "raw_score": 1.1380658149719238,
+              "relevant": false
+            },
+            {
+              "rank": 2,
+              "platform": "absher",
+              "service": "vehicle_registration_renewal",
+              "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+              "chunk_index": 2,
+              "text": "- وثيقة تأمين سارية على المركبة.\n- شهادة الفحص الفني سارية المفعول.\n- سداد رسوم التجديد ومخالفة التأخير إن وجدت.\n- سداد المخالفات المرورية إن وجدت.\n- ألا تقل صلاحية رخصة سير المركبة عن 180 يومًا.",
+              "raw_score": 1.183058261871338,
+              "relevant": false
+            },
+            {
+              "rank": 3,
+              "platform": "absher",
+              "service": "vehicle_registration_renewal",
+              "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+              "chunk_index": 4,
+              "text": "اختيار \"تجديد رخصة سير\"، ثم يتحقّق النظام آليًا من أهلية المستفيد للتجديد وفقًا لشروط ومتطلبات الخدمة، ثم اختيار \"تأكيد التجديد\" لإتمام تجديد رخصة السير بنجاح.",
+              "raw_score": 1.2002300024032593,
+              "relevant": false
+            },
+            {
+              "rank": 4,
+              "platform": "absher",
+              "service": "lost_stolen_plate_report",
+              "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+              "chunk_index": 9,
+              "text": "**س:** هل يمكن تقديم أكثر من بلاغ عن نفس المركبة؟  \n**ج:** لا، لا يمكن تقديم أكثر من بلاغ عن نفس المركبة. يجب متابعة البلاغ الحالي قبل تقديم أي طلب جديد.",
+              "raw_score": 1.2310941219329834,
+              "relevant": false
+            },
+            {
+              "rank": 5,
+              "platform": "absher",
+              "service": "lost_stolen_plate_report",
+              "source": "knowledge_base/absher/lost_stolen_plate_report/content_final.md",
+              "chunk_index": 2,
+              "text": "- عند تقديم البلاغ، سيتم التعميم على المركبة.\n- لا يمكن تقديم أكثر من طلب لنفس المركبة.\n- يجب أن تكون حالة المركبة \"صالحة\" في النظام.\n- تقتصر الخدمة على مالك المركبة فقط.",
+              "raw_score": 1.2743017673492432,
+              "relevant": false
+            },
+            {
+              "rank": 6,
+              "platform": "absher",
+              "service": "lost_passport_replacement",
+              "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+              "chunk_index": 7,
+              "text": "بعد اختيار الناقل ودفع أجور التوصيل، يُرسل الجواز الجديد إلى عنوان التوصيل الذي تمت تعبئته؛ لا يحدد المصدر الرسمي المرفق اسم الناقل بالتحديد ولا مدة التسليم بالأيام.",
+              "raw_score": 1.3073365688323975,
+              "relevant": false
+            },
+            {
+              "rank": 7,
+              "platform": "absher",
+              "service": "lost_passport_replacement",
+              "source": "knowledge_base/absher/lost_passport_replacement/content_final.md",
+              "chunk_index": 5,
+              "text": "اختيار الناقل، ثم مراجعة المعلومات ودفع أجور التوصيل.",
+              "raw_score": 1.3096704483032227,
+              "relevant": false
+            },
+            {
+              "rank": 8,
+              "platform": "absher",
+              "service": "vehicle_registration_renewal",
+              "source": "knowledge_base/absher/vehicle_registration_renewal/content_final.md",
+              "chunk_index": 9,
+              "text": "**س:** رخصة المركبة منتهية، وبعد التجديد تم احتساب تاريخ الانتهاء من تاريخ الاستمارة السابقة، لماذا؟  \n**ج:** في حال تم التجديد بعد انتهاء تاريخ الرخصة فإن التجديد يتم احتسابه من تاريخ انتهاء الاستمارة السابقة.",
+              "raw_score": 1.311253309249878,
+              "relevant": false
+            },
+            {
+              "rank": 9,
+              "platform": "absher",
+              "service": "driving_license_renewal",
+              "source": "knowledge_base/absher/driving_license_renewal/content_final.md",
+              "chunk_index": 5,
+              "text": "تعبئة بيانات العنوان الوطني لطلب توصيل الرخصة.",
+              "raw_score": 1.3125004768371582,
+              "relevant": true
+            }
+          ],
+          "answer": "",
+          "judge_score": null,
+          "latency_seconds": 0.289865099999588
+        }
+      },
+      "validation": {
+        "verdict": "IMPROVED",
+        "recommendation": "ACCEPT_OPTIMIZED",
+        "before": {
+          "recall_at_k": 0.0,
+          "precision_at_k": 0.0,
+          "reciprocal_rank": 0.0,
+          "judge_score": null,
+          "latency_seconds": 0.28368970000883564
+        },
+        "after": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.1111111111111111,
+          "reciprocal_rank": 0.1111111111111111,
+          "judge_score": null,
+          "latency_seconds": 0.289865099999588
+        },
+        "delta": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.1111111111111111,
+          "reciprocal_rank": 0.1111111111111111,
+          "judge_score": null,
+          "latency_seconds": 0.006175399990752339
+        },
+        "answer_comparison": {
+          "before": "",
+          "after": ""
+        }
+      },
+      "final_status": "IMPROVED"
+    }
+  ]
+}
