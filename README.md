@@ -10,6 +10,10 @@
 
 A multi-agent RAGOps system that monitors retrieval quality, diagnoses retrieval failures, proposes targeted optimizations, applies risk-based Human-in-the-loop (HITL), and validates retrieval performance before and after optimization.
 
+## Project Context
+
+Team project developed as part of the Saudi Digital Academy (SDA) Agentic AI Engineering Program.
+
 ### 🚀 Live Demo
 
 **[Launch RAGOps Agent](https://ragops-agent.streamlit.app)**
