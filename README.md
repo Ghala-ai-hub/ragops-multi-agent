@@ -262,7 +262,9 @@ Further work can extend the system with additional retrieval failure modes, broa
 
 ---
 
-## Author
+## Repository Maintainer
+
+This repository presents a **team project** developed during the Saudi Digital Academy (SDA) Agentic AI Engineering Program.
 
 **Ghala Bander Alsuna Allah**  
 Artificial Intelligence Graduate | AI Engineer  
