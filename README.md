@@ -13,6 +13,10 @@
 
 > **Important:** RAGOps is **not a chatbot**. It is designed to improve the retrieval layer that powers RAG-based AI assistants, helping them retrieve better context and ultimately produce more reliable responses.
 
+<p align="center">
+  <img src="ragops-overview-small.jpg" alt="RAGOps Agent overview" width="100%">
+</p>
+
 ---
 
 ## Why This Project Exists
@@ -59,22 +63,11 @@ RAGOps adds a controlled optimization workflow around a baseline RAG pipeline:
 
 ## Multi-Agent Workflow
 
-```mermaid
-flowchart TD
-    A[User Query] --> B[Baseline RAG Retrieval]
-    B --> C[Monitoring Agent]
-    C --> D[Diagnosis Agent]
-    D --> E[Optimization Agent]
-    E --> F{Risk Gate}
-    F -->|Low Risk| G[Action Executor]
-    F -->|Higher Impact| H[Human-in-the-Loop Approval]
-    H -->|Approved| G
-    H -->|Rejected| K[Retain Baseline]
-    G --> I[Validation Agent]
-    I --> J{Improved?}
-    J -->|Yes| L[Accept Optimized Run]
-    J -->|No| K
-```
+The workflow routes each retrieval request through specialized agents and a risk-aware control layer. Low-impact actions can be executed automatically, while structural changes such as re-chunking and re-indexing require human approval before validation.
+
+<p align="center">
+  <img src="ragops-architecture-small.jpg" alt="RAGOps multi-agent architecture and optimization workflow" width="100%">
+</p>
 
 ---
 
