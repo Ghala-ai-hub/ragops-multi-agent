@@ -261,11 +261,3 @@ The current version includes the end-to-end RAGOps workflow, retrieval evaluatio
 Further work can extend the system with additional retrieval failure modes, broader evaluation sets, production deployment controls, and more automated observability.
 
 ---
-
-## Repository Maintainer
-
-This repository presents a **team project** developed during the Saudi Digital Academy (SDA) Agentic AI Engineering Program.
-
-**Ghala Bander Alsuna Allah**  
-Artificial Intelligence Graduate | AI Engineer  
-[LinkedIn](https://www.linkedin.com/in/ghala-bander-alsuna-allah) · [GitHub](https://github.com/Ghala-ai-hub) · [Portfolio](https://ghala-ai-hub.github.io)
